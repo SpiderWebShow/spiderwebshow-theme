@@ -1,0 +1,897 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* Import the purecss base styles, see http://purecss.io */
+@import "http://yui.yahooapis.com/pure/0.2.1/pure-min.css";
+
+/* Import the Roboto font from Google's Font API */
+@import "http://fonts.googleapis.com/css?family=Roboto:100,100italic,400,400italic";
+
+
+/* COLORS */
+
+$dark: #2c3e50;
+	$dark_accent: lighten($dark, 20%);
+$pink: #e67377;
+$tan: #dbd3cb;
+$blue: #6dbcdb;
+$light: #fff;
+
+/* TYPOGRAPHY */
+
+$textcolor: #444;
+	$textcolor_light: #666;
+	
+$type_default: "Roboto", Helvetica, Arial, sans-serif;
+
+$base_unit: 1em;
+
+
+
+/* OTHER STYLES */
+$radius: 4px;
+
+
+
+/* GLOBALS  */
+body {
+	font-family: $type_default;
+	color: $textcolor;
+}
+
+*,*:before,*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box; /* Force elements to include padding and borders in calculating box sizes */
+}
+
+.pure-g-r > [class ^= "pure-u"] {
+	padding-right: 1em;
+	padding-left: 1em; /* For all divs that have a pure-u grid class applied, add 2 ems of padding on the right. */
+}
+
+@media (max-width:767px) {
+	.pure-g-r > [class ^= "pure-u"] {
+		padding-right: 0; /* remove column padding when columns aren't displayed */
+		padding-left: 0;
+	}
+}
+
+hr {
+	margin: 1em 0;
+	height: 1px;
+	border: 0;
+	border-top: double 3px #999;
+}
+
+/* STRUCTURE LAYOUT */
+
+.nav, .main {
+	min-height: 100%;
+}
+
+.nav {
+	position: fixed;
+	width: 20%;
+	z-index: 100;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	background: #fff;
+	border-right: solid 1px $textcolor;
+}
+
+.main {
+	position: absolute;
+	width: 80%;
+	margin-left: 20%;
+}
+
+/* STRUCTURE LAYOUT RESPONSIVE FOR SUB-TABLET */
+
+@media (max-width:767px) {
+	
+	.nav, .main {
+		width: 100%;
+		margin: 0;
+		min-height: intrinsic;
+	}
+	
+	.nav {
+		position: fixed;
+		top: 0;
+		height: 3em;
+		background: $dark;
+		color: #fff;
+	}
+	
+	.main {
+		padding: 3.5em 1em 0.5em;
+	}
+	
+}
+
+/* TYPOGRAPHY */
+
+h1,h2,h3,h4,h5,h6 {
+	font-style: normal;
+	font-weight: 100;
+}
+
+h1 {
+	font-size: $base_unit * 4;
+}
+
+@media (max-width:767px) {
+	h1 {
+		font-size: $base_unit * 2.5;
+	}
+}
+
+
+
+/* BANNER & BRANDING */
+
+#nav_logo {
+	top: 0;
+	
+	img {
+		width: 100%;
+	}
+	
+	svg path, svg rect, svg circle {
+		-webkit-transition-duration: 0.3s;
+		-moz-transition-duration: 0.3s;
+		-o-transition-duration: 0.3s;
+		-ms-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+	}
+	
+	svg path:hover, svg rect:hover, svg circle:hover {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+	
+} /* /#nav_logo */
+
+
+.nav_title {
+/* 	position: absolute; */
+	top: $base_unit;
+	margin: 0;
+	padding: 0 0.67em;
+	font-size: 2em;
+	color: $textcolor;
+	line-height: 1.2em;
+/* 	text-shadow: 1px 1px 2px $dark; */
+}
+
+@media (max-width:767px) {
+	#nav_logo { display: none; }
+	
+	.nav_title {
+		position: absolute;
+		font-size: 1.2em;
+		color: #fff;
+	}
+		
+}
+
+
+
+/* MAIN NAVIGATION */
+
+.nav_menu {
+
+	ul {
+		margin: 0;
+		padding: 1em;	
+	}
+	
+	li {
+		font-weight: 100;
+		font-size: 1.4em;
+		font-style: normal;
+		padding: 0.2em 0;
+		border-bottom: solid 1px $dark_accent;
+	}
+		
+	 li:last-child {
+		border-bottom: none;
+	}
+	
+	a {
+		color: $textcolor;
+		text-decoration: none;
+		display: block;
+	}
+		
+	a:hover {
+		color: $blue;
+	}
+}
+
+
+
+@media (max-width:767px) {
+	.nav_menu {
+		margin-top: 3em;
+		background: $dark;
+		display: none;
+	}
+	
+	.nav_menu li {
+		border: none;
+	}
+	
+	.nav_menu.visible {
+		display: block;
+	}
+	
+	.nav_menu a {
+		display: block;
+		padding: 0.4em;
+		border: solid 1px $dark_accent;
+		color: #fff;
+	}
+	
+}
+
+
+/* NAVIGATION TOGGLE BUTTON ON MOBILE */
+
+.nav_toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	color: #fff;
+	margin: 0.7em 1rem;
+	padding: 0.5em 1em;
+	background: $blue;
+	border-radius: $radius;
+	display: none;
+}
+
+.nav_toggle:active {
+	background: $pink;
+}
+
+@media (max-width:767px) {
+	.nav_toggle {
+		display: block;
+	}
+}
+
+
+/* MEDIA & EMBEDS */
+
+
+/* MAIN_CONTENT STYLES */
+
+.main_content {
+	padding: 0 $base_unit * 2;
+}
+
+
+
+
+/* STAGES  */
+
+.stage {
+	margin: 0;
+	padding: 2em;
+	min-height: 100%;
+}
+
+	
+	.stage h1 {
+		margin-top: 0;
+	}
+
+@media (max-width:767px) {
+	
+	.stage {
+		padding: 2em 0;
+	}
+	
+	.stage h1 {
+		margin-top: 0.67em;
+	}
+	
+}
+
+
+/* HOMEPAGE SECTION STYLES */
+
+
+
+/* Autotune form on homepage */
+
+.jillian-form {
+	margin-top:2em;
+	padding:1em 2em 1.5em;
+	border-radius:50%;
+	color:#444;
+	background-color: #bbb;
+	text-align: center;
+	-webkit-transform:rotate(4deg);
+	
+	p, label, form {
+
+	}
+	
+	form {
+		margin: 0 auto;
+		width: 75%;
+	}
+	
+	input.autotune_callee {
+		border-radius: 2em;
+		width: 100%;
+		font-size: 1.3333em;
+		text-align: center;
+	}
+	
+	input {
+		border-radius: 2em;
+	}
+	
+	
+}
+
+.home-icon {
+	border: solid 1px $textcolor;
+}
+
+/* Color overlay for CdnCult animated gif. Its background color is supplied by a js function */
+.cdncult-homepage {
+		position: relative;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.cdncult-color-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+
+
+/* WEB-MAP PAGE */
+#collaborations {
+	position: relative;
+	
+	.overlay {
+		position: absolute;
+		z-index: 10;
+		font-size: 16px;
+		font-family: $type_default;
+		color: $light;
+		
+		h1 {
+			text-shadow: 1px 1px 2px $dark;
+		}
+		
+	}
+	
+}
+
+
+
+/* #CDNCULT SECTION */
+
+body.single-format-standard, .page-id-25 {
+	background: $tan;
+}
+
+.vertical_cdncult {
+	background: $tan;
+	font-family: Georgia, "Times New Roman", serif;
+	color: $textcolor;
+	
+}
+
+.vertical_cdncult {
+	/* Cdncult Header Styles */
+	h1, h2, h3, h4 {
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+	}
+	
+}
+
+.cdncult_header {
+/* 	border-bottom: double 3px $textcolor; */
+	text-align: center;
+	text-transform: uppercase;
+	
+	h1 {
+		margin-bottom: 0;
+	}
+	
+	.cdncult-tagline {
+		font-size: 0.9em;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal;
+
+	}
+	
+	a {
+		text-decoration: none;
+		color: $textcolor;
+	}
+	
+	a:hover {
+		color: $blue;
+	}
+	
+}
+
+@media (max-width:767px) {
+	.cdncult_header h1 {
+		font-size: 2em;
+	}	
+}
+
+
+
+.cdncult_home {
+	
+	h2 a {
+	text-decoration: none;
+	color: $textcolor;
+	}
+	
+	h2 a:hover {
+		color: $blue;
+	}
+	
+	.author, .date {
+		font-size: 0.9em;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+		border-top: solid 1px $textcolor_light;
+		border-bottom: solid 1px $textcolor_light;
+		padding: 0.7em 0;
+		text-align: center;
+	}
+	
+	.edition-intro {
+		padding-right: 2em;
+		border-right: solid 1px $textcolor_light;
+	}
+		
+	.edition-article-excerpts {
+		padding-left: 2em;
+	}
+	
+	.cdncult-home-excerpt {
+		overflow: hidden;
+		padding: 1em 0;
+		border-bottom: solid 1px $textcolor;
+		
+		.thumbnail {
+			float: left;
+			margin-right: 1em;
+			
+			img {
+				border: solid 1px $textcolor;
+			}
+			
+		}
+		
+	}
+	
+	.cdncult-home-excerpt:last-child {
+		border-bottom: 0;
+	}
+	
+}
+
+@media (max-width:767px) {
+	
+	.cdncult_home {
+		
+		.edition-intro {
+			padding-right:0;
+			border: 0;
+		}
+		
+		.edition-article-excerpts {
+			padding-left: 0;
+		}
+		
+	}
+	
+}
+
+
+
+.excerpt-more {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+}
+
+.post-header {
+	
+	.post-pub-date {
+		display: block;
+		font-size: 0.7em;
+		text-transform: uppercase;
+		margin: $base_unit 0;
+	}
+	
+	.post-title {
+		font-size: 3em;
+	}
+	
+	.author-name {
+		font-size: 1.2em;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal;
+		
+		a {
+			color: $textcolor;
+		}
+		
+		a:hover {
+			color: $blue;
+		}
+		
+	}
+	
+} /* /.post-header */
+
+.post-content {
+	padding-right: $base_unit * 2;
+}
+
+@media (max-width:767px) {
+	.post-content {
+		padding-right: 0;
+	}
+}
+
+
+.post_meta-author {
+	margin-bottom: 2em;
+	text-align: center;
+	padding: $base_unit;
+	border: double 3px $textcolor_light;
+	color: $textcolor_light;
+	
+	.author-name {
+		font-size: 1.8em;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+	}
+	
+	.author-photo img {
+		border-radius: 50%;
+		border: solid 1px $textcolor;
+		padding: 2px;
+	}
+	
+	.author-bio {
+		font-size: 0.8em;
+		padding-bottom: 1em;
+	}
+	
+	.author-website {
+		background: $textcolor;
+		color: #ddd;
+		padding: 2px 8px;
+		text-decoration: none;
+		font-family: $type_default;
+		border-radius: 3px;
+		font-size: 0.7em;
+		text-transform: uppercase;
+	}
+	
+	.author-website:hover {
+		background: $blue;
+	}
+	
+	.author-related-posts-header, .about-the-author, .connect-the-author {
+		font-size: 0.9em;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 0.2em 1em;
+		border-top: solid 1px #bbb;
+		border-bottom: solid 1px #bbb;
+		}
+	
+	.author-related-post {
+		display: block;
+		color: $textcolor_light;
+		line-height: 1.8em;
+		font-size: 0.9em;
+	}
+	
+		.author-related-post:hover {
+			color: $blue;
+		}
+	
+} /* /.post_meta-author */
+
+
+
+.post_meta-bottom {
+	margin-bottom: 2em;
+	width: 100%;
+	padding: 1em;
+	border: double 3px $textcolor;
+	text-align: center;
+	
+	.category-list-header, .tag-list-header {
+		font-size: 0.9em;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 0.2em 1em;
+		border-top: solid 1px #bbb;
+		border-bottom: solid 1px #bbb;
+	}
+	
+	.category-list, .tag-list {
+		font-size: 0.9em;
+	}
+	
+} /* /.post_meta-bottom */
+
+
+/* Post Images */
+/* (Including fixing Wordpress's Stupid-ass Image Insertion) */
+
+div.wp-caption img {
+	max-width:100%; // It can only be as wide as its .wp-caption container, which thanks to the functions.php trickery, no longer has stupid fucking inline styles.
+	height:auto; // This overrides the stupid fucking inline styles that wordpress STILL insists on adding, which is fucking incredible in 2013
+	border: solid 1px $textcolor;
+}
+
+p.wp-caption-text {
+	font-size: 0.8em;
+	color: $textcolor;
+	font-style: italic;
+	border-bottom: double 3px $textcolor;
+	padding-bottom: 1em;
+}
+
+.wp-caption.alignleft, .wp-caption.alignright {
+	max-width: 300px;
+}
+
+.alignleft .wp-caption-text, .alignright .wp-caption-text {
+	max-width: 300px;
+}
+
+.alignleft {
+	float: left;
+	padding: 1em 2em 2em 0;
+}
+
+.alignright {
+	float: right;
+	padding: 1em 0 2em 2em;
+}
+
+
+
+
+/* COMMISSIONS VERTICAL */
+
+.vertical_commissions, .single-commission, body.page-id-23 {
+	
+	background: #363434;
+	color: #eee;
+	
+	.main a {
+		color: #fff;
+	}
+	
+	.main a:hover {
+		color: $blue;
+	}
+	
+}
+
+
+/* EXPERIMENTS VERTICAL */
+
+.vertical_experiments {
+	background: #fff;
+}
+
+.exp2_vertical {
+
+}
+
+.exp2-card {
+	position: relative;
+	float: left;
+	height: 300px;
+	width: 300px;
+	color: #fff;
+	overflow: hidden;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;	
+}
+
+.exp2-card .experiment {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 1em;
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.2)";
+	filter: alpha(opacity=0.2);
+	opacity: 0.2;
+
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	-ms-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.exp2-card:hover {
+-webkit-transform: scale(0.95);
+-moz-transform: scale(0.95);
+-o-transform: scale(0.95);
+-ms-transform: scale(0.95);
+transform: scale(0.95);
+}
+
+.exeriment h2, .experiment p {
+	opacity: 1;
+}
+
+.exp2-card:hover .experiment {
+	background: #000;
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.7)";
+	filter: alpha(opacity=0.7);
+	opacity: 0.7;
+}
+
+.which-lab {
+	padding: 0.25em 0.5em;
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 0 0 0 4px;
+}
+
+.exp2-card .experiment.sonic-theatre, .which-lab.sonic-theatre {
+	background: deeppink;
+}
+	
+.exp2-card .experiment.twitter-theatre, .which-lab.twitter-theatre {
+	background: royalblue;
+}
+
+.exp2-card .experiment.podcasts, .which-lab.podcasts {
+	background: green;
+}
+
+.exp2-card .experiment.unknown-theatre, .which-lab.unknown-theatre {
+	background: purple;
+}
+
+.exp2-card .experiment.tableau, .which-lab.tableau {
+	background: goldenrod;
+}
+
+.exp2-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 300px;
+	padding: 1em;
+	opacity: 1;
+}
+
+a .exp2-content, .exp2-content a {
+	color: #fff;
+}
+
+span.which-lab {
+	font-size: smaller;
+}
+
+
+/* TALKSHOW VERTICAL */
+
+.vertical_talkshow {
+  background:#3c98c3;
+  color:#fff;
+  
+  a, a:visited { color: #fff; }
+  
+}
+
+
+
+/* SOCIAL SHARE BUTTONS ON ARTICLE PAGES */
+
+.share-button {
+	display: inline-block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-family: $type_default;
+}
+		
+.share-button a {
+	background: #444;
+	padding: 0.2em 0.8em;
+	border-radius: 0.2em;
+	color: #fff;
+	text-decoration: none;
+}
+
+.share-button.twitter a {
+	background: #00acee; /* Old browsers */
+	}
+
+.share-button.facebook a {
+	background: #4e69a2;
+	}
+
+.share-holder {
+	margin-left: 0.2em;
+	font-weight: bold;
+	padding: 0.1em 0.8em;
+	border: solid 1px #999;
+	border-radius: 0.2em;
+	display: none;
+	background: #eee;
+}
+
+.share-holder.added {
+	display: inline-block;
+}
+
+
+/* AUTHOR PROFILE PAGES */
+
+.author_profile {
+	padding-bottom: 3em;
+}
+
+#author-map {
+	margin-top: 1em;
+	width:100%;
+	height:300px;
+}
+
+
+
+/* MAKERS PAGE */
+
+/* CSS columns will only activate when the page is wide enough */
+@media (min-width: 768px){
+
+  .columnize {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+  }
+
+}
+
+

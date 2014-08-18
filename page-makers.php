@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="main_content stage pure-g-r">
+<div class="main_content pure-g-r">
 	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
@@ -12,9 +12,11 @@
 		
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-	<?php endif; // End standard wordpress loop. Custom loop fetches experiment list below ?>	
-
-	<div id="makermap" class="pure-u-1" style="height:600px;"></div>
+	<?php endif; // End standard wordpress loop. ?>	
+	
+	<div id="makermap" class="pure-u-1" style="height:600px;">
+    <!-- MapBox map placeholder div -->	
+	</div>
 		
 	<div class="pure-u-1-4">
 		<h2><a href="https://twitter.com/sarahgstanley" title="Follow Sarah Garton Stanley on Twitter">@SarahgStanley</a></h2>
@@ -47,22 +49,48 @@
 	<hr>
 	
 	<div class="pure-u-1">
-		<p style="text-align:center">The SpiderWebShow is produced by <a href="http://www.neworldtheatre.com/" title="Neworld Theatre">Neworld Theatre</a> in collaboration with <a href="http://praxistheatre.com/" title="Praxis Theatre">Praxis Theatre</a> and <a href="http://nac-cna.ca/englishtheatre" title="NAC English Theatre">The NAC English Theatre</a></p>
+		<p>The SpiderWebShow is produced by <a href="http://www.neworldtheatre.com/" title="Neworld Theatre">Neworld Theatre</a> in collaboration with <a href="http://praxistheatre.com/" title="Praxis Theatre">Praxis Theatre</a> and <a href="http://nac-cna.ca/englishtheatre" title="NAC English Theatre">The NAC English Theatre</a></p>
 	</div>
 	
 	<hr>
 	
 	<div class="pure-u-1">
+	<h1>Contributors</h1>
 	<p>So far the SpiderWebShow has incorporated the contributions of the following makers:</p>
-	<?php // custom_wp_list_authors(); ?>
-	<ul class="columnize">
+	
 	<?php
-	    $blogusers = get_users();
-	    foreach ($blogusers as $user) {
-	        echo '<li><a href="' . get_author_posts_url($user->ID) . '" title="'.$user->display_name.'">' . $user->display_name . '</a></li>';
-	    }
-	?>
-	</ul>
+		// Get the complete list of authors
+	    $makers = get_users();
+	    // Loop through the list and fetch the basic information for each user account
+	    foreach ($makers as $maker) {
+        $maker_ID = $maker->ID; // User ID
+        $maker_name = $maker->display_name; // Display Name
+        $maker_link = get_author_posts_url($maker_ID); // Link to author page 
+        $maker_img = types_render_usermeta_field( "author-photo", array("raw"=>"true", "user_id" => $maker_ID)); // URL for author image, custom field
+    		$maker_twitter = types_render_usermeta_field( "twitter-handle", array("raw"=>"true", "user_id" => $maker_ID)); // artist twitter handle, custom field
+
+    			// Scrub any stray "@" symbols from the handle to keep the data clean here, regardless of how it was entered in the database
+    			// preg_replace($patternToFind, $patternToReplace, $stringToOperateOn);
+    			$maker_twitter = preg_replace("/(@)/", "", $maker_twitter);
+
+        if($maker_img){
+  				// If there is a user photo on file, replace the full-sized image URL with the 75px-square one
+  				$findImgExt = "/(\.jpg|\.jpeg|\.png)$/";
+  				$addThumbDimension = "-75x75$1";
+  				$maker_img = preg_replace($findImgExt, $addThumbDimension, $maker_img);
+			} else { 
+				// If there is no image, substitute a placeholder
+				$maker_img = "http://placehold.it/75x75&text=No+Photo";			
+			}						
+  ?>
+	 
+	<a class="maker-card" href="<?php echo $maker_link; ?>" title="See <?php echo $maker_name; ?>'s SpiderWebShow profile page">
+		<img src="<?php echo $maker_img; ?>" alt="Small headshot of <?php echo $maker_name; ?>">
+		<p><?php echo $maker_name; ?></p>
+		<?php if($maker_twitter) { ?><p class="twitter">@<?php echo $maker_twitter ?></p><?php } ?>
+	</a>
+	 
+	 <?php } ?>
 	
 	</div>
 
@@ -74,7 +102,6 @@
 		var theMap = L.mapbox.map('makermap', 'spiderwebshow.map-asrom3ea', { zoomControl: false });
 		new L.Control.Zoom({position:'topright'}).addTo(theMap);
 		theMap.markerLayer.on('ready', function(e){
-			
 									
 			var markers = [];
 			var tooltips = [];
@@ -82,10 +109,7 @@
 			this.eachLayer(function(marker){
 				markers.push(marker.getLatLng());
 				tooltips.push(marker);
-			});
-			//console.log(tooltips);
-			
-			//tooltips[0].openPopup();			
+			});			
 									
 			$.each(markers, function(){
 				var theMarker = this,

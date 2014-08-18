@@ -869,6 +869,39 @@ span.which-lab {
 
 /* MAKERS PAGE */
 
+.maker-card {
+	display: block;
+	width: 300px;
+	padding: $base_unit;
+	margin: $base_unit;
+	overflow: hidden;
+	float: left;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+	transition-duration: 0.2s;
+	color: $textcolor;
+	text-decoration: none;
+	
+	
+	img {
+		float: left;
+		margin-right: $base_unit;
+	}
+	
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	
+	p.twitter {
+		color: #bbb;
+	}
+	
+}
+
+.maker-card:hover {
+	transform: scale(1.05);
+}
+
 /* CSS columns will only activate when the page is wide enough */
 @media (min-width: 768px){
 

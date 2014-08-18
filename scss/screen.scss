@@ -25,6 +25,7 @@ $textcolor: #444;
 	$textcolor_light: #666;
 	
 $type_default: "Roboto", Helvetica, Arial, sans-serif;
+$type_serif: Georgia, "Times New Roman", serif;
 
 $base_unit: 1em;
 
@@ -392,23 +393,27 @@ h1 {
 
 /* #CDNCULT SECTION */
 
-body.single-format-standard, .page-id-25 {
-	background: $tan;
-}
-
 .vertical_cdncult {
-	background: $tan;
+	background: $light;
 	font-family: Georgia, "Times New Roman", serif;
 	color: $textcolor;
 	
-}
-
-.vertical_cdncult {
 	/* Cdncult Header Styles */
 	h1, h2, h3, h4 {
 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
 	}
 	
+	/* Cdncult Section Link styles */
+	a {
+		color: $textcolor;
+		text-decoration: none;
+		border-bottom: solid 1px #ddf;
+		box-shadow: inset 0 -2px 0 #ddf;
+	}
+	
+	a:hover {
+		color: $blue;
+	}
 }
 
 .cdncult_header {
@@ -428,11 +433,6 @@ body.single-format-standard, .page-id-25 {
 	
 	a {
 		text-decoration: none;
-		color: $textcolor;
-	}
-	
-	a:hover {
-		color: $blue;
 	}
 	
 }
@@ -449,11 +449,6 @@ body.single-format-standard, .page-id-25 {
 	
 	h2 a {
 	text-decoration: none;
-	color: $textcolor;
-	}
-	
-	h2 a:hover {
-		color: $blue;
 	}
 	
 	.author, .date {
@@ -539,15 +534,6 @@ body.single-format-standard, .page-id-25 {
 	.author-name {
 		font-size: 1.2em;
 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal;
-		
-		a {
-			color: $textcolor;
-		}
-		
-		a:hover {
-			color: $blue;
-		}
-		
 	}
 	
 } /* /.post-header */
@@ -882,6 +868,39 @@ span.which-lab {
 
 
 /* MAKERS PAGE */
+
+.maker-card {
+	display: block;
+	width: 300px;
+	padding: $base_unit;
+	margin: $base_unit;
+	overflow: hidden;
+	float: left;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+	transition-duration: 0.2s;
+	color: $textcolor;
+	text-decoration: none;
+	
+	
+	img {
+		float: left;
+		margin-right: $base_unit;
+	}
+	
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	
+	p.twitter {
+		color: #bbb;
+	}
+	
+}
+
+.maker-card:hover {
+	transform: scale(1.05);
+}
 
 /* CSS columns will only activate when the page is wide enough */
 @media (min-width: 768px){

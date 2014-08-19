@@ -34,8 +34,8 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // See the __() WordPress function for valid values for $text_domain.
 register_sidebar( array(
     'id'          => 'front-page',
-    'name'        => __( 'Front Page', $text_domain ),
-    'description' => __( 'This Widget area provides an area for site-wide announcements on the front page.', $text_domain ),
+    'name'        => 'Front Page',
+    'description' => 'This Widget area provides an area for site-wide announcements on the front page.',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>'
 ) );

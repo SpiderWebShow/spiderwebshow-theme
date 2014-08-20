@@ -13,7 +13,7 @@
 /* COLORS */
 
 $dark: #2c3e50;
-	$dark_accent: lighten($dark, 20%);
+$dark_accent: lighten($dark, 20%);
 $pink: #e67377;
 $tan: #dbd3cb;
 $blue: #6dbcdb;
@@ -220,7 +220,10 @@ h1 {
 	}
 }
 
-
+// Additional stylings now that the menu has been converted to wordpress
+#menu-primary-menu {
+	padding: 0.2em 1em;
+}
 
 @media (max-width:767px) {
 	.nav_menu {

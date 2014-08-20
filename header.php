@@ -43,8 +43,11 @@
 			
 		</figure>
 		<a href="/" title="Home"><h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1></a>
-
-		<nav class="nav_menu" role="navigation">
+		<!-- Load in the primary menu -->
+		<?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
+		
+		<!-- The Old, Static Menu -->
+		<!-- <nav class="nav_menu" role="navigation">
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/cdncult">#CdnCult Times</a></li>
@@ -54,7 +57,7 @@
 				<li><a href="/makers">Makers</a></li>
 				<li><a href="/participate">Participate</a></li>
 			</ul>
-		</nav>
+		</nav> -->
 		<a href="#" class="nav_toggle nav_toggle-hidden">Menu</a>
 	</div>
 	

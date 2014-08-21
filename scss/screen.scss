@@ -10,6 +10,9 @@
 @import "http://fonts.googleapis.com/css?family=Roboto:100,100italic,400,400italic";
 
 
+/* MEASUREMENTS */
+$base_unit: 1em;
+
 /* COLORS */
 
 $dark: #2c3e50;
@@ -18,22 +21,20 @@ $pink: #e67377;
 $tan: #dbd3cb;
 $blue: #6dbcdb;
 $light: #fff;
+$white: #fff;
+
+/* LINK COLORS */
+$link_default_color: #6dbcdb;
+$link_hover_color: #e67377;
 
 /* TYPOGRAPHY */
 
-$textcolor: #444;
-	$textcolor_light: #666;
-	
+$textcolor: #444;	
 $type_default: "Roboto", Helvetica, Arial, sans-serif;
 $type_serif: Georgia, "Times New Roman", serif;
 
-$base_unit: 1em;
-
-
-
-/* OTHER STYLES */
+/* MISC STYLES */
 $radius: 4px;
-
 
 
 /* GLOBALS  */
@@ -42,33 +43,67 @@ body {
 	color: $textcolor;
 }
 
+/* Border-Box Sizing */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 *,*:before,*:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
-	box-sizing: border-box; /* Force elements to include padding and borders in calculating box sizes */
+	box-sizing: border-box;
 }
 
+/* For all divs that have a pure-u grid class applied, add 1 em of padding on either side. */
 .pure-g-r > [class ^= "pure-u"] {
-	padding-right: 1em;
-	padding-left: 1em; /* For all divs that have a pure-u grid class applied, add 2 ems of padding on the right. */
+	padding-right: $base_unit;
+	padding-left: $base_unit;
 }
 
+/* remove column padding when columns aren't displayed */
 @media (max-width:767px) {
 	.pure-g-r > [class ^= "pure-u"] {
-		padding-right: 0; /* remove column padding when columns aren't displayed */
+		padding-right: 0;
 		padding-left: 0;
 	}
 }
 
+/* Default Horizontal Rule */
 hr {
-	margin: 1em 0;
-	height: 1px;
+	margin: $base_unit 0;
+	height: 3px;
 	border: 0;
-	border-top: double 3px #999;
+	border-top: double 3px $textcolor;
 }
 
-/* STRUCTURE LAYOUT */
+/* MOBILE FIRST */
+/* STRUCTURE LAYOUT FOR TABLET & BELOW */
+
+@media (max-width:767px) {
+	
+	.nav, .main {
+		width: 100%;
+		margin: 0;
+		min-height: intrinsic;
+	}
+	
+	.nav {
+		position: fixed;
+		top: 0;
+		height: 3em;
+		background: $dark;
+		color: $white;
+		
+		/* Translate3d Layer Hack */
+		transform: translate3d(0);
+	}
+	
+	.main {
+	  margin-top: $base_unit * 3.5;
+		padding: $base_unit;
+	}
+	
+}
+
+/* STRUCTURE LAYOUT FOR DESKTOP  */
 
 .nav, .main {
 	min-height: 100%;   
@@ -93,28 +128,21 @@ hr {
 	margin-left: 20%;
 }
 
-/* STRUCTURE LAYOUT RESPONSIVE FOR SUB-TABLET */
+
+
+/* MAIN_CONTENT PADDING */
+/* PS Why is this specified in its own whole thing? I must have had a reason at the time but I don't recall now ^GFS */
+
+.main_content {
+	padding: 0 $base_unit * 2;
+}
 
 @media (max-width:767px) {
-	
-	.nav, .main {
-		width: 100%;
-		margin: 0;
-		min-height: intrinsic;
-	}
-	
-	.nav {
-		position: fixed;
-		top: 0;
-		height: 3em;
-		background: $dark;
-		color: #fff;
-	}
-	
-	.main {
-		padding: 3.5em 1em 0.5em;
-	}
-	
+  
+  .main_content {
+    padding: 0;
+  }
+  
 }
 
 /* TYPOGRAPHY */
@@ -124,14 +152,15 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 100;
 }
 
-h1 {
-	font-size: $base_unit * 4;
-}
 
 @media (max-width:767px) {
 	h1 {
 		font-size: $base_unit * 2.5;
 	}
+}
+
+h1 {
+	font-size: $base_unit * 4;
 }
 
 
@@ -165,14 +194,12 @@ h1 {
 
 
 .nav_title {
-/* 	position: absolute; */
 	top: $base_unit;
 	margin: 0;
 	padding: 0 0.67em;
 	font-size: 2em;
 	color: $textcolor;
 	line-height: 1.2em;
-/* 	text-shadow: 1px 1px 2px $dark; */
 }
 
 @media (max-width:767px) {
@@ -181,7 +208,7 @@ h1 {
 	.nav_title {
 		position: absolute;
 		font-size: 1.2em;
-		color: #fff;
+		color: $white;
 	}
 		
 }
@@ -194,7 +221,7 @@ h1 {
 
 	ul {
 		margin: 0;
-		padding: 1em;	
+		padding: $base_unit;	
 	}
 	
 	li {
@@ -202,7 +229,7 @@ h1 {
 		font-size: 1.4em;
 		font-style: normal;
 		padding: 0.2em 0;
-		border-bottom: solid 1px $dark_accent;
+		border-bottom: solid 1px $textcolor;
 	}
 		
 	 li:last-child {
@@ -216,7 +243,7 @@ h1 {
 	}
 		
 	a:hover {
-		color: $blue;
+		color: $link_hover_color;
 	}
 }
 
@@ -243,7 +270,7 @@ h1 {
 	.nav_menu a {
 		display: block;
 		padding: 0.4em;
-		border: solid 1px $dark_accent;
+		border: solid 1px $textcolor;
 		color: #fff;
 	}
 	
@@ -259,7 +286,7 @@ h1 {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 0.8em;
-	color: #fff;
+	color: $white;
 	margin: 0.7em 1rem;
 	padding: 0.5em 1em;
 	background: $blue;
@@ -279,14 +306,6 @@ h1 {
 
 
 /* MEDIA & EMBEDS */
-
-
-/* MAIN_CONTENT STYLES */
-
-.main_content {
-	padding: 0 $base_unit * 2;
-}
-
 
 
 
@@ -316,21 +335,19 @@ h1 {
 }
 
 
-/* HOMEPAGE SECTION STYLES */
-
-
-
+/* HOMEPAGE */
 /* Autotune form on homepage */
 
 .jillian-form {
 	margin-top:2em;
 	padding:1em 2em 1.5em;
 	border-radius:50%;
-	color:#444;
+	color: $textcolor;
 	background-color: #bbb;
 	text-align: center;
 	-webkit-transform:rotate(4deg);
 	
+/* Deprecated,
 	p, label, form {
 
 	}
@@ -350,9 +367,11 @@ h1 {
 	input {
 		border-radius: 2em;
 	}
+*/
 	
 	
 }
+
 
 .home-icon {
 	border: solid 1px $textcolor;
@@ -360,16 +379,16 @@ h1 {
 
 /* Color overlay for CdnCult animated gif. Its background color is supplied by a js function */
 .cdncult-homepage {
-		position: relative;
-		overflow: hidden;
-		padding: 0;
-	}
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
 
-	.cdncult-color-overlay {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
+.cdncult-color-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
 
 
 
@@ -382,7 +401,7 @@ h1 {
 		z-index: 10;
 		font-size: 16px;
 		font-family: $type_default;
-		color: $light;
+		color: $white;
 		
 		h1 {
 			text-shadow: 1px 1px 2px $dark;
@@ -397,9 +416,8 @@ h1 {
 /* #CDNCULT SECTION */
 
 .vertical_cdncult {
-	background: $light;
+	background: $white;
 	font-family: Georgia, "Times New Roman", serif;
-	color: $textcolor;
 	
 	/* Cdncult Header Styles */
 	h1, h2, h3, h4 {
@@ -415,12 +433,11 @@ h1 {
 	}
 	
 	a:hover {
-		color: $blue;
+		color: $link_hover_color;
 	}
 }
 
 .cdncult_header {
-/* 	border-bottom: double 3px $textcolor; */
 	text-align: center;
 	text-transform: uppercase;
 	
@@ -457,15 +474,15 @@ h1 {
 	.author, .date {
 		font-size: 0.9em;
 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
-		border-top: solid 1px $textcolor_light;
-		border-bottom: solid 1px $textcolor_light;
+		border-top: solid 1px $textcolor;
+		border-bottom: solid 1px $textcolor;
 		padding: 0.7em 0;
 		text-align: center;
 	}
 	
 	.edition-intro {
 		padding-right: 2em;
-		border-right: solid 1px $textcolor_light;
+		border-right: solid 1px $textcolor;
 	}
 		
 	.edition-article-excerpts {
@@ -556,8 +573,8 @@ h1 {
 	margin-bottom: 2em;
 	text-align: center;
 	padding: $base_unit;
-	border: double 3px $textcolor_light;
-	color: $textcolor_light;
+	border: double 3px $textcolor;
+	color: $textcolor;
 	
 	.author-name {
 		font-size: 1.8em;
@@ -576,9 +593,7 @@ h1 {
 	}
 	
 	.author-website {
-		background: $textcolor;
-		color: #ddd;
-		padding: 2px 8px;
+		color: $textcolor;
 		text-decoration: none;
 		font-family: $type_default;
 		border-radius: 3px;
@@ -587,7 +602,7 @@ h1 {
 	}
 	
 	.author-website:hover {
-		background: $blue;
+		color: $link_hover_color;
 	}
 	
 	.author-related-posts-header, .about-the-author, .connect-the-author {
@@ -602,13 +617,13 @@ h1 {
 	
 	.author-related-post {
 		display: block;
-		color: $textcolor_light;
+		color: $textcolor;
 		line-height: 1.8em;
 		font-size: 0.9em;
 	}
 	
 		.author-related-post:hover {
-			color: $blue;
+			color: $link_hover_color;
 		}
 	
 } /* /.post_meta-author */
@@ -618,7 +633,7 @@ h1 {
 .post_meta-bottom {
 	margin-bottom: 2em;
 	width: 100%;
-	padding: 1em;
+	padding: $base_unit;
 	border: double 3px $textcolor;
 	text-align: center;
 	
@@ -644,7 +659,7 @@ h1 {
 
 div.wp-caption img {
 	max-width:100%; // It can only be as wide as its .wp-caption container, which thanks to the functions.php trickery, no longer has stupid fucking inline styles.
-	height:auto; // This overrides the stupid fucking inline styles that wordpress STILL insists on adding, which is fucking incredible in 2013
+	height:auto; // This overrides the stupid fucking inline styles that wordpress STILL insists on adding, which is fucking incredible in 2014
 	border: solid 1px $textcolor;
 }
 
@@ -653,7 +668,7 @@ p.wp-caption-text {
 	color: $textcolor;
 	font-style: italic;
 	border-bottom: double 3px $textcolor;
-	padding-bottom: 1em;
+	padding-bottom: $base_unit;
 }
 
 .wp-caption.alignleft, .wp-caption.alignright {
@@ -681,15 +696,15 @@ p.wp-caption-text {
 
 .vertical_commissions, .single-commission, body.page-id-23 {
 	
-	background: #363434;
-	color: #eee;
+	background: $textcolor;
+	color: $white;
 	
 	.main a {
-		color: #fff;
+		color: $white;
 	}
 	
 	.main a:hover {
-		color: $blue;
+		color: $link_hover_color;
 	}
 	
 }
@@ -698,7 +713,7 @@ p.wp-caption-text {
 /* EXPERIMENTS VERTICAL */
 
 .vertical_experiments {
-	background: #fff;
+	background: $white;
 }
 
 .exp2_vertical {
@@ -710,7 +725,7 @@ p.wp-caption-text {
 	float: left;
 	height: 300px;
 	width: 300px;
-	color: #fff;
+	color: $white;
 	overflow: hidden;
 	-webkit-transition: all 0.4s ease-out;
 	-moz-transition: all 0.4s ease-out;
@@ -723,7 +738,7 @@ p.wp-caption-text {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding: 1em;
+	padding: $base_unit;
 	
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.2)";
 	filter: alpha(opacity=0.2);
@@ -791,12 +806,12 @@ transform: scale(0.95);
 	left: 0;
 	width: 300px;
 	height: 300px;
-	padding: 1em;
+	padding: $base_unit;
 	opacity: 1;
 }
 
 a .exp2-content, .exp2-content a {
-	color: #fff;
+	color: $white;
 }
 
 span.which-lab {
@@ -808,9 +823,9 @@ span.which-lab {
 
 .vertical_talkshow {
   background:#3c98c3;
-  color:#fff;
+  color: $white;
   
-  a, a:visited { color: #fff; }
+  a, a:visited { color: $white; }
   
 }
 
@@ -829,7 +844,7 @@ span.which-lab {
 	background: #444;
 	padding: 0.2em 0.8em;
 	border-radius: 0.2em;
-	color: #fff;
+	color: $white;
 	text-decoration: none;
 }
 
@@ -863,7 +878,7 @@ span.which-lab {
 }
 
 #author-map {
-	margin-top: 1em;
+	margin-top: $base_unit;
 	width:100%;
 	height:300px;
 }
@@ -896,7 +911,7 @@ span.which-lab {
 	}
 	
 	p.twitter {
-		color: #bbb;
+		color: #bbb; /* It would make sense to make a consistent "de-emphasis" lighter color. Consider contrast and accessibility when implementing */
 	}
 	
 }

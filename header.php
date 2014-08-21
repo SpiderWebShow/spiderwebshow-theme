@@ -44,17 +44,10 @@
 		</figure>
 		<a href="/" title="Home"><h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1></a>
 
-		<nav class="nav_menu" role="navigation">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/cdncult">#CdnCult Times</a></li>
-				<li><a href="/commissions">Commissions</a></li>
-				<li><a href="/experiments">Experiments</a></li>
-				<li><a href="/talkshow">TalkShow</a></li>
-				<li><a href="/makers">Makers</a></li>
-				<li><a href="/participate">Participate</a></li>
-			</ul>
-		</nav>
+		<!-- Load in the primary menu -->
+		<?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => 'nav', 'menu_class' => 'nav_menu' ) ); ?>
+		
+		<!-- Toggle the hidden menu -->
 		<a href="#" class="nav_toggle nav_toggle-hidden">Menu</a>
 	</div>
 	

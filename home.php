@@ -10,11 +10,11 @@
 	</div>
 	
 
-	<div id="autotune" class="pure-u-1-3 jillian-form">
-		<h4 style="margin:1em 0 0;padding:0;"><span style="text-transform:uppercase;">Thought Residencies</span><br>Resident Thinker for June:</h4>
-		<h2 style="margin:0;padding:0;"><a href="/residency">Susan Leblanc</a></h2>
+	<div class="pure-u-1-3 thought-residence-bubble">
+		<h4><span>Thought Residencies </span>Resident Thinker for June:</h4>
+		<h2><a href="/residency">Susan Leblanc</a></h2>
 		<p>Click to hear the latest from our resident thinker.</p>
-		<a href="#" id="autotune_control_button" style="font-size:3em;color:#d09;text-decoration:none;"><i class="icon-ellipsis-horizontal"></i></a>
+		<a href="#" id="autotune_control_button"><i class="icon-ellipsis-horizontal"></i></a>
 	</div>
 
 

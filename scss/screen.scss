@@ -335,7 +335,7 @@ h1 {
 /* HOMEPAGE */
 /* Autotune form on homepage */
 
-.jillian-form {
+.thought-residence-bubble {
 	margin-top:2em;
 	padding:1em 2em 1.5em;
 	border-radius:50%;
@@ -344,28 +344,28 @@ h1 {
 	text-align: center;
 	-webkit-transform:rotate(4deg);
 	
-/* Deprecated,
-	p, label, form {
-
+	h4 {
+  	margin: 1em 0 0;
+  	padding: 0;
+  	
+  	span {
+  	  display: block;
+    	text-transform: uppercase;
+  	}
+  	
 	}
 	
-	form {
-		margin: 0 auto;
-		width: 75%;
+	h2 {
+  	margin:0;
+  	padding:0;
 	}
-	
-	input.autotune_callee {
-		border-radius: 2em;
-		width: 100%;
-		font-size: 1.3333em;
-		text-align: center;
-	}
-	
-	input {
-		border-radius: 2em;
-	}
-*/
-	
+  
+  #autotune_control_button {
+    /* NOTE: eventually this ID should also be updated and rationalized, but since it's currently used by some scripts elsewhere in the repo I'm not touching it now */
+    font-size:3em;
+    color:#d09;
+    text-decoration:none;
+  }
 	
 }
 

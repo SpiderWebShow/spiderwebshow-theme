@@ -218,10 +218,12 @@ h1 {
 /* MAIN NAVIGATION */
 
 .nav_menu {
-
+  
+  margin: 0;
+  padding: $base_unit;
+  
 	ul {
-		margin: 0;
-		padding: $base_unit;	
+	  margin: 0;
 	}
 	
 	li {
@@ -245,11 +247,6 @@ h1 {
 	a:hover {
 		color: $link_hover_color;
 	}
-}
-
-// Additional stylings now that the menu has been converted to wordpress
-#menu-primary-menu {
-	padding: 0.2em 1em;
 }
 
 @media (max-width:767px) {

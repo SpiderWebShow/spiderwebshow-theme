@@ -59,6 +59,7 @@
 		<header class="post-header pure-u-1">
 			<time class="post-pub-date" datetime="<?php the_time('c'); ?>"><?php the_time('l, F j, Y'); ?></time>
 			<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php echo types_render_field( "custom-edition-image", array(  )  ) ?>
 			<p class="author-name">By <?php the_author_posts_link(); ?></p>
 		</header>
 		

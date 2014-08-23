@@ -45,6 +45,7 @@
 		$authorID = get_the_author_meta("ID"); // get the author's description from their user account
 		$authorPhoto = types_render_usermeta_field( "author-photo", array("raw"=>"true")); // get URL for author image
 		
+
 		if($authorPhoto){
 			// Function to replace the upload-sized author photo with the thumbnail-sized one
 			$findImgExt = "/(\.jpg|\.jpeg|\.png)$/";
@@ -63,7 +64,7 @@
 		
 		<section class="post-content pure-u-1">
 			<?php the_content(); ?>
-			
+			<?php the_post_thumbnail(); ?>
 			<div class="" style="border:solid 1px #999;padding: 0 1em;">
 				<h2>In this edition:</h2>
 				<?php

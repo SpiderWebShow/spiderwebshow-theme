@@ -45,6 +45,7 @@
 		$authorID = get_the_author_meta("ID"); // get the author's description from their user account
 		$authorPhoto = types_render_usermeta_field( "author-photo", array("raw"=>"true")); // get URL for author image
 		
+
 		if($authorPhoto){
 			// Function to replace the upload-sized author photo with the thumbnail-sized one
 			$findImgExt = "/(\.jpg|\.jpeg|\.png)$/";
@@ -58,12 +59,13 @@
 		<header class="post-header pure-u-1">
 			<time class="post-pub-date" datetime="<?php the_time('c'); ?>"><?php the_time('l, F j, Y'); ?></time>
 			<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php echo types_render_field( "custom-edition-image", array(  )  ) ?>
 			<p class="author-name">By <?php the_author_posts_link(); ?></p>
 		</header>
 		
 		<section class="post-content pure-u-1">
 			<?php the_content(); ?>
-			
+		
 			<div class="" style="border:solid 1px #999;padding: 0 1em;">
 				<h2>In this edition:</h2>
 				<?php

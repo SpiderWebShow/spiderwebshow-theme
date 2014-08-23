@@ -64,7 +64,7 @@
 		
 		<section class="post-content pure-u-1">
 			<?php the_content(); ?>
-			<?php the_post_thumbnail(); ?>
+		
 			<div class="" style="border:solid 1px #999;padding: 0 1em;">
 				<h2>In this edition:</h2>
 				<?php

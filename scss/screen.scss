@@ -379,6 +379,7 @@ h1 {
 	position: relative;
 	overflow: hidden;
 	padding: 0;
+	font-size: 0; // Fixes overlay bleeding around the image
 }
 
 .cdncult-color-overlay {

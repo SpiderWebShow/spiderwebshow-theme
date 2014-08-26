@@ -739,9 +739,11 @@ p.wp-caption-text {
 
 
 /* COMMISSIONS VERTICAL */
+/* FILES: page-commissions.php, single-commission.php */
 
 .vertical_commissions, .single-commission, body.page-id-23 {
 	
+	/* darker colour scheme for watching movies */ 
 	background: $textcolor;
 	color: $white;
 	
@@ -753,6 +755,15 @@ p.wp-caption-text {
 		color: $link_hover_color;
 	}
 	
+}
+
+.vertical_commissions {
+  
+  a.commission-maker-detail {
+    display: block;
+    text-align: center;
+  }
+  
 }
 
 

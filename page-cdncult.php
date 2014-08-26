@@ -63,7 +63,8 @@
 			?>
 			<p class="date"><?php the_date('F j, Y') ?></p>
 			<h2><?php the_title(); ?></h2>
-			<?php echo types_render_field( "custom-edition-image", array(  )  ) ?>
+			<?php the_post_thumbnail('large'); // use existing wordpress featured image behaviour instead of creating Types ?>
+  			<?php // echo types_render_field( "custom-edition-image", array(  )  ) ?>
 			
 			<?php the_content(); ?>
 			

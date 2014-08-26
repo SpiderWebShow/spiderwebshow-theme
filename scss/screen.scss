@@ -691,7 +691,7 @@ p.wp-caption-text {
 }
 
 
-/* EDITIONS STYLING */
+/* SINGLE EDITION STYLING */
 /* FILE: single-edition.php  */
 
 .single-edition {
@@ -715,7 +715,27 @@ p.wp-caption-text {
   
 }
 
+/* EDITION ARCHIVE STYLING */
+/* FILE: archive-edition.php */
 
+.archive-navigation {
+  
+  margin-bottom: 3em;
+  
+  p {
+    font-size: $base_unit * 2;
+    font-style: italic;
+  }
+  
+  p.newer {
+    float: left;
+  }
+  
+  p.older {
+    float: right;
+  }
+  
+}
 
 
 /* COMMISSIONS VERTICAL */

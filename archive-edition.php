@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="main_content stage vertical_cdncult pure-g-r">
+<div class="main_content stage vertical_cdncult archive-edition pure-g-r">
 	
 	<?php 
 	
@@ -47,10 +47,15 @@
 		<?php the_excerpt(); ?>
 	</article>
 	
-		<?php endwhile; else: ?>
-		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-		<?php endif; ?>
-
+	<?php endwhile; else: ?>
+	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	<?php endif; ?>
+  
+  <div class="pure-u-1 archive-navigation">
+    <p class="newer"><?php previous_posts_link('« Newer'); ?></p>
+    <p class="older"><?php next_posts_link('Older »'); ?></p>
+  </div>
+  
 </div>
 
 <?php get_footer(); ?>

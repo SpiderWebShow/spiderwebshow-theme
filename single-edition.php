@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="main_content stage vertical_cdncult pure-g-r">
+<div class="main_content stage vertical_cdncult single-edition pure-g-r">
 
 	<?php 
 	
@@ -56,31 +56,37 @@
 		$authorName = get_the_author();
 	
 	?>
-		<header class="post-header pure-u-1">
-			<time class="post-pub-date" datetime="<?php the_time('c'); ?>"><?php the_time('l, F j, Y'); ?></time>
-			<h1 class="post-title"><?php the_title(); ?></h1>
-			<?php echo types_render_field( "custom-edition-image", array(  )  ) ?>
-			<p class="author-name">By <?php the_author_posts_link(); ?></p>
-		</header>
-		
-		<section class="post-content pure-u-1">
-			<?php the_content(); ?>
-		
-			<div class="" style="border:solid 1px #999;padding: 0 1em;">
-				<h2>In this edition:</h2>
+	
+		<div class="pure-u-1-3">
+		  <?php if(has_post_thumbnail()){ ?>
+			<figure class="thumbnail">
+  			<?php the_post_thumbnail('large'); // use existing wordpress featured image behaviour instead of creating Types   ?>
+  			<?php // echo types_render_field( "custom-edition-image", array(  )  ) ?>
+			</figure>
+      <?php } ?>
+			
+			<div class="article-list">
+				<p class="label">In this edition:</p>
 				<?php
 					$children = types_child_posts('article');
 					foreach($children as $child){ ?>
 					
-						<p><a href="<?php echo get_permalink($child->ID); ?>" title="<?php echo($child->post_title); ?>"><?php echo($child->post_title); ?></a></p>
+						<h2><a href="<?php echo get_permalink($child->ID); ?>" title="<?php echo($child->post_title); ?>"><?php echo($child->post_title); ?></a></h2>
 					
 					<?php }	?>
-			</div>
+			</div>			
 			
-		</section>
+		</div>
 		
-		
-			
+		<div class="pure-u-2-3">
+		  <header class="post-header">
+  			<time class="post-pub-date" datetime="<?php the_time('c'); ?>"><?php the_time('l, F j, Y'); ?></time>
+  			<h1 class="post-title"><?php the_title(); ?></h1>
+  		</header>
+			<p class="author-name">By <?php the_author_posts_link(); ?></p>
+		  <?php the_content(); ?>
+		</div>
+	
 	
 	<?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

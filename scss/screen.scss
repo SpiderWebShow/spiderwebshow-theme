@@ -34,7 +34,10 @@ $type_default: "Roboto", Helvetica, Arial, sans-serif;
 $type_serif: Georgia, "Times New Roman", serif;
 
 /* MISC STYLES */
+// standardized border-radius
 $radius: 4px;
+// double-lined for use in borders
+$double_line: double 3px $textcolor;
 
 
 /* GLOBALS  */
@@ -71,7 +74,7 @@ hr {
 	margin: $base_unit 0;
 	height: 3px;
 	border: 0;
-	border-top: double 3px $textcolor;
+	border-top: $double_line;
 }
 
 /* MOBILE FIRST */
@@ -571,7 +574,7 @@ h1 {
 	margin-bottom: 2em;
 	text-align: center;
 	padding: $base_unit;
-	border: double 3px $textcolor;
+	border: $double_line;
 	color: $textcolor;
 	
 	.author-name {
@@ -632,7 +635,7 @@ h1 {
 	margin-bottom: 2em;
 	width: 100%;
 	padding: $base_unit;
-	border: double 3px $textcolor;
+	border: $double_line;
 	text-align: center;
 	
 	.category-list-header, .tag-list-header {
@@ -665,7 +668,7 @@ p.wp-caption-text {
 	font-size: 0.8em;
 	color: $textcolor;
 	font-style: italic;
-	border-bottom: double 3px $textcolor;
+	border-bottom: $double_line;
 	padding-bottom: $base_unit;
 }
 
@@ -685,6 +688,31 @@ p.wp-caption-text {
 .alignright {
 	float: right;
 	padding: 1em 0 2em 2em;
+}
+
+
+/* EDITIONS STYLING */
+/* FILE: single-edition.php  */
+
+.single-edition {
+  
+  .thumbnail {
+    // Each edition has a featured image thumbnail
+    margin-bottom: 2em;
+  }
+  
+  .article-list {
+    // A list of the child articles within that edition
+    padding: $base_unit;
+    border: $double_line;
+    
+    p.label {
+      font-style: italic;
+      text-align: center;
+    }
+    
+  }
+  
 }
 
 

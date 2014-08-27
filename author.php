@@ -12,6 +12,10 @@
 		$authorWebsite = $curauth->user_url; // get custom field for compsny/artist website -- OPTIONAL
 		$authorBio = $curauth->description; // get the author's bio from their user account
 		$twitterHandle = types_render_usermeta_field( "twitter-handle", array("raw"=>"true", "user_id" => $authorID)); // get custom field for company/artist twitter handle -- OPTIONAL
+		  // Scrub any stray "@" symbols from the handle to keep the data clean here, regardless of how it was entered in the database
+			// preg_replace($patternToFind, $patternToReplace, $stringToOperateOn);
+			$twitterHandle = preg_replace("/(@)/", "", $twitterHandle);		
+		
 		$authorPhoto = types_render_usermeta_field( "author-photo", array("raw"=>"true", "user_id" => $authorID)); // get URL for author image
 		$commissionWords = types_render_usermeta_field("commission-random-words", array("raw"=>"true", "user_id" => $authorID)); // get the random words they used as a starting point for their commission
 		$authorLongitude = types_render_usermeta_field("author-longitude", array("raw"=>"true", "user_id" => $authorID)); // get author longitude

@@ -12,6 +12,10 @@
 		$authorWebsite = $curauth->user_url; // get custom field for compsny/artist website -- OPTIONAL
 		$authorBio = $curauth->description; // get the author's bio from their user account
 		$twitterHandle = types_render_usermeta_field( "twitter-handle", array("raw"=>"true", "user_id" => $authorID)); // get custom field for company/artist twitter handle -- OPTIONAL
+		  // Scrub any stray "@" symbols from the handle to keep the data clean here, regardless of how it was entered in the database
+			// preg_replace($patternToFind, $patternToReplace, $stringToOperateOn);
+			$twitterHandle = preg_replace("/(@)/", "", $twitterHandle);		
+		
 		$authorPhoto = types_render_usermeta_field( "author-photo", array("raw"=>"true", "user_id" => $authorID)); // get URL for author image
 		$commissionWords = types_render_usermeta_field("commission-random-words", array("raw"=>"true", "user_id" => $authorID)); // get the random words they used as a starting point for their commission
 		$authorLongitude = types_render_usermeta_field("author-longitude", array("raw"=>"true", "user_id" => $authorID)); // get author longitude
@@ -137,20 +141,48 @@
 			    }
 			}).addTo(authorMap);
 			
-			
+			// Daylight Savings Time Fixes
+			// http://javascript.about.com/library/bldst.htm
+			// http://stackoverflow.com/questions/11887934/check-if-daylight-saving-time-is-in-effect-and-if-it-is-for-how-many-hours
+			Date.prototype.stdTimezoneOffset = function() {
+        var jan = new Date(this.getFullYear(), 0, 1);
+        var jul = new Date(this.getFullYear(), 6, 1);
+        return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+        }
+			Date.prototype.dst = function() {
+        return this.getTimezoneOffset() < this.stdTimezoneOffset();
+        }
 			
 			// Function to grab the current time where the author is, given the time where the visitor is
 			function authorTime(offset) {
-    
+        
 		    // get the client's current time
 		    var clientTime = new Date();
+		    if (clientTime.dst()){
+  		    offset = offset + 1;
+		    }
 		    
 		    // get UTC time compared to the client in milliseconds
 		    var utc = clientTime.getTime() + (clientTime.getTimezoneOffset() * 60000);
 		    
 		    var authorTime = new Date(utc + (3600000 * offset)); // get the author's local time, since we have their hour differential from the timezone setting
+		    
 		    var authorHour = authorTime.getHours(); // what's the hour there?
-		    var authorMinute = authorTime.getMinutes(); // what's the minute there?
+		      // if it's PM, subtract 12 to get the 12-hour clock version of the hour.
+		      if(authorHour >= 12) {
+  		      authorHour = authorHour - 12;
+		      }
+		      
+		      if(authorHour === 0) {
+  		      authorHour = "00";
+		      }		      	    
+		    		    
+        var authorMinute = authorTime.getMinutes(); // what's the minute there?
+  	      // If there's only one digit returned add a preceding zero
+		      authorMinute.toString();
+		      if(authorMinute.length == 1) {
+  		      authorMinute = "0" + authorMinute;
+		      }
 		    	    
 		    var output = authorHour + ":" + authorMinute; // combine it into one string
 		    

@@ -74,7 +74,8 @@
 						<h2><a href="<?php echo get_permalink($child->ID); ?>" title="<?php echo($child->post_title); ?>"><?php echo($child->post_title); ?></a></h2>
 					
 					<?php }	?>
-			</div>			
+			</div>
+				
 			
 		</div>
 		

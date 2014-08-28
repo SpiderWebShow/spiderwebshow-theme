@@ -31,7 +31,8 @@
 		<h1><a href="/cdncult" title="#CdnCult Home">#Cdncult Times</a></h1>
 		<p class="cdncult-tagline">Reporting and commentary about Canadian performance culture in Internet times &bull; <?php echo $most_recent_date; ?></p>
 	</header>
-	<hr/>
+	
+	<hr>
 	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // WORDPRESS LOOP BEGINS ?>
 		<header class="post-header pure-u-1">
@@ -60,10 +61,47 @@
 						
 			<hr>
 			
-			<aside>
-				<?php $the_parent = wpcf_pr_post_get_belongs(get_the_ID(),'edition'); ?>
-				<p>This article originally appeared in <a href="<?php echo get_permalink($the_parent); ?>"><?php echo get_the_title($the_parent); ?></a></p>
-			</aside>
+			<div class="related">
+			  <?php
+			    // Get the current article's ID so that we can later compare it against the siblings'
+			    $thisHerePost = get_the_id();
+			    // Use WP-Types built-in function to get the ID of the parent edition
+			    $the_parent = wpcf_pr_post_get_belongs( $thisHerePost,'edition' );
+			    // http://wp-types.com/forums/topic/displaying-brother-pages-in-php/#post-95642
+			    // Get post data for the parent edition		    
+          // NOTE: It seems to me that hijacking the $post variable, which is used by Wordpress, is poor practice. But this works and nothing else I've ever tried has, so...
+          $post = get_post($the_parent);
+          // Get the array of child posts of the parent edition
+          $child_posts = types_child_posts('article');
+          // Now we're ready to loop through the sibling posts array. Put it inside a ul element after the headline and introductory text
+        ?>
+        <h2>Also in this issue</h2>
+ 			  <p>This article originally appeared in <a href="<?php echo get_permalink($the_parent); ?>"><?php echo get_the_title($the_parent); ?></a>. More from this issue:</p>
+        <ul>
+        
+        <?php
+          // loop through each child post
+          foreach ($child_posts as $child_post) {
+            // get the ID of the child post
+            $sibling_id = $child_post->ID;
+            // use the ID to get the title and permalink
+            $sibling_title = get_the_title($sibling_id);
+            $sibling_url = get_the_permalink($sibling_id);
+            // IF $sibling_id DOES NOT equal this page's ID, we know it must be one of the other siblings. This way we don't show a redundant link to the page you're already reading
+            if( $sibling_id != $thisHerePost ) :
+        ?>
+
+          <li><a href="<?php echo $sibling_url; ?>" title="<?php echo $sibling_title; ?>"><?php echo $sibling_title; ?></a></li>
+        
+        <?php
+          // end the if statement; end the foreach loop. Done. Close the ul element.
+          endif; }
+        ?>
+        </ul>
+
+			</div>
+			
+			<hr>
 
 			<div class="comments">
 				<!-- START: Livefyre Embed -->

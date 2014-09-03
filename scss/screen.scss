@@ -69,6 +69,31 @@ body {
 	}
 }
 
+/* Skiplink */
+/* Implemented using solutions outlined by WebAIM: */
+/* http://webaim.org/techniques/skipnav/ */
+/* http://webaim.org/techniques/css/invisiblecontent/ */
+a.skiplink {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+a.skiplink:focus {
+  left: $base_unit;
+  top: $base_unit;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  background: $white;
+  padding: $base_unit;
+  overflow: visible;
+}
+
+
 /* Default Horizontal Rule */
 hr {
 	margin: $base_unit 0;

@@ -554,7 +554,9 @@ h1 {
 	
 	.author-name {
 		font-size: 1.2em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B';
+		font-weight: 400;
+		font-style: normal;
 	}
 	
 } /* /.post-header */
@@ -579,7 +581,9 @@ h1 {
 	
 	.author-name {
 		font-size: 1.8em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+		font-family: 'Chronicle Cond A', 'Chronicle Cond B';
+		font-weight: 700;
+		font-style: normal;
 	}
 	
 	.author-photo img {
@@ -616,6 +620,7 @@ h1 {
 		border-bottom: solid 1px #bbb;
 		}
 	
+/*
 	.author-related-post {
 		display: block;
 		color: $textcolor;
@@ -626,6 +631,7 @@ h1 {
 		.author-related-post:hover {
 			color: $link_hover_color;
 		}
+*/
 	
 } /* /.post_meta-author */
 
@@ -654,6 +660,35 @@ h1 {
 	
 } /* /.post_meta-bottom */
 
+/* RELATED ARTICLES */
+/* FILE: single-article.php */
+/* SCOPE: .related */
+/* Related articles box at the end of CdnCult articles pointing to sibling articles in the same edition */
+
+.related {
+  padding: 1em;
+  border: $double_line;
+}
+
+.sidebar-header {
+  font-size: 0.9em;
+	font-family: 'Chronicle Cond A', 'Chronicle Cond B'; 
+	font-weight: 700;
+	font-style: normal;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0.2em 1em;
+	border-top: solid 1px $textcolor;
+	border-bottom: solid 1px $textcolor;
+}
+
+.related p {
+  font-size: 0.9em;
+}
+
+.related h2 {
+  margin-top: 0;
+}
 
 /* Post Images */
 /* (Including fixing Wordpress's Stupid-ass Image Insertion) */

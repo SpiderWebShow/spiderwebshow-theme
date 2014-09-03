@@ -177,31 +177,33 @@
         $post = get_post($the_parent);
         // Get the array of child posts of the parent edition
         $child_posts = types_child_posts('article');
-        // Now we're ready to loop through the sibling posts array. Put it inside a ul element after the headline and introductory text
+        // Now we're ready to loop through the sibling posts array.
         ?>
-        <h2>Also in this issue</h2>
+        <h3 class="sidebar-header">Also in this issue</h3>
  			  <p>This article originally appeared in <a href="<?php echo get_permalink($the_parent); ?>"><?php echo get_the_title($the_parent); ?></a>. More from this issue:</p>
-        <ul>
         
         <?php
           // loop through each child post
           foreach ($child_posts as $child_post) {
             // get the ID of the child post
             $sibling_id = $child_post->ID;
-            // use the ID to get the title and permalink
+            // use the ID to get the title, permalink, and thumbnail
             $sibling_title = get_the_title($sibling_id);
             $sibling_url = get_the_permalink($sibling_id);
+            $sibling_thumbnail = get_the_post_thumbnail($sibling_id, "medium", array( 'alt' => $sibling_title , 'title' => $sibling_title ) );
             // IF $sibling_id DOES NOT equal this page's ID, we know it must be one of the other siblings. This way we don't show a redundant link to the page you're already reading
             if( $sibling_id != $thisHerePost ) :
         ?>
 
-          <li><a href="<?php echo $sibling_url; ?>" title="<?php echo $sibling_title; ?>"><?php echo $sibling_title; ?></a></li>
+          <a class="related-article" href="<?php echo $sibling_url; ?>" title="<?php echo $sibling_title; ?>">
+            <?php echo $sibling_thumbnail; ?>
+            <h2><?php echo $sibling_title; ?></h2>
+          </a>
         
         <?php
-          // end the if statement; end the foreach loop. Done. Close the ul element.
+          // end the if statement; end the foreach loop. Done.
           endif; }
         ?>
-        </ul>
 
 			</div>
 						

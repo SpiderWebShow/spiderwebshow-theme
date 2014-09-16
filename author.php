@@ -178,8 +178,8 @@
 		      }		      	    
 		    		    
         var authorMinute = authorTime.getMinutes(); // what's the minute there?
-  	      // If there's only one digit returned add a preceding zero
-		      authorMinute.toString();
+          // If there's only one digit returned add a preceding zero
+		      authorMinute = authorMinute.toString();
 		      if(authorMinute.length == 1) {
   		      authorMinute = "0" + authorMinute;
 		      }

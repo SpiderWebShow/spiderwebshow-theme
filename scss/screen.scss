@@ -139,6 +139,7 @@ hr {
 
 .nav {
 	position: fixed;
+	padding-top: 3em;
 	width: 20%;
 	z-index: 100;
 	-webkit-transform: translateZ(0);
@@ -147,7 +148,7 @@ hr {
 	-ms-transform: translateZ(0);
 	transform: translateZ(0);
 	background: #fff;
-	border-right: solid 1px $textcolor;
+/* 	border-right: solid 1px $textcolor; */
 }
 
 .main {

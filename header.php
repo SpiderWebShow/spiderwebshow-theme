@@ -41,9 +41,7 @@
   <a href="#main" class="skiplink" title="Skip to main content">Skip to main content</a>
 
 	<div class="nav" role="banner">
-		<figure id="nav_logo">
-			
-		</figure>
+
 		<a href="/" title="Home"><h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1></a>
 
 		<!-- Load in the primary menu -->

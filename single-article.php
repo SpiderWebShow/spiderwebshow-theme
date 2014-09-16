@@ -95,7 +95,7 @@
         
         <?php
           // end the if statement; end the foreach loop. Done. Close the ul element.
-          endif; }
+          endif; }      		
         ?>
         </ul>
 

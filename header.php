@@ -42,7 +42,10 @@
 
 	<div class="nav" role="banner">
 
-		<a href="/" title="Home"><h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1></a>
+		<a href="/" title="Home">
+		  <img class="nav-logo" src="//placehold.it/500&text=Logo" alt="SpiderWebShow logo" style="max-width:100%;padding:1em" />
+		  <h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1>
+	  </a>
 
 		<!-- Load in the primary menu -->
 		<?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => 'nav', 'menu_class' => 'nav_menu' ) ); ?>

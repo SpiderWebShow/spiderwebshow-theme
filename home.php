@@ -133,33 +133,6 @@
 		$('#autotune').attr('style',colorString);
 	};
 	
-/*
-	
-	function lastAutotuneCall(){
-		// get the date and time of the last Autotune update by querying the SoundCloud API
-		var soundcloudQuery = "https://api.soundcloud.com/users/spiderweb-show/tracks.json?limit=1&client_id=3f356f314a7dde49074ede79efb447b2";
-		
-		$.getJSON(soundcloudQuery, function(data){
-			
-			var uploadTime = data[0].created_at;
-			$('#autotune').attr('data-upload-time', uploadTime);			
-			
-		});		
-				
-	};
-	
-	function autotuneTimeAgo() {
-		
-		var timeposted = $('#autotune').data('upload-time');
-		console.log(timeposted);
-		
-	};
-	
-*/
-	
-	
-	
-	
 	head.ready(function(){
 		
 		// get the commission thumbnail holder and resize that box to be the proper aspect ratio like the others.

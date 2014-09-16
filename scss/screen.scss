@@ -105,58 +105,65 @@ hr {
 /* MOBILE FIRST */
 /* STRUCTURE LAYOUT FOR TABLET & BELOW */
 
-@media (max-width:767px) {
-	
-	.nav, .main {
-		width: 100%;
-		margin: 0;
-		min-height: intrinsic;
-	}
-	
-	.nav {
-		position: fixed;
-		top: 0;
-		height: 3em;
-		background: $dark;
-		color: $white;
-		
-		/* Translate3d Layer Hack */
-		transform: translate3d(0);
-	}
-	
-	.main {
-	  margin-top: $base_unit * 3.5;
-		padding: $base_unit;
-	}
-	
-}
-
-/* STRUCTURE LAYOUT FOR DESKTOP  */
-
 .nav, .main {
-	min-height: 100%;   
-} 
+	width: 100%;
+	margin: 0;
+	min-height: intrinsic;
+}
 
 .nav {
 	position: fixed;
-	padding-top: 3em;
-	width: 20%;
-	z-index: 100;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	background: #fff;
-/* 	border-right: solid 1px $textcolor; */
+	top: 0;
+	height: 3em;
+	background: $dark;
+	color: $white;
+	
+	/* Translate3d Layer Hack */
+	transform: translate3d(0);
 }
 
 .main {
-	position: absolute;
-	width: 80%;
-	margin-left: 20%;
+  margin-top: $base_unit * 3.5;
+	padding: $base_unit;
 }
+  
+  /* Logo is hidden at mobile sizes */
+  .nav-logo {
+    display: none;
+  }
 
+/* STRUCTURE LAYOUT FOR DESKTOP  */
+
+@media (min-width:768px) {  
+  .nav, .main {
+  	min-height: 100%;   
+  } 
+  
+  .nav {
+  	position: fixed;
+  	width: 20%;
+  	z-index: 100;
+  	-webkit-transform: translateZ(0);
+  	-moz-transform: translateZ(0);
+  	-o-transform: translateZ(0);
+  	-ms-transform: translateZ(0);
+  	transform: translateZ(0);
+  	background: #fff;
+  /* 	border-right: solid 1px $textcolor; */
+  }
+  
+  /* Logo displays at Desktop and wider sizes */
+  .nav-logo {
+    display: block;
+  }
+  
+  .main {
+    margin-top: 0;
+  	position: absolute;
+  	width: 80%;
+  	margin-left: 20%;
+  }
+}
 
 
 /* MAIN_CONTENT PADDING */
@@ -196,39 +203,11 @@ h1 {
 
 /* BANNER & BRANDING */
 
-#nav_logo {
-	top: 0;
-	
-	img {
-		width: 100%;
-	}
-	
-	svg path, svg rect, svg circle {
-		-webkit-transition-duration: 0.3s;
-		-moz-transition-duration: 0.3s;
-		-o-transition-duration: 0.3s;
-		-ms-transition-duration: 0.3s;
-		transition-duration: 0.3s;
-	}
-	
-	svg path:hover, svg rect:hover, svg circle:hover {
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
-	}
-	
-} /* /#nav_logo */
-
-
 .nav_title {
-	top: $base_unit;
 	margin: 0;
-	padding: 0 0.67em;
+	padding: 0 1rem;
 	font-size: 2em;
 	color: $textcolor;
-	line-height: 1.2em;
 }
 
 @media (max-width:767px) {

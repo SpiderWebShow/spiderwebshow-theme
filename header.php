@@ -38,6 +38,8 @@
 </head>
 <body <?php body_class(); ?>>
 
+  <a href="#main" class="skiplink" title="Skip to main content">Skip to main content</a>
+
 	<div class="nav" role="banner">
 		<figure id="nav_logo">
 			
@@ -51,5 +53,5 @@
 		<a href="#" class="nav_toggle nav_toggle-hidden">Menu</a>
 	</div>
 	
-	<div class="main <?php if(is_home()){ echo "homepage"; }?>" role="main"> <!-- Main Content Begins -->
+	<div id="main" class="main <?php if(is_home()){ echo "homepage"; }?>" role="main"> <!-- Main Content Begins -->
 	

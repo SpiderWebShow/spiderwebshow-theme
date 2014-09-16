@@ -14,9 +14,11 @@
 		
 		// The Loop
 		if ( $latest_edition_date->have_posts() ) {
-			while ( $latest_edition_date->have_posts() ) {
+			while ( $latest_edition_date->have_posts() )  {
 				$latest_edition_date->the_post();
-				$most_recent_date = get_the_date();
+				$most_recent_date = get_the_date(); ?> 
+
+				<?php
 			}
 		} else {
 			// no posts found
@@ -26,6 +28,7 @@
 		wp_reset_postdata();
 	
 	?>
+	
 	
 	<header class="cdncult_header pure-u-1">
 		<h1><a href="/cdncult" title="#CdnCult Home">#Cdncult Times</a></h1>
@@ -59,6 +62,7 @@
 						
 			<?php the_content(); ?>
 						
+<<<<<<< HEAD
 			<hr>
 			
 			<div class="related">
@@ -102,6 +106,9 @@
 			</div>
 			
 			<hr>
+=======
+  		<hr>
+>>>>>>> 74993624a90669499dfc9e2ebfe9b5be6685ccb0
 
 			<div class="comments">
 				<!-- START: Livefyre Embed -->
@@ -202,7 +209,50 @@
 				<?php endif; ?>
 			</div>
 			<?php } ?>
+		
+			<div class="related">
 			
+			<?php 
+			  // Get the current article's ID so that we can later compare it against the siblings'
+		    $thisHerePost = get_the_id();
+		    // Use WP-Types built-in function to get the ID of the parent edition
+		    $the_parent =  (string) wpcf_pr_post_get_belongs( $thisHerePost, 'edition' );
+		    // http://wp-types.com/forums/topic/displaying-brother-pages-in-php/#post-95642
+		    // Get post data for the parent edition		    
+        // NOTE: Hijacking the $post variable is obviously bad practice. But this works and nothing else I've ever tried has, so. As long as this related panel remains the last thing in the loop it's not a total disaster
+        $post = get_post($the_parent);
+        // Get the array of child posts of the parent edition
+        $child_posts = types_child_posts('article');
+        // Now we're ready to loop through the sibling posts array.
+        ?>
+        <h3 class="sidebar-header">Also in this issue</h3>
+ 			  <p>This article originally appeared in <a href="<?php echo get_permalink($the_parent); ?>"><?php echo get_the_title($the_parent); ?></a>. More from this issue:</p>
+        
+        <?php
+          // loop through each child post
+          foreach ($child_posts as $child_post) {
+            // get the ID of the child post
+            $sibling_id = $child_post->ID;
+            // use the ID to get the title, permalink, and thumbnail
+            $sibling_title = get_the_title($sibling_id);
+            $sibling_url = get_the_permalink($sibling_id);
+            $sibling_thumbnail = get_the_post_thumbnail($sibling_id, "medium", array( 'alt' => $sibling_title , 'title' => $sibling_title ) );
+            // IF $sibling_id DOES NOT equal this page's ID, we know it must be one of the other siblings. This way we don't show a redundant link to the page you're already reading
+            if( $sibling_id != $thisHerePost ) :
+        ?>
+
+          <a class="related-article" href="<?php echo $sibling_url; ?>" title="<?php echo $sibling_title; ?>">
+            <?php echo $sibling_thumbnail; ?>
+            <h2><?php echo $sibling_title; ?></h2>
+          </a>
+        
+        <?php
+          // end the if statement; end the foreach loop. Done.
+          endif; }
+        ?>
+
+			</div>
+						
 		</aside>
 			
 	

@@ -194,8 +194,8 @@
         ?>
 
           <a class="related-article" href="<?php echo $sibling_url; ?>" title="<?php echo $sibling_title; ?>">
-            <?php echo $sibling_thumbnail; ?>
             <h2><?php echo $sibling_title; ?></h2>
+            <?php echo $sibling_thumbnail; ?>
           </a>
         
         <?php

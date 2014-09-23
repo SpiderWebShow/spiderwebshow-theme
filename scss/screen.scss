@@ -24,8 +24,8 @@ $light: #fff;
 $white: #fff;
 
 /* LINK COLORS */
-$link_default_color: #6dbcdb;
-$link_hover_color: #e67377;
+$link_default_color: blue;
+$link_hover_color: red;
 
 /* TYPOGRAPHY */
 
@@ -91,6 +91,31 @@ a.skiplink:focus {
   background: $white;
   padding: $base_unit;
   overflow: visible;
+}
+
+/* GLOBAL LINK COLOURS */
+/* FILE(S): All */
+/* SCOPE: Global */
+
+a {
+  color: $link_default_color;
+  transition-duration: 0.2s;
+}
+
+a:hover {
+  color: $link_hover_color;
+}
+
+a:visited {
+  color: $textcolor;
+}
+
+a:active {
+  color: $textcolor;
+}
+
+a:focus {
+  background: yellow;
 }
 
 
@@ -202,23 +227,33 @@ h1 {
 
 
 /* BANNER & BRANDING */
+/* FILE(S): All */
+/* SCOPE: Global */
+/* Controls the display of the Site title and logo on all pages */
 
+/* Mobile first! */
+#nav_logo { display: none; }
+	
 .nav_title {
-	margin: 0;
-	padding: 0 1rem;
-	font-size: 2em;
-	color: $textcolor;
+	position: absolute;
+ 	padding: 0 1rem;
+	font-size: 1.2em;
+	color: $white;
 }
 
-@media (max-width:767px) {
-	#nav_logo { display: none; }
-	
+@media (min-width:768px) {
+  
+  #nav_logo { 
+    display: block;
+  }
+  
 	.nav_title {
-		position: absolute;
-		font-size: 1.2em;
-		color: $white;
-	}
-		
+	  position: relative;
+  	margin: 0;
+  	font-size: 2em;
+  	color: $textcolor;
+  }
+  
 }
 
 
@@ -433,9 +468,6 @@ h1 {
 	/* Cdncult Section Link styles */
 	a {
 		color: $textcolor;
-		text-decoration: none;
-		border-bottom: solid 1px #ddf;
-		box-shadow: inset 0 -2px 0 #ddf;
 	}
 	
 	a:hover {
@@ -689,10 +721,6 @@ h1 {
 
 .related p {
   font-size: 0.9em;
-}
-
-.related h2 {
-  margin-top: 0;
 }
 
 /* Post Images */

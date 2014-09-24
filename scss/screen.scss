@@ -24,8 +24,8 @@ $light: #fff;
 $white: #fff;
 
 /* LINK COLORS */
-$link_default_color: #6dbcdb;
-$link_hover_color: #e67377;
+$link_default_color: blue;
+$link_hover_color: red;
 
 /* TYPOGRAPHY */
 
@@ -93,6 +93,31 @@ a.skiplink:focus {
   overflow: visible;
 }
 
+/* GLOBAL LINK COLOURS */
+/* FILE(S): All */
+/* SCOPE: Global */
+
+a {
+  color: $link_default_color;
+  transition-duration: 0.2s;
+}
+
+a:hover {
+  color: $link_hover_color;
+}
+
+a:visited {
+  color: $textcolor;
+}
+
+a:active {
+  color: $textcolor;
+}
+
+a:focus {
+  background: yellow;
+}
+
 
 /* Default Horizontal Rule */
 hr {
@@ -105,57 +130,65 @@ hr {
 /* MOBILE FIRST */
 /* STRUCTURE LAYOUT FOR TABLET & BELOW */
 
-@media (max-width:767px) {
-	
-	.nav, .main {
-		width: 100%;
-		margin: 0;
-		min-height: intrinsic;
-	}
-	
-	.nav {
-		position: fixed;
-		top: 0;
-		height: 3em;
-		background: $dark;
-		color: $white;
-		
-		/* Translate3d Layer Hack */
-		transform: translate3d(0);
-	}
-	
-	.main {
-	  margin-top: $base_unit * 3.5;
-		padding: $base_unit;
-	}
-	
-}
-
-/* STRUCTURE LAYOUT FOR DESKTOP  */
-
 .nav, .main {
-	min-height: 100%;   
-} 
+	width: 100%;
+	margin: 0;
+	min-height: intrinsic;
+}
 
 .nav {
 	position: fixed;
-	width: 20%;
-	z-index: 100;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	background: #fff;
-	border-right: solid 1px $textcolor;
+	top: 0;
+	height: 3em;
+	background: $dark;
+	color: $white;
+	
+	/* Translate3d Layer Hack */
+	transform: translate3d(0);
 }
 
 .main {
-	position: absolute;
-	width: 80%;
-	margin-left: 20%;
+  margin-top: $base_unit * 3.5;
+	padding: $base_unit;
 }
+  
+  /* Logo is hidden at mobile sizes */
+  .nav-logo {
+    display: none;
+  }
 
+/* STRUCTURE LAYOUT FOR DESKTOP  */
+
+@media (min-width:768px) {  
+  .nav, .main {
+  	min-height: 100%;   
+  } 
+  
+  .nav {
+  	position: fixed;
+  	width: 20%;
+  	z-index: 100;
+  	-webkit-transform: translateZ(0);
+  	-moz-transform: translateZ(0);
+  	-o-transform: translateZ(0);
+  	-ms-transform: translateZ(0);
+  	transform: translateZ(0);
+  	background: #fff;
+  /* 	border-right: solid 1px $textcolor; */
+  }
+  
+  /* Logo displays at Desktop and wider sizes */
+  .nav-logo {
+    display: block;
+  }
+  
+  .main {
+    margin-top: 0;
+  	position: absolute;
+  	width: 80%;
+  	margin-left: 20%;
+  }
+}
 
 
 /* MAIN_CONTENT PADDING */
@@ -194,51 +227,33 @@ h1 {
 
 
 /* BANNER & BRANDING */
+/* FILE(S): All */
+/* SCOPE: Global */
+/* Controls the display of the Site title and logo on all pages */
 
-#nav_logo {
-	top: 0;
+/* Mobile first! */
+#nav_logo { display: none; }
 	
-	img {
-		width: 100%;
-	}
-	
-	svg path, svg rect, svg circle {
-		-webkit-transition-duration: 0.3s;
-		-moz-transition-duration: 0.3s;
-		-o-transition-duration: 0.3s;
-		-ms-transition-duration: 0.3s;
-		transition-duration: 0.3s;
-	}
-	
-	svg path:hover, svg rect:hover, svg circle:hover {
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
-	}
-	
-} /* /#nav_logo */
-
-
 .nav_title {
-	top: $base_unit;
-	margin: 0;
-	padding: 0 0.67em;
-	font-size: 2em;
-	color: $textcolor;
-	line-height: 1.2em;
+	position: absolute;
+ 	padding: 0 1rem;
+	font-size: 1.2em;
+	color: $white;
 }
 
-@media (max-width:767px) {
-	#nav_logo { display: none; }
-	
+@media (min-width:768px) {
+  
+  #nav_logo { 
+    display: block;
+  }
+  
 	.nav_title {
-		position: absolute;
-		font-size: 1.2em;
-		color: $white;
-	}
-		
+	  position: relative;
+  	margin: 0;
+  	font-size: 2em;
+  	color: $textcolor;
+  }
+  
 }
 
 
@@ -453,9 +468,6 @@ h1 {
 	/* Cdncult Section Link styles */
 	a {
 		color: $textcolor;
-		text-decoration: none;
-		border-bottom: solid 1px #ddf;
-		box-shadow: inset 0 -2px 0 #ddf;
 	}
 	
 	a:hover {
@@ -709,10 +721,6 @@ h1 {
 
 .related p {
   font-size: 0.9em;
-}
-
-.related h2 {
-  margin-top: 0;
 }
 
 /* Post Images */

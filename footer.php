@@ -6,12 +6,9 @@
 		head.js({ jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'},
 						'<?php echo $template; ?>/js/scripts.js',
 						'<?php echo $template; ?>/js/jquery.parallax.min.js',
-						//{ soundjs: '//code.createjs.com/soundjs-0.5.2.min.js' },
 						'<?php echo $template; ?>/js/fitvids.js',
-						//{ soundmanager: '<?php echo $template; ?>/js/soundmanager2/script/soundmanager2-jsmin.js' },
 						'<?php echo $template; ?>/js/maskedinput.min.js',
 						'//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
-						//'//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js',
 						'//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js',
 						'//platform.twitter.com/widgets.js',
 						'//connect.facebook.net/en_US/all.js#xfbml=1&appId=220399704646080'

@@ -48,7 +48,7 @@
 
 	
 	<div class="pure-u-1">
-		<!-- <h1>Previous Talk Shows</h1> -->
+    <h1>Previous Talk Shows</h1>
 	</div>
 		<?php
 			// Custom posts loop for commissions

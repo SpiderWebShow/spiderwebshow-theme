@@ -34,7 +34,7 @@
 	
 	<hr>
 	
-	<div class="pure-u-1-3 edition-intro">
+	<div class="pure-u-1-2 edition-intro">
 		<?php
 		/*
 		 * Run two loops. First, grab the most recent Edition and display it. 
@@ -80,7 +80,7 @@
 		<a href="/edition" title="See all editions of the #CdnCult Times">Read all back issues of #CdnCult Times &raquo;</a>
 	</div>
 	
-	<div class="pure-u-2-3 edition-article-excerpts">
+	<div class="pure-u-1-2 edition-article-excerpts">
 		<?php 
 		
 		/*

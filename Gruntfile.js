@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     watch: {
       compass: {
         files: ['**/*.scss'],
-        tasks: ['compass']
+        tasks: ['compass', 'autoprefixer']
       }
        
     },
@@ -27,6 +27,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+
 
   // grunt.loadNpmTasks('grunt-recess');
 

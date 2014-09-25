@@ -43,7 +43,7 @@
 	<div class="nav" role="banner">
 
 		<a href="/" title="Home">
-		  <img class="nav-logo" src="//placehold.it/500&text=Logo" alt="SpiderWebShow logo" style="max-width:100%;padding:1em" />
+		  <img class="nav-logo" src="<?php bloginfo('template_url') ?>/img/sws-logo-optimized.svg" alt="SpiderWebShow logo" style="max-width:100%;padding:1em" />
 		  <h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1>
 	  </a>
 

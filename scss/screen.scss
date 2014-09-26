@@ -7,7 +7,7 @@
 @import "http://yui.yahooapis.com/pure/0.2.1/pure-min.css";
 
 /* Import the Roboto font from Google's Font API */
-@import "http://fonts.googleapis.com/css?family=Roboto:100,100italic,400,400italic";
+/* @import "http://fonts.googleapis.com/css?family=Roboto:100,100italic,400,400italic"; */
 
 
 /* MEASUREMENTS */
@@ -30,7 +30,8 @@ $link_hover_color: red;
 /* TYPOGRAPHY */
 
 $textcolor: #444;	
-$type_default: "Roboto", Helvetica, Arial, sans-serif;
+/* $type_default: "Roboto", Helvetica, Arial, sans-serif; */
+$type_default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $type_serif: Georgia, "Times New Roman", serif;
 
 /* MISC STYLES */
@@ -209,8 +210,10 @@ hr {
 /* TYPOGRAPHY */
 
 h1,h2,h3,h4,h5,h6 {
+/*
 	font-style: normal;
 	font-weight: 100;
+*/
 }
 
 
@@ -458,11 +461,13 @@ h1 {
 
 .vertical_cdncult {
 	background: $white;
-	font-family: Georgia, "Times New Roman", serif;
+	/* font-family: Georgia, "Times New Roman", serif; */
+	font-family: $type_default;
 	
 	/* Cdncult Header Styles */
 	h1, h2, h3, h4 {
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
+
 	}
 	
 	/* Cdncult Section Link styles */
@@ -485,7 +490,7 @@ h1 {
 	
 	.cdncult-tagline {
 		font-size: 0.9em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal;
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal; */
 
 	}
 	
@@ -511,7 +516,7 @@ h1 {
 	
 	.author, .date {
 		font-size: 0.9em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
 		border-top: solid 1px $textcolor;
 		border-bottom: solid 1px $textcolor;
 		padding: 0.7em 0;
@@ -573,7 +578,7 @@ h1 {
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: 0.9em;
-	font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+/* 	font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
 }
 
 .post-header {
@@ -591,7 +596,7 @@ h1 {
 	
 	.author-name {
 		font-size: 1.2em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B';
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; */
 		font-weight: 400;
 		font-style: normal;
 	}
@@ -618,7 +623,7 @@ h1 {
 	
 	.author-name {
 		font-size: 1.8em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B';
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; */
 		font-weight: 700;
 		font-style: normal;
 	}
@@ -649,7 +654,7 @@ h1 {
 	
 	.author-related-posts-header, .about-the-author, .connect-the-author {
 		font-size: 0.9em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
 		text-transform: uppercase;
 		display: inline-block;
 		padding: 0.2em 1em;
@@ -683,7 +688,7 @@ h1 {
 	
 	.category-list-header, .tag-list-header {
 		font-size: 0.9em;
-		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal;
+/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
 		text-transform: uppercase;
 		display: inline-block;
 		padding: 0.2em 1em;
@@ -709,7 +714,7 @@ h1 {
 
 .sidebar-header {
   font-size: 0.9em;
-	font-family: 'Chronicle Cond A', 'Chronicle Cond B'; 
+/* 	font-family: 'Chronicle Cond A', 'Chronicle Cond B';  */
 	font-weight: 700;
 	font-style: normal;
 	text-align: center;

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+<style>
+	.style0{
+		fill:	#BE1E2D;
+	}
+	.style1{
+		stroke:	#BE1E2D;
+		stroke-width: 10;
+		stroke-miterlimit:	10;
+		fill:	none;
+	}
+</style><g>
+	<path d="M1016.4 6v1012H6V6H1016.4 M1022.4 0H0v1024h1022.4V0L1022.4 0z" class="style0"/>
+</g>
+<line x1="190.9" y1="980.1" x2="893.3" y2="43.6" class="style1"/>
+<line x1="448.3" y1="895.3" x2="351" y2="766.7" class="style1"/>
+<line x1="254.5" y1="766.7" x2="351" y2="766.7" class="style1"/>
+<line x1="42.3" y1="446.9" x2="351" y2="766.7" class="style1"/>
+<line x1="127.1" y1="190.9" x2="351" y2="766.7" class="style1"/>
+<line x1="288.1" y1="287.8" x2="351" y2="766.7" class="style1"/>
+<line x1="638.7" y1="127" x2="351" y2="766.7" class="style1"/>
+<line x1="896.4" y1="257.1" x2="351" y2="766.7" class="style1"/>
+<line x1="766.4" y1="639.1" x2="351" y2="766.7" class="style1"/>
+<line x1="980.1" y1="798.1" x2="351" y2="766.7" class="style1"/>
+<line x1="799.8" y1="980.1" x2="351" y2="766.7" class="style1"/>
+</svg>

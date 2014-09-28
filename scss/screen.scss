@@ -408,6 +408,11 @@ h1 {
   margin-top: 0;
 }
 
+/* Responsive images fix for homepage masonry */
+.directory-card img {
+  max-width: 100%;
+}
+
 
 
 

@@ -786,22 +786,6 @@ p.wp-caption-text {
 /* COMMISSIONS VERTICAL */
 /* FILES: page-commissions.php, single-commission.php */
 
-.vertical_commissions, .single-commission, body.page-id-23 {
-	
-	/* darker colour scheme for watching movies */ 
-	background: $textcolor;
-	color: $white;
-	
-	.main a {
-		color: $white;
-	}
-	
-	.main a:hover {
-		color: $link_hover_color;
-	}
-	
-}
-
 .vertical_commissions {
   
   a.commission-maker-detail {
@@ -923,13 +907,6 @@ span.which-lab {
 
 /* TALKSHOW VERTICAL */
 
-.vertical_talkshow {
-  background:#3c98c3;
-  color: $white;
-  
-  a, a:visited { color: $white; }
-  
-}
 
 
 

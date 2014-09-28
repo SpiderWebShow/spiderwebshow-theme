@@ -143,6 +143,7 @@ hr {
 	height: 3em;
 	background: $dark;
 	color: $white;
+	z-index: 100;
 	
 	/* Translate3d Layer Hack */
 	transform: translate3d(0);
@@ -379,60 +380,34 @@ h1 {
 
 
 /* HOMEPAGE */
-/* Autotune form on homepage */
+/* FILE(S): home.php */
+/* SCOPE: .home */
+/* Controls the display of the homepage */
 
-.thought-residence-bubble {
-	margin-top:2em;
-	padding:1em 2em 1.5em;
-	border-radius:50%;
-	color: $textcolor;
-	background-color: #bbb;
-	text-align: center;
-	-webkit-transform:rotate(4deg);
-	
-	h4 {
-  	margin: 1em 0 0;
-  	padding: 0;
-  	
-  	span {
-  	  display: block;
-    	text-transform: uppercase;
-  	}
-  	
-	}
-	
-	h2 {
-  	margin:0;
-  	padding:0;
-	}
-  
-  #autotune_control_button {
-    /* NOTE: eventually this ID should also be updated and rationalized, but since it's currently used by some scripts elsewhere in the repo I'm not touching it now */
-    font-size:3em;
-    color:#d09;
-    text-decoration:none;
+@media (max-width:767px) {
+
+  .main_content h1 {
+    font-size: 2em;
   }
-	
+
 }
 
 
-.home-icon {
-	border: solid 1px $textcolor;
+.directory {
+
 }
 
-/* Color overlay for CdnCult animated gif. Its background color is supplied by a js function */
-.cdncult-homepage {
-	position: relative;
-	overflow: hidden;
-	padding: 0;
-	font-size: 0; // Fixes overlay bleeding around the image
+.directory-card {
+  margin: $base_unit;
+  padding: $base_unit;
+ 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+ 	width: calc(50% - 2em);
 }
 
-.cdncult-color-overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.directory-card-title {
+  margin-top: 0;
 }
+
 
 
 
@@ -481,17 +456,9 @@ h1 {
 }
 
 .cdncult_header {
-	text-align: center;
-	text-transform: uppercase;
 	
 	h1 {
 		margin-bottom: 0;
-	}
-	
-	.cdncult-tagline {
-		font-size: 0.9em;
-/* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 400; font-style: normal; */
-
 	}
 	
 	a {
@@ -1049,6 +1016,29 @@ span.which-lab {
 .maker-card:hover {
 	transform: scale(1.05);
 }
+
+.creator-card {
+  display: block;
+  width: 300px;
+  padding: $base_unit;
+  margin: $base_unit;
+  overflow: hidden;
+  float: left;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+	
+	img {
+		float: left;
+		margin-right: $base_unit;
+		margin-bottom: $base_unit;
+	}
+	
+	h4, p.twitter {
+  	margin: 0;
+  	padding: 0;
+	}
+	
+}
+
 
 /* CSS columns will only activate when the page is wide enough */
 @media (min-width: 768px){

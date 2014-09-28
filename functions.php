@@ -36,8 +36,10 @@ register_sidebar( array(
     'id'          => 'front-page',
     'name'        => 'Front Page',
     'description' => 'This Widget area provides an area for site-wide announcements on the front page.',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>'
+    'before_widget' => '<div id="%1$s" class="directory-card widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="directory-card-title">',
+    'after_title' => '</h2>'
 ) );
 
 

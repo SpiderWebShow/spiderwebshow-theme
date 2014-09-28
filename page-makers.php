@@ -14,38 +14,80 @@
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; // End standard wordpress loop. ?>	
 	
-	<div id="makermap" class="pure-u-1" style="height:600px;">
-    <!-- MapBox map placeholder div -->	
-	</div>
-		
-	<div class="pure-u-1-4">
-		<h2><a href="https://twitter.com/sarahgstanley" title="Follow Sarah Garton Stanley on Twitter">@SarahgStanley</a></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/sstanley-glitch-2.gif" alt="Sarah Garton Stanley" />
-		<h3><em>Co-Creator &amp; Artistic Director, SpiderWebShow</em></h3>
-		<p>Sarah is the Associate Artistic Director @ <a href="http://nac-cna.ca/englishtheatre" title="NAC English Theatre">NAC English Theatre</a>. Originally from Montréal, she now lives between Ottawa and Kingston. She co-founded <a href="http://kingstongrand.ca/" title="The Baby Grand Theatre, Kingston">The Baby Grand Theatre</a> in Kingston,  co-created Women Making Scenes in Montréal, and Die in Debt Theatre in Toronto, (a ground-breaking company dedicated to large canvas altspace work).</p>
-		<p>Sarah is a former AD @<a href="http://buddiesinbadtimes.com/" title="Buddies in Bad Times">Buddies in Bad Times</a>, co-helmed the Directing Program @<a href="http://ent-nts.ca/en/" title="National Theatre School">National Theatre School</a> and is an adjunct @<a href="http://www.concordia.ca" title="Concordia University">Concordia University</a>. She creates work with Michael Rubenfeld like <em><a href="http://www.bookofjudith.com" title="The Book of Judith">The Book of Judith</a></em> and others at <a href="http://selfconscious.ca/" title="Selfconscious">Selfconscious</a>. Sarah oversees <a href="http://nac-cna.ca/en/englishtheatre/collaboration" title="#TheCollaborations at NAC">#TheCollaborations</a>.</p>
-	</div>
-	<div class="pure-u-1-4">
-		<h2><a href="https://twitter.com/michaelcwheeler" title="Follow Michael Wheeler on Twitter">@MichaelcWheeler</a></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/mwheeler-glitch-2.gif" alt="Michael Wheeler" />
-		<h3><em>Co-Creator, SpiderWebShow &amp; Editor in Chief, <a href="/cdncult" title="#CdnCult Times">#CdnCult Times</a></em></h3>
-		<p>Michael is a director, writer, social designer, and artistic director of Praxis Theatre. His work in performance is often integrated online through various tools including <a href="http://praxistheatre.com" title="Praxis Theatre">praxistheatre.com</a>, <a href="http://thewreckingball.ca" title="The Wrecking Ball">thewreckingball.ca</a>, and <a href="http://michaelcwheeler.com" title="Michael C. Wheeler's website">michaelcwheeler.com</a>.</p>
-		<p>Directing credits include the National Tour of <em>You Should Have Stayed Home</em>, <em>Jesus Chrysler</em>, <em>Section 98</em>, <em>Dyad</em> and <em>Steel</em>. Michael has been Co-Curator of the Freefall Festival at The Theatre Centre, a Neil Munro Intern Director at The Shaw Festival and is currently Guest Co-Curator of HATCH ’14 at Harbourfront Centre. Upcoming is <em>Rifles</em>, a new Brecht adaptation by Nicolas Billon at The Next Stage Festival in Toronto in January 2014.</p>
-	</div>
-	<div class="pure-u-1-4">
-		<h2><a href="https://twitter.com/AdrienneWong88" title="Follow Adrienne Wong on Twitter">@AdrienneWong88</a></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/awong-glitch.gif" alt="Adrienne Wong" />
-		<h3><em>Artistic Associate, SpiderWebShow &amp; Head Researcher, <a href="/experiments" title="SpiderWebShow Experiments">Experiments</a></em></h3>
-		<p>Adrienne is an artist interested in asking audiences to “re-see” and re-imagine the everyday. To date, most of Adrienne’s projects could be called theatre; located in actual theatres, on-site, soundwaves, or in purpose-built structures.</p>
-		<p>Projects with Neworld Theatre, where she is Associate Artist (previously Artistic Producer), include commissioning, developing and producing eleven "podplays" (site-specific audio plays); co-creating three <em>HIVE</em> presentations of installation theatre; <em>Placebook</em>, an analogue Facebook; <em>Landline</em>, a text-message performance for audience in different cities; and <em>Me On The Map</em>, a participatory show for kids about inclusive community-building. Adrienne is a member of PTC's Associates and a graduate of SFU’s School for the Contemporary Arts.</p>
-	</div>
-	<div class="pure-u-1-4">
-		<h2><a href="https://twitter.com/gfscott" title="Follow Graham F. Scott on Twitter">@gfscott</a></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/gfscott-glitch-2.gif" alt="Graham F. Scott" />
-		<h3><em>Designer-Developer &amp; Digital Dramaturg</em></h3>
-		<p>Graham is a Toronto editor, writer, and web designer. Recent projects of note include <a href="http://praxistheatre.com" title="Praxis Theatre">praxistheatre.com</a>, <a href="http://thewreckingball.ca" title="The Wrecking Ball">thewreckingball.ca</a>, and <a href="http://howlonghasrobfordbeenmayor.com" title="How Long Has Rob Ford Been Mayor?">HowLongHasRobFordBeenMayor.com</a>.</p>
+	<div class="pure-u-1">
+  	<div id="makermap" style="height:600px;">
+      <!-- MapBox map placeholder div -->	
+  	</div>
 	</div>
 	
+	<div class="pure-u-1">
+	
+  	<div class="creator-card">
+    	<a href="#">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/TWITTER_SHOT-75x75.jpg" alt="Sarah Garton Stanley" />
+      	<h4>Sarah Garton Stanley</h4>
+    	</a>
+     	<p class="twitter"><a href="https://twitter.com/sarahgstanley">@SarahgStanley</a></p>
+     	<strong>Co-Creator &amp; Artistic Director, SpiderWebShow</strong>
+      <p>Sarah is the Associate Artistic Director @ <a href="http://nac-cna.ca/englishtheatre" title="NAC English Theatre">NAC English Theatre</a>. Originally from Montréal, she now lives between Ottawa and Kingston. She co-founded <a href="http://kingstongrand.ca/" title="The Baby Grand Theatre, Kingston">The Baby Grand Theatre</a> in Kingston,  co-created Women Making Scenes in Montréal, and Die in Debt Theatre in Toronto, (a ground-breaking company dedicated to large canvas altspace work).</p>
+  		<p>Sarah is a former AD @<a href="http://buddiesinbadtimes.com/" title="Buddies in Bad Times">Buddies in Bad Times</a>, co-helmed the Directing Program @<a href="http://ent-nts.ca/en/" title="National Theatre School">National Theatre School</a> and is an adjunct @<a href="http://www.concordia.ca" title="Concordia University">Concordia University</a>. She creates work with Michael Rubenfeld like <em><a href="http://www.bookofjudith.com" title="The Book of Judith">The Book of Judith</a></em> and others at <a href="http://selfconscious.ca/" title="Selfconscious">Selfconscious</a>. Sarah oversees <a href="http://nac-cna.ca/en/englishtheatre/collaboration" title="#TheCollaborations at NAC">#TheCollaborations</a>.</p>
+  	</div>
+  	
+  	<div class="creator-card">
+    	<a href="#">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/Michael_Wheeler_Headshot-75x75.jpg" alt="Michael Wheeler" />
+      	<h4>Michael Wheeler</h4>
+    	</a>
+     	<p class="twitter"><a href="https://twitter.com/michaelcwheeler">@MichaelcWheeler</a></p>
+     	<strong>Co-Creator, SpiderWebShow &amp; Editor in Chief, <a href="/cdncult" title="#CdnCult Times">#CdnCult Times</a></strong>
+      <p>Michael is a director, writer, social designer, and artistic director of Praxis Theatre. His work in performance is often integrated online through various tools including <a href="http://praxistheatre.com" title="Praxis Theatre">praxistheatre.com</a>, <a href="http://thewreckingball.ca" title="The Wrecking Ball">thewreckingball.ca</a>, and <a href="http://michaelcwheeler.com" title="Michael C. Wheeler's website">michaelcwheeler.com</a>.</p>
+  		<p>Directing credits include the National Tour of <em>You Should Have Stayed Home</em>, <em>Jesus Chrysler</em>, <em>Section 98</em>, <em>Dyad</em> and <em>Steel</em>. Michael has been Co-Curator of the Freefall Festival at The Theatre Centre, a Neil Munro Intern Director at The Shaw Festival and is currently Guest Co-Curator of HATCH ’14 at Harbourfront Centre. Upcoming is <em>Rifles</em>, a new Brecht adaptation by Nicolas Billon at The Next Stage Festival in Toronto in January 2014.</p>
+  	</div>
+  	
+  	<div class="creator-card">
+    	<a href="#">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/11/074-IMG_4796-75x75.jpg" alt="" />
+      	<h4>Adrienne Wong</h4>
+    	</a>
+     	<p class="twitter"><a href="https://twitter.com/adriennewong88">@AdrienneWong88</a></p>
+     	<strong>Artistic Associate, SpiderWebShow &amp; Head Researcher, <a href="/experiments" title="SpiderWebShow Experiments">Experiments</a></strong>
+  		<p>Adrienne is an artist interested in asking audiences to “re-see” and re-imagine the everyday. To date, most of Adrienne’s projects could be called theatre; located in actual theatres, on-site, soundwaves, or in purpose-built structures.</p>
+  		<p>Projects with Neworld Theatre, where she is Associate Artist (previously Artistic Producer), include commissioning, developing and producing eleven "podplays" (site-specific audio plays); co-creating three <em>HIVE</em> presentations of installation theatre; <em>Placebook</em>, an analogue Facebook; <em>Landline</em>, a text-message performance for audience in different cities; and <em>Me On The Map</em>, a participatory show for kids about inclusive community-building. Adrienne is a member of PTC's Associates and a graduate of SFU’s School for the Contemporary Arts.</p>
+  	</div>
+  	
+  	<div class="creator-card">
+    	<a href="#">
+      	<img src="//placehold.it/75x75" alt="" />
+      	<h4>Laurel Green</h4>
+    	</a>
+     	<p class="twitter"><a href="https://twitter.com/lgyyc">@LGYYC</a></p>
+     	<strong>Artistic Associate</strong><br>
+  		<p>Laurel Green is Artistic Associate at Alberta Theatre Projects in Calgary (@contemporaryATP), a dramaturg in new play development and the company’s literary manager. She creates and hosts events for ATP’s Exchange series, bringing together audiences and artists to explore and celebrate the art of theatre making.</p>
+      <p>Laurel also works with: Inside Out Theatre’s Point of View Ensemble (@IOT_YYC), Evergreen Theatre (@Evergreen_Th), mi casa theatre (@micasatheatre) & Humble Wonder (@humblewonder). She is a board member for the Literary Managers and Dramaturgs of the Americas (@LMDAmericas) Canada chapter. She has a Masters degree in Drama from the University of Toronto, and this past summer she knit her first scarf.</p>
+  	</div>
+  	
+    <div class="creator-card">
+    	<a href="#">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/gfs1-75x75.jpg" alt="Graham F. Scott" />
+      	<h4>Graham F. Scott</h4>
+    	</a>
+     	<p class="twitter"><a href="https://twitter.com/gfscott">@gfscott</a></p>
+     	<strong>Designer-Developer &amp; Digital Dramaturg</strong>
+      <p>Graham is a Toronto editor, writer, and web designer. Recent projects of note include <a href="http://praxistheatre.com" title="Praxis Theatre">praxistheatre.com</a>, <a href="http://thewreckingball.ca" title="The Wrecking Ball">thewreckingball.ca</a>, and <a href="http://howlonghasrobfordbeenmayor.com" title="How Long Has Rob Ford Been Mayor?">HowLongHasRobFordBeen-Mayor.com</a>.</p>
+  	</div>
+  	
+  	<div class="creator-card">
+    	<a href="#">
+      	<img src="//placehold.it/75x75" alt="" />
+      	<h4>Simon Bloom</h4>
+    	</a>
+     	<p class="twitter"><a href="https://twitter.com/gfscott">@simonwbloom</a></p>
+     	<strong>Designer-Developer &amp; Associate Digital Dramaturg</strong>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	</div>
+  	
+	</div>
+		
 	<hr>
 	
 	<div class="pure-u-1">

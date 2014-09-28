@@ -5,10 +5,7 @@
 	<script>
 		head.js({ jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'},
 						'<?php echo $template; ?>/js/scripts.js',
-						'<?php echo $template; ?>/js/jquery.parallax.min.js',
-						'<?php echo $template; ?>/js/fitvids.js',
-						'<?php echo $template; ?>/js/maskedinput.min.js',
-						'//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
+						{fitvids: '<?php echo $template; ?>/js/fitvids.js'},
 						'//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js',
 						'//platform.twitter.com/widgets.js',
 						'//connect.facebook.net/en_US/all.js#xfbml=1&appId=220399704646080'
@@ -25,55 +22,6 @@
   ga('send', 'pageview');
 
 </script>
-
-<?php if(is_home()){ ?>
-	<script src="<?php echo $template; ?>/js/soundmanager2/script/soundmanager2-jsmin.js"></script>
-	<script>
-		head.ready('jquery', function(){
-			soundManager.setup({
-				//debugMode: true,
-				//debugFlash: true,
-				url: "<?php bloginfo('template_url'); ?>/js/soundmanager2/swf/",
-				//flashLoadTimeout: 0,
-				
-				onready: function(){
-					var soundCloudQuery = 'http://api.soundcloud.com/users/spiderweb-show/tracks.json?client_id=3f356f314a7dde49074ede79efb447b2&limit=1';
-					$.getJSON(soundCloudQuery, function(data){
-						var streamUrl = data[0].stream_url + '?client_id=3f356f314a7dde49074ede79efb447b2';
-						
-						var audio_control_button = $('#autotune_control_button');
-						var audio_status = audio_control_button.children('i');
-							audio_status.removeClass('icon-ellipsis-horizontal').addClass('icon-play');
-						
-						var mySound = soundManager.createSound({
-							url: streamUrl,
-							autoload: true,
-							onfinish: function() {
-								$('#autotune_control_button i').toggleClass('icon-play').toggleClass('icon-pause');
-							},
-						});
-						
-						audio_control_button.on('click', function(){
-							event.preventDefault();
-							var thisbutton = $(this);
-							thisbutton.toggleClass('playing').toggleClass('stopped');
-							audio_status.toggleClass('icon-pause').toggleClass('icon-play');
-							mySound.togglePause('aSound');							
-						});
-					});
-	
-				},
-				
-				ontimeout: function(){
-					console.log("soundManager timed out");
-				}
-				
-				
-			});
-		});
-	</script>
-	
-<?php }?>
 	
 <?php wp_footer(); ?>
 </body>

@@ -28,7 +28,7 @@
 	?>
 	
 	<header class="cdncult_header pure-u-1">
-		<h1>#Cdncult Times</h1>
+		<h1>#CdnCult Times</h1>
 		<p class="cdncult-tagline">Reporting and commentary about Canadian performance culture in Internet times &bull; <?php echo $most_recent_date; ?></p>
 	</header>
 	

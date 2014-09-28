@@ -1050,6 +1050,29 @@ span.which-lab {
 	transform: scale(1.05);
 }
 
+.creator-card {
+  display: block;
+  width: 300px;
+  padding: $base_unit;
+  margin: $base_unit;
+  overflow: hidden;
+  float: left;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+	
+	img {
+		float: left;
+		margin-right: $base_unit;
+		margin-bottom: $base_unit;
+	}
+	
+	h4, p.twitter {
+  	margin: 0;
+  	padding: 0;
+	}
+	
+}
+
+
 /* CSS columns will only activate when the page is wide enough */
 @media (min-width: 768px){
 

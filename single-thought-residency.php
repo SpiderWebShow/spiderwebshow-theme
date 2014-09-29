@@ -4,7 +4,7 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // WORDPRESS LOOP BEGINS ?>
 	
 	<div class="pure-u-1">
-		<h2>The Thought Residencies</h2>
+		<p><strong><a href="/residency">« The Thought Residencies</a></strong></p>
 		<h1><?php the_title(); ?></h1>
 	</div>
 	

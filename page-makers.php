@@ -81,7 +81,7 @@
       	<img src="//spiderwebshow.ca/wp-content/uploads/2014/09/simonbloom-75x75.jpg" alt="Simon Bloom" />
       	<h4>Simon Bloom</h4>
     	</a>
-     	<p class="twitter"><a href="https://twitter.com/gfscott">@simonwbloom</a></p>
+     	<p class="twitter"><a href="https://twitter.com/SimonWBloom">@simonwbloom</a></p>
      	<strong>Designer-Developer &amp; Associate Digital Dramaturg</strong>
      	<p>Simon Bloom is a director, designer, web developer, co-Artistic Director of the Dora award winning theatre company <a href="http://www.outsidethemarch.ca/">Outside the March</a>, and co-founder of the Sterling award winning East/West Collective. He is deeply interested in the intersection between theatre and digital experiences.</p>
       <p>Recent directing credits include <em>East of Berlin</em> (Sterling Award, Outstanding Production & Outstanding Director), <em>Murderers Confess at Christmastime</em> (Outside the March), and <em>The Last Days of Judas Iscariot</em> (Studio Theatre). He is a graduate of the MFA Directing Program at the University of Alberta, and the Banff/Citadel Professional Theatre Program.</p>

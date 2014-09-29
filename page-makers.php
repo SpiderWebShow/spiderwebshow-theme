@@ -23,8 +23,8 @@
 	<div class="pure-u-1">
 	
   	<div class="creator-card">
-    	<a href="#">
-      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/TWITTER_SHOT-75x75.jpg" alt="Sarah Garton Stanley" />
+    	<a href="http://spiderwebshow.ca/author/sstanley">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2014/09/sarah-garton-stanley-75x75.jpg" alt="Sarah Garton Stanley" />
       	<h4>Sarah Garton Stanley</h4>
     	</a>
      	<p class="twitter"><a href="https://twitter.com/sarahgstanley">@SarahgStanley</a></p>
@@ -34,7 +34,7 @@
   	</div>
   	
   	<div class="creator-card">
-    	<a href="#">
+    	<a href="http://spiderwebshow.ca/author/mwheeler">
       	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/Michael_Wheeler_Headshot-75x75.jpg" alt="Michael Wheeler" />
       	<h4>Michael Wheeler</h4>
     	</a>
@@ -45,8 +45,8 @@
   	</div>
   	
   	<div class="creator-card">
-    	<a href="#">
-      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/11/074-IMG_4796-75x75.jpg" alt="" />
+    	<a href="http://spiderwebshow.ca/author/adriennewong">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2013/11/074-IMG_4796-75x75.jpg" alt="Adrienne Wong" />
       	<h4>Adrienne Wong</h4>
     	</a>
      	<p class="twitter"><a href="https://twitter.com/adriennewong88">@AdrienneWong88</a></p>
@@ -56,18 +56,18 @@
   	</div>
   	
   	<div class="creator-card">
-    	<a href="#">
-      	<img src="//placehold.it/75x75" alt="" />
+    	<a href="http://spiderwebshow.ca/author/laurelgreen">
+      	<img src="http://spiderwebshow.ca/wp-content/uploads/2014/09/laurel-green-75x75.jpg" alt="Laurel Green" />
       	<h4>Laurel Green</h4>
     	</a>
      	<p class="twitter"><a href="https://twitter.com/lgyyc">@LGYYC</a></p>
      	<strong>Artistic Associate</strong><br>
-  		<p>Laurel Green is Artistic Associate at Alberta Theatre Projects in Calgary (@contemporaryATP), a dramaturg in new play development and the company’s literary manager. She creates and hosts events for ATP’s Exchange series, bringing together audiences and artists to explore and celebrate the art of theatre making.</p>
-      <p>Laurel also works with: Inside Out Theatre’s Point of View Ensemble (@IOT_YYC), Evergreen Theatre (@Evergreen_Th), mi casa theatre (@micasatheatre) & Humble Wonder (@humblewonder). She is a board member for the Literary Managers and Dramaturgs of the Americas (@LMDAmericas) Canada chapter. She has a Masters degree in Drama from the University of Toronto, and this past summer she knit her first scarf.</p>
+  		<p>Laurel Green is Artistic Associate at <a href="http://www.atplive.com/">Alberta Theatre Projects</a> in Calgary (<a href="https://twitter.com/contemporaryATP">@contemporaryATP</a>), a dramaturg in new play development and the company’s literary manager. She creates and hosts events for ATP’s Exchange series, bringing together audiences and artists to explore and celebrate the art of theatre making.</p>
+      <p>Laurel also works with: <a href="http://insideouttheatre.com/">Inside Out Theatre</a>’s Point of View Ensemble (<a href="https://twitter.com/IOT_YYC">@IOT_YYC</a>), Evergreen Theatre (<a href="https://twitter.com/Evergreen_Th">@Evergreen_Th</a>), mi casa theatre (<a href="https://twitter.com/micasatheatre">@micasatheatre</a>) &amp; Humble Wonder (<a href="https://twitter.com/humblewonder">@humblewonder</a>). She is a board member for the Literary Managers and Dramaturgs of the Americas (<a href="https://twitter.com/LMDAmericas">@LMDAmericas</a>) Canada chapter. She has a Masters degree in Drama from the University of Toronto, and this past summer she knit her first scarf.</p>
   	</div>
   	
     <div class="creator-card">
-    	<a href="#">
+    	<a href="http://spiderwebshow.ca/author/gfscott">
       	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/gfs1-75x75.jpg" alt="Graham F. Scott" />
       	<h4>Graham F. Scott</h4>
     	</a>
@@ -77,13 +77,15 @@
   	</div>
   	
   	<div class="creator-card">
-    	<a href="#">
-      	<img src="//placehold.it/75x75" alt="" />
+    	<a href="http://spiderwebshow.ca/author/simonbloom">
+      	<img src="//spiderwebshow.ca/wp-content/uploads/2014/09/simonbloom-75x75.jpg" alt="Simon Bloom" />
       	<h4>Simon Bloom</h4>
     	</a>
      	<p class="twitter"><a href="https://twitter.com/gfscott">@simonwbloom</a></p>
      	<strong>Designer-Developer &amp; Associate Digital Dramaturg</strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     	<p>Simon Bloom is a director, designer, web developer, co-Artistic Director of the Dora award winning theatre company <a href="http://www.outsidethemarch.ca/">Outside the March</a>, and co-founder of the Sterling award winning East/West Collective. He is deeply interested in the intersection between theatre and digital experiences.</p>
+      <p>Recent directing credits include <em>East of Berlin</em> (Sterling Award, Outstanding Production & Outstanding Director), <em>Murderers Confess at Christmastime</em> (Outside the March), and <em>The Last Days of Judas Iscariot</em> (Studio Theatre). He is a graduate of the MFA Directing Program at the University of Alberta, and the Banff/Citadel Professional Theatre Program.</p>
+      <p>Currently, Simon is working as a front-end web developer at the creative agency <a href="http://nascentdigital.com/">Nascent</a>, and is in pre-production for <em>Mr. Burns: A Post Electric Play</em>, Outside the March's upcoming show about the apocalypse and the Simpsons, which he will be co-direct with Mitchell Cushman.</p>
   	</div>
   	
 	</div>

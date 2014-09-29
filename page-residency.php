@@ -23,7 +23,7 @@
 		
 		<?php
 			// Custom posts loop for commissions
-			$args = array( 'post_type' => 'thought-residency', 'order' => 'DESC', 'orderby' => 'id', 'posts_per_page' => 50 );
+			$args = array( 'post_type' => 'thought-residency', 'order' => 'DESC', 'orderby' => 'date', 'posts_per_page' => 50 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			

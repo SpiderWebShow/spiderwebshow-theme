@@ -103,16 +103,16 @@ a {
   transition-duration: 0.2s;
 }
 
-a:hover {
-  color: $link_hover_color;
-}
-
 a:visited {
   color: $textcolor;
 }
 
 a:active {
   color: $textcolor;
+}
+
+a:hover {
+  color: $link_hover_color;
 }
 
 a:focus {

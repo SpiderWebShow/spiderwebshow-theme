@@ -6,6 +6,7 @@
 	<div class="pure-u-1">
 		<p><strong><a href="/residency">« The Thought Residencies</a></strong></p>
 		<h1><?php the_title(); ?></h1>
+		<h2>Thought Residency: <time datetime="<?php the_time('Y-m'); ?>"><?php the_time('F Y'); ?></time></h2>
 	</div>
 	
 	<div class="pure-u-1-2">
@@ -33,7 +34,7 @@
 
 			<?php if($authorBio){ echo '<p class="author-bio">'.$authorBio.'</p>'; } ?>
 			
-			<p class="author-name"><a href="<?php echo get_author_posts_url($authorID); ?>" title="Visit <?php echo $authorName; ?>&rsquo;s Author Profile">Visit <?php echo $authorName; ?>&rsquo;s Full Author Profile</a></p>
+			<p class="author-name"><a href="<?php echo get_author_posts_url($authorID); ?>" title="Visit <?php echo $authorName; ?>&rsquo;s Author Profile">Visit <?php echo $authorName; ?>&rsquo;s Full Author Profile »</a></p>
 
 	</div>
 	<div class="pure-u-1-2">

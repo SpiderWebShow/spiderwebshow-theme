@@ -27,7 +27,7 @@
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<h2><span style="color:#777;"><time datetime="<?php the_time('Y-m'); ?>"><?php the_time('F Y'); ?></time>:</span> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			
 		<?php endwhile;	?>
 		

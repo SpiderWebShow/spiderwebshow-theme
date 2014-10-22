@@ -19,19 +19,20 @@
 
 <script>
 
-head.load('//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js', function(){
-  var directory = document.querySelector('.directory');
-  var msnry = new Masonry(directory, {
-    itemSelector: '.directory-card',
-    transitionDuration: 0
-  });
-  
-  twttr.ready(function(twttr){
-    twttr.events.bind('rendered', function(event){
-        msnry.layout();
+head.ready('twitter', function(){
+  head.load('//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js', function(){
+    var directory = document.querySelector('.directory');
+    var msnry = new Masonry(directory, {
+      itemSelector: '.directory-card',
+      transitionDuration: 0
+    });
+    
+    twttr.ready(function(twttr){
+      twttr.events.bind('rendered', function(event){
+          msnry.layout();
+      });
     });
   });
-  
 });
 
 head.ready('fitvids', function(){

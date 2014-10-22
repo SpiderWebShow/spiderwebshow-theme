@@ -103,16 +103,16 @@ a {
   transition-duration: 0.2s;
 }
 
-a:hover {
-  color: $link_hover_color;
-}
-
 a:visited {
   color: $textcolor;
 }
 
 a:active {
   color: $textcolor;
+}
+
+a:hover {
+  color: $link_hover_color;
 }
 
 a:focus {
@@ -1002,24 +1002,41 @@ span.which-lab {
 .creator-card {
   display: block;
   width: 300px;
+  height: 150px;
   padding: $base_unit;
   margin: $base_unit;
   overflow: hidden;
   float: left;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
 	
-	img {
-		float: left;
-		margin-right: $base_unit;
-		margin-bottom: $base_unit;
-	}
-	
-	h4, p.twitter {
+	p {
   	margin: 0;
   	padding: 0;
+  	margin-left: calc(75px + 1em);
+	}
+	
+	a {
+  	text-decoration: none;
+	}
+	
+	p.twitter a {
+	  text-decoration: none;
+	  color: #bbb;
+	}
+	
+	p.title {
+  	margin-top: $base_unit;
+	}
+	
+	img {
+  	float: left;
+  	margin-right: $base_unit;
+  	margin-bottom: $base_unit;
 	}
 	
 }
+
+
 
 
 /* CSS columns will only activate when the page is wide enough */

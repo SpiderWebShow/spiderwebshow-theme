@@ -29,7 +29,7 @@
 	<a href="http://spiderwebshow.ca/laboratory/podcasts">
 		<div class="exp2-content">
 			<h2>Podcasts</h2>
-			<p>CLICK HERE to see all our podcast episodes</p>
+			<p>SWS Podcast - click here</p>
 		</div>
 	</a>
 </div>

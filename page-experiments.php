@@ -33,7 +33,17 @@
 		</div>
 	</a>
 </div>
-
+<div class="exp2-card podcasts" style="background:green;">
+	<div class="experiment">
+		&nbsp;	
+	</div>
+	<a href="http://spiderwebshow.ca/laboratory/theatre-ux">
+		<div class="exp2-content">
+			<h2>Theatre UX</h2>
+			<p>Click here to see all episodes of Theatre UX - the podcast all about theatre and tech.</p>
+		</div>
+	</a>
+</div>
 
 <?php
 	// Custom posts loop for experiments

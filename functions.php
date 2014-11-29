@@ -157,6 +157,23 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /////////////////////////////////
+// CONTROL DISPLAY OF SOUNDCLOUD OEMBEDS
+/////////////////////////////////
+
+function soundCloud_mini_embed($html, $provider) {
+
+  if(preg_match("/soundcloud.com/", $provider)) {
+    $html = preg_replace("/visual=true/", "visual=false", $html);
+    $html = preg_replace("/show_artwork=true/", "show_artwork=false", $html);
+    $html = preg_replace("/ height=\"\d+?\"/", "height=\"166\"", $html);
+    return $html;
+  }
+  
+}
+add_filter('embed_oembed_html', 'soundCloud_mini_embed', 10, 3);
+
+
+/////////////////////////////////
 // LIST AUTHORS OF CUSTOM POST TYPES
 /////////////////////////////////
 // http://wordpress.stackexchange.com/questions/90600/wp-list-authors-including-custom-post-types

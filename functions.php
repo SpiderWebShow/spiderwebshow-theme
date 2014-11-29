@@ -163,10 +163,10 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 // https://wordpress.org/support/topic/filter-hook-for-built-in-oembed-providers-eg-youtube
 
 
-function soundCloud_mini_embed($html, $provider) {
+function soundCloud_mini_embed($html, $url) {
   
   // Only use this filter on Soundcloud embeds
-  if(preg_match("/soundcloud.com/", $provider)) {
+  if(preg_match("/soundcloud.com/", $url)) {
     
     // array of patterns to find in the oembed iframe html
     $patterns = array();

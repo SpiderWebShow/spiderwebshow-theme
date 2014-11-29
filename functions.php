@@ -159,18 +159,42 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 /////////////////////////////////
 // CONTROL DISPLAY OF SOUNDCLOUD OEMBEDS
 /////////////////////////////////
+// https://wordpress.org/support/topic/hookfilter-for-auto-embed-function-of-wp
+// https://wordpress.org/support/topic/filter-hook-for-built-in-oembed-providers-eg-youtube
+
 
 function soundCloud_mini_embed($html, $provider) {
-
+  
+  // Only use this filter on Soundcloud embeds
   if(preg_match("/soundcloud.com/", $provider)) {
-    $html = preg_replace("/visual=true/", "visual=false", $html);
-    $html = preg_replace("/show_artwork=true/", "show_artwork=false", $html);
-    $html = preg_replace("/ height=\"\d+?\"/", "height=\"166\"", $html);
+    
+    // array of patterns to find in the oembed iframe html
+    $patterns = array();
+      $patterns[0] = "/visual=true/"; // true means a big image background
+      $patterns[1] = "/show_artwork=true/"; // true means show the track artwork
+      $patterns[2] = "/ height=\"\d+?\"/"; // height of standard embed is in the 400-pixel range. Just look for any height integer
+    
+    // array of replacements to make for these patterns
+    $replacements = array();
+      $replacements[0] = "visual=false"; // turn off big image background
+      $replacements[1] = "show_artwork=false"; // turn off track artwork
+      $replacements[2] = "height=\"166\""; // set iframe height to 166 pixels, the embed standard for the Soundcloud mini player
+    
+    // prophylactic ksort to make sure that all patterns and replacments will line up regardless of what order they're input
+    ksort($patterns);
+    ksort($replacements);
+    
+    // one function to do all the find and replace
+    $html = preg_replace($patterns, $replacements, $html);
+    // return the html string and save to database or output
     return $html;
   }
   
 }
+// hook into the Wordpress oembed filter
 add_filter('embed_oembed_html', 'soundCloud_mini_embed', 10, 3);
+
+
 
 
 /////////////////////////////////

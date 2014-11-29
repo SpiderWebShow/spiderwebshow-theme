@@ -157,6 +157,32 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /////////////////////////////////
+// CONTROL DISPLAY OF SOUNDCLOUD OEMBEDS
+/////////////////////////////////
+
+function soundCloud_mini_embed($html, $provider) {
+
+  if(preg_match("/soundcloud.com/", $provider)) {
+    $html = preg_replace("/visual=true/", "visual=false", $html);
+    $html = preg_replace("/show_artwork=true/", "show_artwork=false", $html);
+    $html = preg_replace("/ height=\"\d+?\"/", "height=\"166\"", $html);
+    return $html;
+  }
+  
+}
+add_filter('embed_oembed_html', 'soundCloud_mini_embed', 10, 3);
+
+
+
+/*
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/156769300&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/156769300&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+*/
+
+
+/////////////////////////////////
 // LIST AUTHORS OF CUSTOM POST TYPES
 /////////////////////////////////
 // http://wordpress.stackexchange.com/questions/90600/wp-list-authors-including-custom-post-types

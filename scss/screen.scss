@@ -389,7 +389,25 @@ h1 {
   .main_content h1 {
     font-size: 2em;
   }
+  
+  .directory-card {
+    margin: $base_unit;
+    padding: $base_unit;
+   	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+   	width: calc(100% - 2em);
+  }
 
+}
+
+@media (min-width:768px){
+  
+  .directory-card {
+    margin: $base_unit;
+    padding: $base_unit;
+   	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+   	width: calc(50% - 2em);
+  }
+  
 }
 
 
@@ -397,12 +415,6 @@ h1 {
 
 }
 
-.directory-card {
-  margin: $base_unit;
-  padding: $base_unit;
- 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
- 	width: calc(50% - 2em);
-}
 
 .directory-card-title {
   margin-top: 0;

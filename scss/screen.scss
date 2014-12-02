@@ -167,16 +167,9 @@ hr {
   } 
   
   .nav {
-  	position: fixed;
+  	position: relative;
   	width: 20%;
-  	z-index: 100;
-  	-webkit-transform: translateZ(0);
-  	-moz-transform: translateZ(0);
-  	-o-transform: translateZ(0);
-  	-ms-transform: translateZ(0);
-  	transform: translateZ(0);
   	background: #fff;
-  /* 	border-right: solid 1px $textcolor; */
   }
   
   /* Logo displays at Desktop and wider sizes */
@@ -236,9 +229,9 @@ h1 {
 /* Controls the display of the Site title and logo on all pages */
 
 /* Mobile first! */
-#nav_logo { display: none; }
+.nav-logo { display: none; }
 	
-.nav_title {
+.nav-title {
 	position: absolute;
  	padding: 0 1rem;
 	font-size: 1.2em;
@@ -247,15 +240,22 @@ h1 {
 
 @media (min-width:768px) {
   
-  #nav_logo { 
+  .nav-logo { 
     display: block;
+    padding: $base_unit;
+    max-width: 100%;
   }
   
-	.nav_title {
+	.nav-title {
 	  position: relative;
   	margin: 0;
   	font-size: 2em;
   	color: $textcolor;
+  	overflow: hidden;
+  }
+  
+  .nav-title span {
+    float: left;
   }
   
 }

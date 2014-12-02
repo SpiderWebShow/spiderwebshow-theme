@@ -8,9 +8,7 @@
 	<link rel="dns-prefetch" href="//yui.yahooapis.com">
 	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 	<link rel="dns-prefetch" href="//ajax.googleapis.com">	
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">	
 	<link rel="dns-prefetch" href="//api.tiles.mapbox.com">
-	<link rel="dns-prefetch" href="//use.typekit.net">
 	
 	<!-- Title -->
 	<title><?php bloginfo('name'); wp_title(' / '); ?></title>
@@ -19,9 +17,6 @@
 	
 	<!-- CSS -->
 	<link href="<?php bloginfo('template_url'); ?>/css/screen.css" media="screen, projection" rel="stylesheet" />
-	
-	<!-- Cloud.Typography -->
-	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7533252/654022/css/fonts.css" />
 	
 	<!-- FontAwesome for sharing font stuff -->
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
@@ -42,9 +37,9 @@
 
 	<div class="nav" role="banner">
 
-		<a href="/" title="Home">
-		  <img class="nav-logo" src="<?php bloginfo('template_url') ?>/img/sws-logo-optimized.svg" alt="SpiderWebShow logo" style="max-width:100%;padding:1em" />
-		  <h1 class="nav_title" style="overflow:hidden;"><span style="float:left;">Spider</span><span style="float:left;">Web</span><span style="float:left;">Show</span></h1>
+		<a href="<?php bloginfo('url'); ?>" title="Home">
+		  <img class="nav-logo" src="<?php bloginfo('template_url'); ?>/img/sws-logo-optimized.svg" alt="SpiderWebShow logo" />
+		  <h1 class="nav-title"><span>Spider</span><span>Web</span><span>Show</span></h1>
 	  </a>
 
 		<!-- Load in the primary menu -->

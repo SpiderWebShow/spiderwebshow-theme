@@ -60,8 +60,7 @@
 		<div class="pure-u-1-3">
 		  <?php if(has_post_thumbnail()){ ?>
 			<figure class="thumbnail">
-  			<?php the_post_thumbnail('large'); // use existing wordpress featured image behaviour instead of creating Types ?>
-  			<?php // echo types_render_field( "custom-edition-image", array(  )  ) ?>
+  			<?php the_post_thumbnail('large'); ?>
 			</figure>
       <?php } ?>
 			
@@ -70,9 +69,12 @@
 				<?php
 					$children = types_child_posts('article');
 					foreach($children as $child){ ?>
-					
+					  
 						<h2><a href="<?php echo get_permalink($child->ID); ?>" title="<?php echo($child->post_title); ?>"><?php echo($child->post_title); ?></a></h2>
-					
+            <figure class="thumbnail">
+    					<a href="<?php echo get_permalink($child->ID); ?>" title="<?php echo($child->post_title); ?>"><?php echo get_the_post_thumbnail($child->ID, 'large'); ?></a>
+    				</figure>
+    				
 					<?php }	?>
 			</div>
 				

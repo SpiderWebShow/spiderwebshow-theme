@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="main_content">
-	
+	<!-- This is a default template page! -->
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	

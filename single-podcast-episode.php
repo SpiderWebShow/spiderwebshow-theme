@@ -11,8 +11,8 @@
   	$podcastName = $podcast->name;
   	$podcastDesc = $podcast->description;
   	$podcastSlug = $podcast->slug;
-  	$podcastURL = get_bloginfo('home') . "/podcast/" . $podcastSlug;
-  	$podcastFeed = get_bloginfo('home') . "/podcast/" . $podcastSlug . "/feed";
+  	$podcastURL = get_bloginfo('url') . "/podcast/" . $podcastSlug;
+  	$podcastFeed = get_bloginfo('url') . "/podcast/" . $podcastSlug . "/feed";
   	
 	?>
 

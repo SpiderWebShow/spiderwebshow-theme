@@ -270,6 +270,54 @@ add_filter('embed_oembed_html', 'soundCloud_mini_embed', 10, 3);
 
 
 
+/////////////////////////////////
+// ADD CUSTOM FIELDS TO THE CUSTOM "PODCASTS" TAXONOMY
+/////////////////////////////////
+// http://sabramedia.com/blog/how-to-add-custom-fields-to-custom-taxonomies
+
+// A callback function to add a custom field to our "presenters" taxonomy
+function podcast_taxonomy_custom_fields($tax) {
+   // Check for existing taxonomy meta for the term you're editing
+    $t_id = $tax->term_id; // Get the ID of the term you're editing
+    $term_meta = get_option( "taxonomy_term_$t_id" ); // Do the check
+?>
+
+<tr class="form-field">
+	<th scope="row" valign="top">
+		<label for="podcast_itunes_link"><?php _e('URL for Podcast on iTunes'); ?></label>
+	</th>
+	<td>
+		<input type="text" name="term_meta[podcast_itunes_link]" id="term_meta[podcast_itunes_link]" size="25" style="width:60%;" value="<?php echo $term_meta['podcast_itunes_link'] ? $term_meta['podcast_itunes_link'] : ''; ?>"><br />
+		<span class="description"><?php _e('The link to the podcast on iTunes'); ?></span>
+	</td>
+</tr>
+
+<?php };
+
+// A callback function to save our extra taxonomy field(s)
+function save_taxonomy_custom_fields( $term_id ) {
+    if ( isset( $_POST['term_meta'] ) ) {
+        $t_id = $term_id;
+        $term_meta = get_option( "taxonomy_term_$t_id" );
+        $cat_keys = array_keys( $_POST['term_meta'] );
+            foreach ( $cat_keys as $key ){
+            if ( isset( $_POST['term_meta'][$key] ) ){
+                $term_meta[$key] = $_POST['term_meta'][$key];
+            }
+        }
+        //save the option array
+        update_option( "taxonomy_term_$t_id", $term_meta );
+    }
+}
+
+// Add the fields to the "podcasts" taxonomy, using our callback function
+add_action( 'podcast_edit_form_fields', 'podcast_taxonomy_custom_fields', 10, 2 );
+
+// Save the changes made on the "podcasts" taxonomy, using our callback function
+add_action( 'edited_podcast', 'save_taxonomy_custom_fields', 10, 2 );
+
+
+
 
 /////////////////////////////////
 // LIST AUTHORS OF CUSTOM POST TYPES

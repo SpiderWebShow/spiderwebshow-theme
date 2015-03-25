@@ -103,6 +103,10 @@
 		<p><?php _e(''); ?></p>
 		<?php endif; ?>
 		
+		<hr />
+		
+		<?php posts_nav_link(" // ", "&laquo; Newer Posts", "Older Posts &raquo;"); ?>
+		
 	</div>
 	
 	

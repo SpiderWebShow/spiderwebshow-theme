@@ -9,7 +9,7 @@
 		  <div style="float:left;">
 		    <a href="https://twitter.com/spiderwebshow" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @SpiderWebShow</a>
 		  </div> &nbsp;
-		  <div class="fb-like" data-href="https://www.facebook.com/PraxNACspiderwebshow" data-width="" data-height="" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false" style="margin-left: 1em; float:left;">
+		  <div class="fb-like" data-href="https://www.facebook.com/PraxNACspiderwebshow" data-width="" data-height="" data-colorscheme="light" data-layout="button" data-action="like" data-show-faces="false" data-send="false" style="margin-left: 1em; float:left;">
 		  </div>
 		</p>
     

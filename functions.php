@@ -537,7 +537,7 @@ function cpt_sticky_class($classes) {
 		endif; 
 		return $classes;
 				}
-	add_filter('post_class', 'cpt_sticky_class');
+add_filter('post_class', 'cpt_sticky_class');
 
 
 // Register the primary navigation menu

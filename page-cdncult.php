@@ -28,13 +28,13 @@
 	?>
 	
 	<header class="cdncult_header pure-u-1">
-		<h1>#CdnCult Times</h1>
+		<h1>#CdnCult</h1>
 		<p class="cdncult-tagline">Reporting and commentary about Canadian performance culture in Internet times &bull; <?php echo $most_recent_date; ?></p>
 	</header>
 	
 	<hr>
 	
-	<div class="pure-u-1-2 edition-intro">
+	<div class="pure-u-1 edition-intro">
 		<?php
 		/*
 		 * Run two loops. First, grab the most recent Edition and display it. 
@@ -61,10 +61,18 @@
 					array_push($edition_articles, $child->ID); // get its post ID and push that to the array we set up above.
 				}
 			?>
-			<p class="date"><?php the_date('F j, Y') ?></p>
+			
 			<h2><?php the_title(); ?></h2>
-			<?php the_post_thumbnail('large'); // use existing wordpress featured image behaviour instead of creating Types ?>
-  			<?php // echo types_render_field( "custom-edition-image", array(  )  ) ?>
+			
+			<?php if(has_post_thumbnail()): ?>
+      <?php 
+        $thumbID = get_post_thumbnail_id($post->ID);
+        $thumbSRC = wp_get_attachment_image_src($thumbID, 'large');
+      ?>
+      <figure>
+        <img src="<?php echo($thumbSRC[0]) ?>" style="float:left; padding-right: 1em;" />
+      </figure>
+			<?php endif; ?>
 			
 			<?php the_content(); ?>
 			
@@ -80,7 +88,9 @@
 		<a href="/edition" title="See all editions of the #CdnCult Times">Read all back issues of #CdnCult Times &raquo;</a>
 	</div>
 	
-	<div class="pure-u-1-2 edition-article-excerpts">
+	<hr />
+	
+	<div class="edition-article-excerpts">
 		<?php 
 		
 		/*
@@ -90,7 +100,7 @@
 		 		 
 		// Set up new argument
 		$args2 = array(
-			//'posts_per_page' => 3, // limit the number of Articles that will display to 3
+			//'posts_per_page' => 3, // limit the number of Articles that will display to 3. DEPRECATED so that we can accommodate differently-sized editions in future
 			'post_type' => 'article', // define post_type of 'article'. We only want this post type, no traditional "posts"
 			'post__in' => $edition_articles // the array of post IDs to fetch
 		);
@@ -101,7 +111,7 @@
 		// The 2nd Loop
 		while( $query2->have_posts() ) { $query2->the_post(); ?>
 		
-			<article class="cdncult-home-excerpt">
+			<article class="pure-u-1-3 cdncult-home-excerpt">
 				<?php if(has_post_thumbnail()): ?>
 				<figure class="thumbnail">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('cdncult-thumb'); ?></a>

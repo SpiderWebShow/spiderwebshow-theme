@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-<div class="main_content vertical_podcasts pure-g-r">
+<div class="main_content vertical_sound pure-g-r">
 
   <div class="pure-u-1">
 
- 		<p><a href="/podcasts" title="More SpiderWebShow Podcasts">&laquo; See all SpiderWebShow Podcasts</a></p>
+ 		<p><a href="/sound" title="More SpiderWebShow Sound">&laquo; See all SpiderWeb Sound</a></p>
 
   </div>
   

@@ -90,7 +90,7 @@
 	
 	<hr />
 	
-	<div class="edition-article-excerpts">
+	<div class="pure-g-r edition-article-excerpts">
 		<?php 
 		
 		/*

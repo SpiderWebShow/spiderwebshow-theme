@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
 <style>
 	.style0{
-		fill:	#BE1E2D;
+		fill:	#952f29;
 	}
 	.style1{
-		stroke:	#BE1E2D;
-		stroke-width: 10;
-		stroke-miterlimit:	10;
-		fill:	none;
+		stroke:	#93fbfd;
+		stroke-width: 20;
+		stroke-miterlimit:	20;
 	}
-</style><g>
-	<path d="M1016.4 6v1012H6V6H1016.4 M1022.4 0H0v1024h1022.4V0L1022.4 0z" class="style0"/>
+</style>
+<g>
+	<rect width="1024" height="1024" class="style0" />	
 </g>
 <line x1="190.9" y1="980.1" x2="893.3" y2="43.6" class="style1"/>
 <line x1="448.3" y1="895.3" x2="351" y2="766.7" class="style1"/>

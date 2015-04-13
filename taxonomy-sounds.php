@@ -6,6 +6,9 @@
  		<p><a href="/sound" title="More SpiderWebShow Sound">&laquo; See all SpiderWeb Sound</a></p>
   
     	<h1><?php single_term_title(); ?></h1>
+    	
+    	<?php if (function_exists('z_taxonomy_image')) z_taxonomy_image(NULL, 'medium'); ?>
+    	
     	<p><?php echo term_description(); ?></p>
 
     <hr />

@@ -15,7 +15,15 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
 	<article class="pure-u-1">
+		
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		
+		<?php if(has_post_thumbnail()): ?>
+			<figure>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('cdncult-thumb'); ?></a>
+			</figure>
+		<?php endif; ?>
+		
 		<?php the_excerpt(); ?>
 	</article>
 	

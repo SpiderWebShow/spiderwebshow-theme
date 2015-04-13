@@ -4,17 +4,15 @@
   <div class="pure-u-1">
 
  		<p><a href="/sound" title="More SpiderWebShow Sound">&laquo; See all SpiderWeb Sound</a></p>
+  
+    	<h1><?php single_term_title(); ?></h1>
+    	<p><?php echo term_description(); ?></p>
 
+    <hr />
+  
   </div>
   
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-  <div class="pure-u-1">
-  	<h1><?php single_term_title(); ?></h1>
-  	<p><?php echo term_description(); ?></p>
-  </div>
-
-  <hr />
 	
 	<article class="pure-u-1">
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

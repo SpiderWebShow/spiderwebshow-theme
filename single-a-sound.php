@@ -6,14 +6,18 @@
   <?php
   	
   	$sound =  wp_get_post_terms( $post->ID, 'sounds' );
-  	$sound = $sound[0];
-  	$soundID = $sound->term_id;
-  	$soundName = $sound->name;
-  	$soundDesc = $sound->description;
-  	$soundSlug = $sound->slug;
-  	$soundURL = get_bloginfo('url') . "/sounds/" . $soundSlug;
-  	$soundFeed = get_bloginfo('url') . "/sounds/" . $soundSlug . "/feed";
+  
+  if ($sound) {
+
+    	$sound = $sound[0];  	
+    	$soundID = $sound->term_id;
+    	$soundName = $sound->name;
+    	$soundDesc = $sound->description;
+    	$soundSlug = $sound->slug;
+    	$soundURL = get_bloginfo('url') . "/sounds/" . $soundSlug;
+    	$soundFeed = get_bloginfo('url') . "/sounds/" . $soundSlug . "/feed";
   	
+  	}
 	?>
 
   <div class="pure-u-1">
@@ -22,13 +26,13 @@
 
   </div>
 	
-	<div class="pure-u-2-3">
+	<article class="pure-u-2-3">
 		
 		<h1><?php the_title(); ?></h1>
 		<p>Posted by <?php the_author_posts_link(); ?> on <?php the_date("F j, Y"); ?></p>
 		<?php the_content(); ?>
 
-	</div>
+	</article>
 	
 	<div class="pure-u-1-3">
 	

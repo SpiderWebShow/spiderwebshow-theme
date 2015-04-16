@@ -1,21 +1,39 @@
 <?php get_header(); ?>
 <div class="main_content vertical_sound pure-g-r">
 
-  <div class="pure-u-1">
+  <div class="pure-u-1 Soundseries-description">
 
  		<p><a href="/sound" title="More SpiderWebShow Sound">&laquo; See all SpiderWeb Sound</a></p>
   
-    	<h1><?php single_term_title(); ?></h1>
+    	<h1 class="Soundseries-title"><?php single_term_title(); ?></h1>
     	
-    	<?php if (function_exists('z_taxonomy_image')) { z_taxonomy_image(NULL, 'medium'); } ?>
+    	<?php
+      	
+      	// This functionality requires the Categories Images plugin:
+      	// https://wordpress.org/plugins/categories-images/
+      	
+      if (function_exists('z_taxonomy_image_url')) { 
+        // if the plugin is active, fetch the img src
+        // z_taxonomy_image_url($term_ID, $size, $return_placeholder)
+        $soundImg = z_taxonomy_image_url(NULL, 'medium');
+        
+      }
+    
+      if( $soundImg ) { // only insert img tag if src is present
+    
+    ?>
+    	  <img src="<?php echo $soundImg ?>" class="Soundseries-image" />
+    	  
+    	<?php } // end of Categories Images ?>
     	
     	<?php if (term_description()) { ?>
-    	<p><?php echo term_description(); ?></p>
+    	<p class="Soundseries-text"><?php echo term_description(); ?></p>
     	<?php } ?>
-
-    <hr />
-  
+    	  
   </div>
+  
+  <hr />
+
   
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	

@@ -834,6 +834,24 @@ p.wp-caption-text {
   
 }
 
+/* SPIDERWEBSOUND VERTICAL */
+/* FILES: page-sound.php, taxonomy-sounds.php, single-a-sound.php */
+/* SCOPE: .Soundseries */
+/* Descriptive sections for series of sounds, or other meta-information related to podcasts */
+
+@media (min-width: 768px) {
+
+  .Soundseries-description {
+    overflow: hidden;
+  }
+
+  .Soundseries-image {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+}
+
 
 /* EXPERIMENTS VERTICAL */
 

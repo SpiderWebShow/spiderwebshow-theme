@@ -351,6 +351,27 @@ h1 {
 }
 
 
+
+/* SUPPLEMENTARY NAVIGATION */
+.Nav-pagination {
+  margin: 2em inherit 4em;
+  height: 2em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+  .Nav-pagination--older {
+    float: right;
+    margin-bottom: 4em;
+  }
+  
+  .Nav-pagination--newer {
+    float: left;
+    margin-bottom: 4em;
+  }
+
+
+
 /* MEDIA & EMBEDS */
 
 

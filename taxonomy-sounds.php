@@ -7,9 +7,11 @@
   
     	<h1><?php single_term_title(); ?></h1>
     	
-    	<?php if (function_exists('z_taxonomy_image')) z_taxonomy_image(NULL, 'medium'); ?>
+    	<?php if (function_exists('z_taxonomy_image')) { z_taxonomy_image(NULL, 'medium'); } ?>
     	
+    	<?php if (term_description()) { ?>
     	<p><?php echo term_description(); ?></p>
+    	<?php } ?>
 
     <hr />
   
@@ -33,6 +35,11 @@
 <?php endwhile; else: ?>
   <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
+
+<nav class="pure-u-1 Nav-pagination">
+  <p class="Nav-pagination--older"><?php next_posts_link("Older »"); ?></p>
+  <p class="Nav-pagination--newer"><?php previous_posts_link("« Newer"); ?></p>
+</nav>
 
 </div>
 

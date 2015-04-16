@@ -16,7 +16,9 @@
     	$soundSlug = $sound->slug;
     	$soundURL = get_bloginfo('url') . "/sounds/" . $soundSlug;
     	$soundFeed = get_bloginfo('url') . "/sounds/" . $soundSlug . "/feed";
-  	
+    if (function_exists('z_taxonomy_image_url')) {
+    	  $soundImg = z_taxonomy_image_url($soundID, 'medium', false);
+    }
   	}
 	?>
 
@@ -36,7 +38,11 @@
 	
 	<div class="pure-u-1-3">
 	
-	  <hr />
+  <hr />
+  <?php if ( $soundImg ) { ?>
+    <img src="<?php echo $soundImg ?>" />
+  <?php } ?>
+	
   	
   	<h3><a href="<?php echo $soundURL ?>"><?php echo $soundName; ?></a></h3>
   	<p><?php echo $soundDesc; ?></p>

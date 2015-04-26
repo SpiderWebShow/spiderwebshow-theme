@@ -801,25 +801,23 @@ p.wp-caption-text {
 
 /* EDITION ARCHIVE STYLING */
 /* FILE: archive-edition.php */
+/* Listings of archived Editions of #CdnCult */
 
-.archive-navigation {
+.Archive-thumbnail {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
   
-  margin-bottom: 3em;
-  
-  p {
-    font-size: $base_unit * 2;
-    font-style: italic;
-  }
-  
-  p.newer {
+  .Archive-thumbnail {
     float: left;
-  }
-  
-  p.older {
-    float: right;
+    margin-right: 1em;
   }
   
 }
+
+
 
 
 /* COMMISSIONS VERTICAL */

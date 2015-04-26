@@ -41,9 +41,18 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
-	<article class="pure-u-1">
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php the_time('F j, Y'); ?>
+	<article class="pure-u-1 Archive-excerpt">
+    
+    	<?php if(has_post_thumbnail()): ?>
+			<figure class="Archive-thumbnail">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a>
+			</figure>
+		<?php endif; ?>
+  	
+		<h2 class="Archive-hed"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		
+		<time datetime="<?php the_time("c"); ?>" class="Archive-datetime"><?php the_time('F j, Y'); ?></time>
+		
 		<?php the_excerpt(); ?>
 	</article>
 	
@@ -51,10 +60,10 @@
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
   
-  <div class="pure-u-1 archive-navigation">
-    <p class="newer"><?php previous_posts_link('« Newer'); ?></p>
-    <p class="older"><?php next_posts_link('Older »'); ?></p>
-  </div>
+<nav class="pure-u-1 Nav-pagination">
+  <p class="Nav-pagination--older"><?php next_posts_link("Older »"); ?></p>
+  <p class="Nav-pagination--newer"><?php previous_posts_link("« Newer"); ?></p>
+</nav>
   
 </div>
 

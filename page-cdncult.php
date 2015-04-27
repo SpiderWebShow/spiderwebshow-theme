@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="main_content vertical_cdncult cdncult_home pure-g-r" style="margin-bottom: 8em;">
+<div class="main_content vertical_cdncult cdncult_home pure-g-r">
 	
 	<?php 
 	
@@ -34,7 +34,7 @@
 	
 	<hr>
 	
-	<div class="pure-u-1 edition-intro">
+	<div class="pure-u-3-5 edition-intro">
 		<?php
 		/*
 		 * Run two loops. First, grab the most recent Edition and display it. 
@@ -64,14 +64,10 @@
 			
 			<h2><?php the_title(); ?></h2>
 			
-			<?php if(has_post_thumbnail()): ?>
-      <?php 
-        $thumbID = get_post_thumbnail_id($post->ID);
-        $thumbSRC = wp_get_attachment_image_src($thumbID, 'large');
-      ?>
-      <figure>
-        <img src="<?php echo($thumbSRC[0]) ?>" style="float:left; padding-right: 1em;" />
-      </figure>
+      <?php if(has_post_thumbnail()): ?>
+				<figure class="thumbnail">
+					<?php the_post_thumbnail('large'); ?>
+				</figure>
 			<?php endif; ?>
 			
 			<?php the_content(); ?>
@@ -85,13 +81,18 @@
 		 */
 		wp_reset_postdata(); ?>
 		
-		<a href="/edition" title="See all editions of the #CdnCult Times">Read all back issues of #CdnCult Times &raquo;</a>
+		<a class="pure-button" href="/edition" title="See all editions of the #CdnCult Times">Read all back issues of #CdnCult Times &raquo;</a>
+	</div>
+	<div class="pure-u-2-5">
+		<h2>Latest #CdnCult Tweets</h2>
+		<p>A stream of all tweets tagged <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. A way to use hashtags to begin, broaden, and intensify conversations about Canadian Culture.</p>
+		<p>Tweeting about The SpiderWebShow? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. Tweeting about Canadian Culture? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. Tweeting about anything related to #Cdn plays, films, music, art, writing etc? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. Tweeting about Canadian Cults? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>.</p>
+		<a class="twitter-timeline" data-chrome="transparent noheader noborders" data-dnt="true" href="https://twitter.com/hashtag/cdncult" data-widget-id="371717661882728448" aria-polite="polite" height="400">Tweets about "#cdncult"</a>
 	</div>
 	
-	<hr />
-	
-	<div class="pure-g-r edition-article-excerpts">
-		<?php 
+</div>
+<div class="main_content vertical_cdncult cdncult_home pure-g-r">
+	<hr />	<?php 
 		
 		/*
 		 * Second loop starts here.
@@ -111,12 +112,17 @@
 		// The 2nd Loop
 		while( $query2->have_posts() ) { $query2->the_post(); ?>
 		
-			<article class="pure-u-1-3 cdncult-home-excerpt">
+			<div class="cdncult-home-excerpt">
+  			
+  			  <div class="pure-u-3-5">
 				<?php if(has_post_thumbnail()): ?>
 				<figure class="thumbnail">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('cdncult-thumb'); ?></a>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('large'); ?></a>
 				</figure>
 				<?php endif; ?>
+  			  </div>
+  			  
+  			  <div class="pure-u-2-5">
 				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 				<em>By <?php if ( function_exists( 'coauthors_posts_links' ) ) {
 					    coauthors_posts_links();
@@ -124,33 +130,18 @@
 					    the_author_posts_link();
 					} ?></em>
 				<?php the_excerpt(); ?>
-			</article>
+  			  </div>
+  			  
+			</div>
+			
+			<hr>
 		
 		<?php } // end while; ?>
 		
 		<?php 
 		// Restore original Post Data
 		wp_reset_postdata();
-		?>				
-		
-	</div>
-	
-	<hr>
-	
-	<div class="pure-u-1-2">
-		<h2>Latest #CdnCult tweets</h2>
-		<p>A stream of all tweets tagged <a href="https://twitter.com/search?q=%23cdncult" title="#cdncult">#CdnCult</a>. A way to use hashtags to begin, broaden, and intensify conversations about Canadian Culture.</p>
-		<p>Tweeting about The SpiderWebShow? Use <a href="https://twitter.com/search?q=%23cdncult" title="#cdncult">#CdnCult</a>. Tweeting about Canadian Culture? Use <a href="https://twitter.com/search?q=%23cdncult" title="#cdncult">#CdnCult</a>. Tweeting about anything related to #Cdn plays, films, music, art, writing etc? Use <a href="https://twitter.com/search?q=%23cdncult" title="#cdncult">#CdnCult</a>. Tweeting about Canadian Cults? Use <a href="https://twitter.com/search?q=%23cdncult" title="#cdncult">#CdnCult</a>.</p>
-		<a class="twitter-timeline" data-chrome="transparent noheader noborders" data-dnt="true" href="https://twitter.com/search?q=%23cdncult" data-tweet-limit="5" data-widget-id="371717661882728448" aria-polite="polite">Tweets about "#cdncult"</a>
-	</div>
-		
-	<div class="pure-u-1-2">
-		<h2>Latest #CdnTheatreThrowback tweets</h2>
-		<p>A stream of all tweets tagged <a href="https://twitter.com/search?q=%23CdnTheatreThrowback" title="#CdnTheatreThrowback">#CdnTheatreThrowback</a>. A way to use hashtags explore the history of Canadian Performance.</p>
-		<p>Tweets by theatre studies students about an event that happened on that day in Canadian Performance History via <a href="https://twitter.com/MultiManteau" title="@MultiManteau">@MultiManteau</a> hashtagged <a href="https://twitter.com/search?q=%23CdnTheatreThrowback" title="#CdnTheatreThrowback">#CdnTheatreThrowback</a>. Tweeting from January to April: the University of Ottawa&rsquo;s &ldquo;Theatre in English Canada&rdquo; class. Want to add your own significant event in performance history? Use <a href="https://twitter.com/search?q=%23CdnTheatreThrowback" title="#CdnTheatreThrowback">#CdnTheatreThrowback</a>.</p>
-		<a class="twitter-timeline" data-chrome="transparent noheader noborders" data-dnt="true" href="https://twitter.com/search?q=%23CdnTheatreThrowback" data-tweet-limit="5" data-widget-id="389854528410890240" aria-polite="polite">Tweets about "#CdnTheatreThrowback"</a>
-	</div>
+		?>		
 
-			
-</div><!-- /.main_content -->
+</div>
 <?php get_footer(); ?>

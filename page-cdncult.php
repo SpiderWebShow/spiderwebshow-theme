@@ -34,7 +34,6 @@
 	
 	<hr>
 	
-	<div class="pure-u-3-5 edition-intro">
 		<?php
 		/*
 		 * Run two loops. First, grab the most recent Edition and display it. 
@@ -61,17 +60,20 @@
 					array_push($edition_articles, $child->ID); // get its post ID and push that to the array we set up above.
 				}
 			?>
-			
+		<div class="pure-u-1 edition-intro">
+  		
 			<h2><?php the_title(); ?></h2>
 			
       <?php if(has_post_thumbnail()): ?>
 				<figure class="thumbnail">
-					<?php the_post_thumbnail('large'); ?>
+					<?php the_post_thumbnail('edition-banner'); ?>
 				</figure>
 			<?php endif; ?>
-			
+		
+		</div>
+		
+		<div class="pure-u-3-5 tweetmatch">
 			<?php the_content(); ?>
-			
 		<?php } // end while; ?>
 		<?php
 		
@@ -85,9 +87,23 @@
 	</div>
 	<div class="pure-u-2-5">
 		<h2>Latest #CdnCult Tweets</h2>
-		<p>A stream of all tweets tagged <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. A way to use hashtags to begin, broaden, and intensify conversations about Canadian Culture.</p>
-		<p>Tweeting about The SpiderWebShow? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. Tweeting about Canadian Culture? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. Tweeting about anything related to #Cdn plays, films, music, art, writing etc? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>. Tweeting about Canadian Cults? Use <a href="https://twitter.com/hashtag/cdncult" title="#cdncult">#CdnCult</a>.</p>
 		<a class="twitter-timeline" data-chrome="transparent noheader noborders" data-dnt="true" href="https://twitter.com/hashtag/cdncult" data-widget-id="371717661882728448" aria-polite="polite" height="400">Tweets about "#cdncult"</a>
+		<script>
+			head.ready(function(){
+  			
+  			  twttr.events.bind("rendered", function(event){
+          
+          var widget = $("iframe#" + event.target.id);
+          var matchHeight = $("div.tweetmatch").height();
+          var h2height = $("div.edition-intro > h2").outerHeight(true);
+          var targetHeight = matchHeight - h2height;
+          widget.attr("height", targetHeight);
+          
+          
+  			  });
+  			
+			});
+		</script>
 	</div>
 	
 </div>
@@ -111,9 +127,7 @@
 		
 		// The 2nd Loop
 		while( $query2->have_posts() ) { $query2->the_post(); ?>
-		
-			<div class="cdncult-home-excerpt">
-  			
+		  			
   			  <div class="pure-u-3-5">
 				<?php if(has_post_thumbnail()): ?>
 				<figure class="thumbnail">
@@ -131,9 +145,7 @@
 					} ?></em>
 				<?php the_excerpt(); ?>
   			  </div>
-  			  
-			</div>
-			
+
 			<hr>
 		
 		<?php } // end while; ?>

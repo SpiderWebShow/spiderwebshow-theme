@@ -24,7 +24,10 @@
 
   <div class="pure-u-1">
 
- 		<p><a href="/sound" title="More SpiderWebShow Sound">&laquo; See all SpiderWeb Sound</a></p>
+ 		<p>
+      <a href="/sound" title="More SpiderWebShow Sound">SpiderWeb Sound</a><?php 
+        if ( $soundName && $soundURL ): ?>&nbsp;&raquo;&nbsp;<a href="<?php echo $soundURL ?>"><?php echo $soundName; ?></a>&nbsp;&raquo;&nbsp;<?php the_title(); ?><?php endif; ?>
+    </p>
 
   </div>
 	

@@ -3,7 +3,7 @@
 
   <div class="pure-u-1 Soundseries-description">
 
- 		<p><a href="/sound" title="More SpiderWebShow Sound">&laquo; See all SpiderWeb Sound</a></p>
+ 		<p><a href="/sound" title="More SpiderWebShow Sound">SpiderWeb Sound</a>&nbsp;&raquo;&nbsp;<?php single_term_title(); ?></p>
   
     	<h1 class="Soundseries-title"><?php single_term_title(); ?></h1>
     	

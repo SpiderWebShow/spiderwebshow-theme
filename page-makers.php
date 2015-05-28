@@ -28,7 +28,8 @@
       	<p>Sarah Garton Stanley</p>
     	</a>
       	<p class="twitter"><a href="https://twitter.com/sarahgstanley">@SarahgStanley</a></p>
-       	<p class="title">Co-Creator &amp; Artistic Director, SpiderWebShow</p>
+      <p class="title">Co-Creator &amp; Artistic Director, SpiderWebShow</p>
+      <p class="location">Kingston/Ottawa</p>
     	</a>
 	  </div>
   	
@@ -39,6 +40,7 @@
     	</a>
      	<p class="twitter"><a href="https://twitter.com/michaelcwheeler">@MichaelcWheeler</a></p>
      	<p class="title">Co-Creator, SpiderWebShow &amp; Editor in Chief, <a href="/cdncult" title="#CdnCult Times">#CdnCult Times</a></p>
+     	<p class="location">Toronto</p>
   	</div>
   	
   	<div class="creator-card">
@@ -47,7 +49,8 @@
       	<p>Adrienne Wong</p>
     	</a>
      	<p class="twitter"><a href="https://twitter.com/adriennewong88">@AdrienneWong88</a></p>
-     	<p class="title">Artistic Associate, SpiderWebShow &amp; Head Researcher, <a href="/experiments" title="SpiderWebShow Experiments">Experiments</a></p>
+     	<p class="title">Artistic Associate &amp; Head Researcher</p>
+     	<p class="location">Ottawa/Vancouver</p>
   	</div>
   	
   	<div class="creator-card">
@@ -57,6 +60,7 @@
     	</a>
      	<p class="twitter"><a href="https://twitter.com/lgyyc">@LGYYC</a></p>
      	<p class="title">Artistic Associate</p>
+     	<p class="location">Calgary</p>
   	</div>
   	
     <div class="creator-card">
@@ -66,6 +70,7 @@
     	</a>
      	<p class="twitter"><a href="https://twitter.com/gfscott">@gfscott</a></p>
      	<p class="title">Designer-Developer &amp; Digital Dramaturg</p>
+     	<p class="location">Toronto</p>
   	</div>
   	
   	<div class="creator-card">
@@ -75,7 +80,28 @@
     	</a>
      	<p class="twitter"><a href="https://twitter.com/SimonWBloom">@simonwbloom</a></p>
      	<p class="title">Designer-Developer &amp; Associate Digital Dramaturg</p>
+     	<p class="location">Toronto</p>
    	</div>
+
+  <div class="creator-card">
+    	<a href="http://spiderwebshow.ca/author/claytonbaraniuk">
+      	<img src="http://spiderwebshow.ca/wp-content/uploads/2014/12/Clayton-75x75.jpg" alt="Clayton Baraniuk" />
+      	<p>Clayton Baraniuk</p>
+    	</a>
+      <p class="twitter"><a href="https://twitter.com/Claybee">@Claybee</a></p>
+      <p class="title">Associate Producer</p>
+      <p class="location">Ottawa/Victoria</p>
+ 	</div>
+   	
+  <div class="creator-card">
+    	<a href="http://spiderwebshow.ca/author/alisonbowie">
+      	<img src="http://spiderwebshow.ca/wp-content/uploads/2015/05/Headshot-2015sm-75x75.jpeg" alt="Alison Bowie" />
+      	<p>Alison Bowie</p>
+    	</a>
+      <p class="twitter"><a href="https://twitter.com/ajbowie1984">@ajbowie1984</a></p>
+      <p class="title">Associate Dramaturg</p>
+      <p class="location">Montreal</p>
+ 	</div>
   	
 	</div>
 		

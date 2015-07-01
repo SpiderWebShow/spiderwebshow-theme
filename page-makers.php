@@ -108,7 +108,7 @@
 	<hr>
 	
 	<div class="pure-u-1">
-		<p>The SpiderWebShow is produced by <a href="http://www.neworldtheatre.com/" title="Neworld Theatre">Neworld Theatre</a> in collaboration with <a href="http://praxistheatre.com/" title="Praxis Theatre">Praxis Theatre</a> and <a href="http://nac-cna.ca/englishtheatre" title="NAC English Theatre">The NAC English Theatre</a></p>
+		<p>The SpiderWebShow is produced by <a href="http://www.neworldtheatre.com/" title="Neworld Theatre">Neworld Theatre</a> in collaboration with <a href="http://praxistheatre.com/" title="Praxis Theatre">Praxis Theatre</a>, <a href="http://nac-cna.ca/englishtheatre" title="NAC English Theatre">The NAC English Theatre</a> and <a href="http://atplive.com/" title="Alberta Theatre Projects">Alberta Theatre Projects</a>.</p>
 	</div>
 	
 	<hr>

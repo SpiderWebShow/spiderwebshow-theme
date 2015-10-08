@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
 <style>
 	.style0{
-		fill:	#952f29;
+		fill:	#800518;
 	}
 	.style1{
-		stroke:	#93fbfd;
+		stroke:	#f77f16;
 		stroke-width: 20;
 		stroke-miterlimit:	20;
 	}

@@ -2,6 +2,8 @@
 <div class="main_content vertical_sound pure-g-r">
 
   <div class="pure-u-1 Soundseries-description">
+    
+    <img src="http://unsplash.it/960/250?random">
 
  		<p><a href="/sound" title="More SpiderWebShow Sound">SpiderWeb Sound</a>&nbsp;&raquo;&nbsp;<?php single_term_title(); ?></p>
   

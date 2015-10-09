@@ -2,7 +2,9 @@
 <div class="main_content vertical_sound pure-g-r">
 	<!-- This is a default template page! -->
   
-  <div class="pure-u-1">  
+  <div class="pure-u-1">
+  
+  <img src="http://unsplash.it/960/250?random">  
   
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	

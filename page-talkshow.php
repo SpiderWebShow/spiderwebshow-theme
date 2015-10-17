@@ -3,6 +3,12 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // BEGIN WORDPRESS LOOP ?>
 
 	<div class="pure-u-1">
+  	
+    <figure class="vertical_header">
+      <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-talkshow.jpg" alt="">
+      <p class="vertical_header-caption">Photo: <em>Habitat</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+    </figure>
+  	
 		<h1><?php the_title(); ?></h1>
 	</div>
 	

@@ -2,7 +2,13 @@
 <div class="main_content pure-g-r">
 	<!-- This is a default template page! -->
   
-  <div class="pure-u-1">  
+  <div class="pure-u-1">
+    
+    <figure class="vertical_header">
+      <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-gallery.jpg" alt="">
+      <p class="vertical_header-caption">Photo: <em>Rage</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+    </figure>
+      
   
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	

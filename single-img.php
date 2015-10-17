@@ -19,7 +19,12 @@
   	}
 	?>
   <div class="pure-u-1">
-
+    
+    <figure class="vertical_header">
+      <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-gallery.jpg" alt="">
+      <p class="vertical_header-caption">Photo: <em>Rage</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+    </figure>
+    
     <p>
       <a href="/images" title="More SpiderWebShow Images">SpiderWeb Images</a><?php 
         if ( $imgName && $imgURL ): ?>&nbsp;&raquo;&nbsp;<a href="<?php echo $imgURL ?>"><?php echo $imgName; ?></a>&nbsp;&raquo;&nbsp;<?php the_title(); ?><?php endif; ?>

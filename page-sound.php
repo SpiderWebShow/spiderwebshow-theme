@@ -4,7 +4,10 @@
   
   <div class="pure-u-1">
   
-  <img src="http://unsplash.it/960/250?random">  
+  <figure class="vertical_header">
+    <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-sound.jpg" alt="">
+    <p class="vertical_header-caption">Photo: <em>Zadie’s Shoes</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+  </figure>
   
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	

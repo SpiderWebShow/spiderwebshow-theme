@@ -23,6 +23,11 @@
 	?>
 
   <div class="pure-u-1">
+    
+    <figure class="vertical_header">
+      <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-sound.jpg" alt="">
+      <p class="vertical_header-caption">Photo: <em>Zadie’s Shoes</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+    </figure>
 
  		<p>
       <a href="/sound" title="More SpiderWebShow Sound">SpiderWeb Sound</a><?php 

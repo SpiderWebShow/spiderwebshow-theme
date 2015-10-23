@@ -2,8 +2,8 @@
 
 <div class="main_content">
 	
-		<h1>Welcome to the SpiderWebShow</h1>
-		<p>A theatrical space where Canada, the Internet and performance minds intersect.</p>
+		<h1>Welcome to SpiderWebShow. A theatrical space where Canada, the Internet and performance minds intersect. You are in the Lobby</h1>
+<!-- 		<p>A theatrical space where Canada, the Internet and performance minds intersect.</p> -->
 		
 		<p>
 		  <div style="float:left;">

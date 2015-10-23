@@ -14,7 +14,7 @@
   		head.load("//apis.google.com/js/platform.js");
 		</script>
 		<hr>
-		<p>Subscribe on YouTube: <div class="g-ytsubscribe" data-channel="UC32SlshOqWPecg0eYa63DPA" data-layout="default" data-count="hidden"></div></p>
+		<p>Subscribe on YouTube: <div class="g-ytsubscribe" data-channelid="UC32SlshOqWPecg0eYa63DPA" data-layout="default" data-count="hidden"></div></p>
 		
 	</div>
 

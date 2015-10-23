@@ -3,7 +3,7 @@
 <div class="main_content vertical_elders stage pure-g-r">
 
 	<div class="pure-u-1">
-		<p><a href="/talkshow" title="See all Elder Project videos">&laquo; Back to Elder Project</a></p>
+		<p><a href="/the-elder-project" title="See all Elder Project videos">&laquo; Back to Elder Project</a></p>
 	</div>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // WORDPRESS LOOP BEGINS ?>

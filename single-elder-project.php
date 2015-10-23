@@ -27,7 +27,7 @@
     		head.load("//apis.google.com/js/platform.js");
   		</script>
   		<div style="display:block;float:right;margin-top: 1em;padding:0.33em 2em;background:rgba(33,33,33,0.3);text-align:center;">
-    		<p>Subscribe on YouTube: <div class="g-ytsubscribe" data-channel="UC32SlshOqWPecg0eYa63DPA" data-layout="default" data-count="hidden"></div></p>
+    		<p>Subscribe on YouTube: <div class="g-ytsubscribe" data-channelid="UC32SlshOqWPecg0eYa63DPA" data-layout="default" data-count="hidden"></div></p>
   		</div>
 		  
 			<?php the_content(); ?>

@@ -84,7 +84,7 @@
       <img src="http://spiderwebshow.ca/wp-content/uploads/2015/10/Activation-47-75x75.jpg" alt="Camila Diaz-Varela" />
       <p>Camila Diaz-Varela</p>
     	</a>
-    <p class="twitter"><a href="https://twitter.com/SimonWBloom">@camilstown</a></p>
+    <p class="twitter"><a href="https://twitter.com/camilstown">@camilstown</a></p>
     <p class="title">Digital Production Manager</p>
     <p class="location">Toronto</p>
   </div>

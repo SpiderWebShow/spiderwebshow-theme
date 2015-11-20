@@ -79,15 +79,25 @@
      	<p class="location">Toronto</p>
   	</div>
   	
-  	<div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/simonbloom">
-      	<img src="//spiderwebshow.ca/wp-content/uploads/2014/09/simonbloom-75x75.jpg" alt="Simon Bloom" />
-      	<p>Simon Bloom</p>
+  <div class="creator-card">
+	  <a href="http://spiderwebshow.ca/author/CamilaDiazVarela">
+      <img src="http://spiderwebshow.ca/wp-content/uploads/2015/10/Activation-47-75x75.jpg" alt="Camila Diaz-Varela" />
+      <p>Camila Diaz-Varela</p>
     	</a>
-     	<p class="twitter"><a href="https://twitter.com/SimonWBloom">@simonwbloom</a></p>
-     	<p class="title">Designer-Developer &amp; Associate Digital Dramaturg</p>
-     	<p class="location">Toronto</p>
-   	</div>
+    <p class="twitter"><a href="https://twitter.com/SimonWBloom">@camilstown</a></p>
+    <p class="title">Digital Production Manager</p>
+    <p class="location">Toronto</p>
+  </div>
+  	
+  <div class="creator-card">
+	  <a href="http://spiderwebshow.ca/author/simonbloom">
+      <img src="//spiderwebshow.ca/wp-content/uploads/2014/09/simonbloom-75x75.jpg" alt="Simon Bloom" />
+      <p>Simon Bloom</p>
+    	</a>
+    <p class="twitter"><a href="https://twitter.com/SimonWBloom">@simonwbloom</a></p>
+    <p class="title">Associate Artist</p>
+    <p class="location">Toronto</p>
+  </div>
 
   <div class="creator-card">
     	<a href="http://spiderwebshow.ca/author/claytonbaraniuk">

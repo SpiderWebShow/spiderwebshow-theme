@@ -90,16 +90,6 @@
   </div>
   	
   <div class="creator-card">
-	  <a href="http://spiderwebshow.ca/author/simonbloom">
-      <img src="//spiderwebshow.ca/wp-content/uploads/2014/09/simonbloom-75x75.jpg" alt="Simon Bloom" />
-      <p>Simon Bloom</p>
-    	</a>
-    <p class="twitter"><a href="https://twitter.com/SimonWBloom">@simonwbloom</a></p>
-    <p class="title">Associate Artist</p>
-    <p class="location">Toronto</p>
-  </div>
-
-  <div class="creator-card">
     	<a href="http://spiderwebshow.ca/author/claytonbaraniuk">
       	<img src="http://spiderwebshow.ca/wp-content/uploads/2014/12/Clayton-75x75.jpg" alt="Clayton Baraniuk" />
       	<p>Clayton Baraniuk</p>

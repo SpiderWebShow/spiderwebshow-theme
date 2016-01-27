@@ -40,6 +40,7 @@
 		<a href="<?php bloginfo('url'); ?>" title="Home">
 		  <img class="nav-logo" src="<?php bloginfo('template_url'); ?>/img/sws-logo-optimized.svg" alt="SpiderWebShow logo" />
 		  <h1 class="nav-title"><span>Spider</span><span>Web</span><span>Show</span></h1>
+	  	  <small class="nav-established">Est. 2013</small>
 	  </a>
 
 		<!-- Load in the primary menu -->

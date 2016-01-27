@@ -240,6 +240,7 @@ h1 {
 	color: $white;
 }
 
+
 @media (min-width:768px) {
   
   .nav-logo { 
@@ -249,7 +250,7 @@ h1 {
   }
   
 	.nav-title {
-	  position: relative;
+  position: relative;
   	margin: 0;
   	font-size: 2em;
   	color: $textcolor;
@@ -259,6 +260,13 @@ h1 {
   .nav-title span {
     float: left;
   }
+  
+  .nav-established {
+    padding: 0 1rem;
+    text-decoration: none;
+    color: $textcolor;
+  }
+  
   
 }
 

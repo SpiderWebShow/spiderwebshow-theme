@@ -10,9 +10,10 @@ if ( function_exists( 'add_theme_support' ) ) {
         set_post_thumbnail_size( 75, 75 );
 }
 
-if ( function_exists( 'add_image_size' ) ) { 
+if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
 	add_image_size( 'homepage-thumb', 220, 180, true ); //(cropped)
+	add_image_size( 'square-300', 300, 300, true ); //(cropped)
 }
 
 
@@ -90,10 +91,10 @@ class Foo_Widget extends WP_Widget {
         $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
         ?>
         <p>
-        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
-        <?php 
+        <?php
     }
 
     /**
@@ -236,34 +237,34 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 function soundCloud_mini_embed($html, $url) {
-  
+
   // Only use this filter on Soundcloud embeds
   if(preg_match("/soundcloud.com/", $url)) {
-    
+
     // array of patterns to find in the oembed iframe html
     $patterns = array();
       $patterns[0] = "/visual=true/"; // true means a big image background
       $patterns[1] = "/show_artwork=true/"; // true means show the track artwork
       $patterns[2] = "/ height=\"\d+?\"/"; // height of standard embed is in the 400-pixel range. Just look for any height integer
       $patterns[3] = "/ width=\"\d+?\"/"; // width of standard embed is a fixed pixel width. Look for any integer
-    
+
     // array of replacements to make for these patterns
     $replacements = array();
       $replacements[0] = "visual=false"; // turn off big image background
       $replacements[1] = "show_artwork=false"; // turn off track artwork
       $replacements[2] = " height=\"166\""; // set iframe height to 166 pixels, the embed standard for the Soundcloud mini player
       $replacements[3] = " width=\"100%\""; // set iframe to full width instead of fixed pixel dimension
-    
+
     // prophylactic ksort to make sure that all patterns and replacments will line up regardless of what order they're input
     ksort($patterns);
     ksort($replacements);
-    
+
     // one function to do all the find and replace
     $html = preg_replace($patterns, $replacements, $html);
     // return the html string and save to database or output
     return $html;
   }
-  
+
 }
 // hook into the Wordpress oembed filter
 add_filter('embed_oembed_html', 'soundCloud_mini_embed', 10, 3);
@@ -347,13 +348,13 @@ $authors = get_users( $query_args );
     $custom_post_types = get_post_types(array('_builtin' => false));
     if(!empty($custom_post_types)){
         $temp = implode ("','", $custom_post_types);
-        $custom_post_types = "'"; 
-        $custom_post_types .= $temp; 
+        $custom_post_types = "'";
+        $custom_post_types .= $temp;
         $custom_post_types .= "','post'";
     }else{
         $custom_post_types .= "'post'";
     }
-$author_count = array();        
+$author_count = array();
 foreach ( (array) $wpdb->get_results("SELECT DISTINCT post_author, COUNT(ID) AS count FROM $wpdb->posts WHERE post_type in ($custom_post_types)  AND " . get_private_posts_cap_sql( 'post' ) . " GROUP BY post_author") as $row )
     $author_count[$row->post_author] = $row->count;
 
@@ -475,66 +476,66 @@ if ( ! function_exists('wpse_2266_custom_taxonomy_post_class') ) {
 
 
 function wpb_cpt_sticky_at_top( $posts ) {
- 
+
     // apply it on the archives only
     // GFS - I've altered this by removing the requirement that it be only on post_type_archive. This is so the sticky post will work on the experiment custom loop. To restore, restore commented-out section in the line below
     if ( is_main_query() && is_page( 462 ) /* && is_post_type_archive() */ ) {
         global $wp_query;
- 
+
         $sticky_posts = get_option( 'sticky_posts' );
         $num_posts = count( $posts );
         $sticky_offset = 0;
- 
+
         // Find the sticky posts
         for ($i = 0; $i < $num_posts; $i++) {
- 
+
             // Put sticky posts at the top of the posts array
             if ( in_array( $posts[$i]->ID, $sticky_posts ) ) {
                 $sticky_post = $posts[$i];
- 
+
                 // Remove sticky from current position
                 array_splice( $posts, $i, 1 );
- 
+
                 // Move to front, after other stickies
                 array_splice( $posts, $sticky_offset, 0, array($sticky_post) );
                 $sticky_offset++;
- 
+
                 // Remove post from sticky posts array
                 $offset = array_search($sticky_post->ID, $sticky_posts);
                 unset( $sticky_posts[$offset] );
             }
         }
- 
+
         // Look for more sticky posts if needed
         if ( !empty( $sticky_posts) ) {
- 
+
             $stickies = get_posts( array(
                 'post__in' => $sticky_posts,
                 'post_type' => $wp_query->query_vars['post_type'],
                 'post_status' => 'publish',
                 'nopaging' => true
             ) );
- 
+
             foreach ( $stickies as $sticky_post ) {
                 array_splice( $posts, $sticky_offset, 0, array( $sticky_post ) );
                 $sticky_offset++;
             }
         }
- 
+
     }
- 
+
     return $posts;
 }
- 
+
 add_filter( 'the_posts', 'wpb_cpt_sticky_at_top' );
 
 // Add sticky class in article title to style sticky posts differently
 
 function cpt_sticky_class($classes) {
-			if ( is_sticky() ) : 
+			if ( is_sticky() ) :
 			$classes[] = 'sticky';
 	        return $classes;
-		endif; 
+		endif;
 		return $classes;
 				}
 add_filter('post_class', 'cpt_sticky_class');

@@ -29,7 +29,7 @@ $link_hover_color: red;
 
 /* TYPOGRAPHY */
 
-$textcolor: #444;	
+$textcolor: #444;
 /* $type_default: "Roboto", Helvetica, Arial, sans-serif; */
 $type_default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $type_serif: Georgia, "Times New Roman", serif;
@@ -146,7 +146,7 @@ hr {
 	background: $dark;
 	color: $white;
 	z-index: 100;
-	
+
 	/* Translate3d Layer Hack */
 	transform: translate3d(0);
 }
@@ -155,7 +155,7 @@ hr {
   margin-top: $base_unit * 3.5;
 	padding: $base_unit;
 }
-  
+
   /* Logo is hidden at mobile sizes */
   .nav-logo {
     display: none;
@@ -163,22 +163,22 @@ hr {
 
 /* STRUCTURE LAYOUT FOR DESKTOP  */
 
-@media (min-width:768px) {  
+@media (min-width:768px) {
   .nav, .main {
-  	min-height: 100%;   
-  } 
-  
+  	min-height: 100%;
+  }
+
   .nav {
   	position: relative;
   	width: 20%;
   	background: #fff;
   }
-  
+
   /* Logo displays at Desktop and wider sizes */
   .nav-logo {
     display: block;
   }
-  
+
   .main {
     margin-top: 0;
   	position: absolute;
@@ -196,11 +196,11 @@ hr {
 }
 
 @media (max-width:767px) {
-  
+
   .main_content {
     padding: 0;
   }
-  
+
 }
 
 /* TYPOGRAPHY */
@@ -232,7 +232,7 @@ h1 {
 
 /* Mobile first! */
 .nav-logo { display: none; }
-	
+
 .nav-title {
 	position: absolute;
  	padding: 0 1rem;
@@ -242,13 +242,13 @@ h1 {
 
 
 @media (min-width:768px) {
-  
-  .nav-logo { 
+
+  .nav-logo {
     display: block;
     padding: $base_unit;
     max-width: 100%;
   }
-  
+
 	.nav-title {
   position: relative;
   	margin: 0;
@@ -256,18 +256,18 @@ h1 {
   	color: $textcolor;
   	overflow: hidden;
   }
-  
+
   .nav-title span {
     float: left;
   }
-  
+
   .nav-established {
     padding: 0 1rem;
     text-decoration: none;
     color: $textcolor;
   }
-  
-  
+
+
 }
 
 
@@ -275,14 +275,14 @@ h1 {
 /* MAIN NAVIGATION */
 
 .nav_menu {
-  
+
   margin: 0;
   padding: $base_unit;
-  
+
 	ul {
 	  margin: 0;
 	}
-	
+
 	li {
 		font-weight: 100;
 		font-size: 1.4em;
@@ -290,17 +290,17 @@ h1 {
 		padding: 0.2em 0;
 		border-bottom: solid 1px $textcolor;
 	}
-		
+
 	 li:last-child {
 		border-bottom: none;
 	}
-	
+
 	a {
 		color: $textcolor;
 		text-decoration: none;
 		display: block;
 	}
-		
+
 	a:hover {
 		color: $link_hover_color;
 	}
@@ -312,22 +312,22 @@ h1 {
 		background: $dark;
 		display: none;
 	}
-	
+
 	.nav_menu li {
 		border: none;
 	}
-	
+
 	.nav_menu.visible {
 		display: block;
 	}
-	
+
 	.nav_menu a {
 		display: block;
 		padding: 0.4em;
 		border: solid 1px $textcolor;
 		color: #fff;
 	}
-	
+
 }
 
 
@@ -372,7 +372,7 @@ h1 {
     float: right;
     margin-bottom: 4em;
   }
-  
+
   .Nav-pagination--newer {
     float: left;
     margin-bottom: 4em;
@@ -392,21 +392,21 @@ h1 {
 	min-height: 100%;
 }
 
-	
+
 	.stage h1 {
 		margin-top: 0;
 	}
 
 @media (max-width:767px) {
-	
+
 	.stage {
 		padding: 2em 0;
 	}
-	
+
 	.stage h1 {
 		margin-top: 0.67em;
 	}
-	
+
 }
 
 
@@ -420,7 +420,7 @@ h1 {
   .main_content h1 {
     font-size: 2em;
   }
-  
+
   .directory-card {
     margin: $base_unit;
     padding: $base_unit;
@@ -431,14 +431,14 @@ h1 {
 }
 
 @media (min-width:768px){
-  
+
   .directory-card {
     margin: $base_unit;
     padding: $base_unit;
    	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
    	width: calc(50% - 2em);
   }
-  
+
 }
 
 
@@ -462,20 +462,20 @@ h1 {
 /* WEB-MAP PAGE */
 #collaborations {
 	position: relative;
-	
+
 	.overlay {
 		position: absolute;
 		z-index: 10;
 		font-size: 16px;
 		font-family: $type_default;
 		color: $white;
-		
+
 		h1 {
 			text-shadow: 1px 1px 2px $dark;
 		}
-		
+
 	}
-	
+
 }
 
 
@@ -502,49 +502,49 @@ h1 {
 	background: $white;
 	/* font-family: Georgia, "Times New Roman", serif; */
 	font-family: $type_default;
-	
+
 	/* Cdncult Header Styles */
 	h1, h2, h3, h4 {
 /* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
 
 	}
-	
+
 	/* Cdncult Section Link styles */
 	a {
 		color: $textcolor;
 	}
-	
+
 	a:hover {
 		color: $link_hover_color;
 	}
 }
 
 .cdncult_header {
-	
+
 	h1 {
 		margin-bottom: 0;
 	}
-	
+
 	a {
 		text-decoration: none;
 	}
-	
+
 }
 
 @media (max-width:767px) {
 	.cdncult_header h1 {
 		font-size: 2em;
-	}	
+	}
 }
 
 
 
 .cdncult_home {
-	
+
 	h2 a {
 	text-decoration: none;
 	}
-	
+
 	.author, .date {
 		font-size: 0.9em;
 /* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
@@ -553,47 +553,47 @@ h1 {
 		padding: 0.7em 0;
 		text-align: center;
 	}
-	
+
 	.edition-intro {
 		/*
 padding-right: 2em;
 		border-right: solid 1px $textcolor;
 */
 	}
-		
+
 	.edition-article-excerpts {
 		/* padding-left: 2em; */
 	}
-	
+
 	.cdncult-home-excerpt div {
 		overflow: hidden;
 		padding: 1em;
 		/* border-bottom: solid 1px $textcolor; */
-		
-		
+
+
 	}
-	
+
 	.cdncult-home-excerpt:last-child {
 		border-bottom: 0;
 	}
-	
+
 }
 
 @media (max-width:767px) {
-	
+
 	.cdncult_home {
-		
+
 		.edition-intro {
 			padding-right:0;
 			border: 0;
 		}
-		
+
 		.edition-article-excerpts {
 			padding-left: 0;
 		}
-		
+
 	}
-	
+
 }
 
 
@@ -606,25 +606,25 @@ padding-right: 2em;
 }
 
 .post-header {
-	
+
 	.post-pub-date {
 		display: block;
 		font-size: 0.7em;
 		text-transform: uppercase;
 		margin: $base_unit 0;
 	}
-	
+
 	.post-title {
 		font-size: 3em;
 	}
-	
+
 	.author-name {
 		font-size: 1.2em;
 /* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; */
 		font-weight: 400;
 		font-style: normal;
 	}
-	
+
 } /* /.post-header */
 
 .post-content {
@@ -644,25 +644,25 @@ padding-right: 2em;
 	padding: $base_unit;
 	border: $double_line;
 	color: $textcolor;
-	
+
 	.author-name {
 		font-size: 1.8em;
 /* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; */
 		font-weight: 700;
 		font-style: normal;
 	}
-	
+
 	.author-photo img {
 		border-radius: 50%;
 		border: solid 1px $textcolor;
 		padding: 2px;
 	}
-	
+
 	.author-bio {
 		font-size: 0.8em;
 		padding-bottom: 1em;
 	}
-	
+
 	.author-website {
 		color: $textcolor;
 		text-decoration: none;
@@ -671,11 +671,11 @@ padding-right: 2em;
 		font-size: 0.7em;
 		text-transform: uppercase;
 	}
-	
+
 	.author-website:hover {
 		color: $link_hover_color;
 	}
-	
+
 	.author-related-posts-header, .about-the-author, .connect-the-author {
 		font-size: 0.9em;
 /* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
@@ -685,7 +685,7 @@ padding-right: 2em;
 		border-top: solid 1px #bbb;
 		border-bottom: solid 1px #bbb;
 		}
-	
+
 /*
 	.author-related-post {
 		display: block;
@@ -693,12 +693,12 @@ padding-right: 2em;
 		line-height: 1.8em;
 		font-size: 0.9em;
 	}
-	
+
 		.author-related-post:hover {
 			color: $link_hover_color;
 		}
 */
-	
+
 } /* /.post_meta-author */
 
 
@@ -709,7 +709,7 @@ padding-right: 2em;
 	padding: $base_unit;
 	border: $double_line;
 	text-align: center;
-	
+
 	.category-list-header, .tag-list-header {
 		font-size: 0.9em;
 /* 		font-family: 'Chronicle Cond A', 'Chronicle Cond B'; font-weight: 700; font-style: normal; */
@@ -719,11 +719,11 @@ padding-right: 2em;
 		border-top: solid 1px #bbb;
 		border-bottom: solid 1px #bbb;
 	}
-	
+
 	.category-list, .tag-list {
 		font-size: 0.9em;
 	}
-	
+
 } /* /.post_meta-bottom */
 
 /* RELATED ARTICLES */
@@ -792,24 +792,24 @@ p.wp-caption-text {
 /* FILE: single-edition.php  */
 
 .single-edition {
-  
+
   .thumbnail {
     // Each edition has a featured image thumbnail
     margin-bottom: 2em;
   }
-  
+
   .article-list {
     // A list of the child articles within that edition
     padding: $base_unit;
     border: $double_line;
-    
+
     p.label {
       font-style: italic;
       text-align: center;
     }
-    
+
   }
-  
+
 }
 
 /* EDITION ARCHIVE STYLING */
@@ -822,12 +822,12 @@ p.wp-caption-text {
 }
 
 @media (min-width: 768px) {
-  
+
   .Archive-thumbnail {
     float: left;
     margin-right: 1em;
   }
-  
+
 }
 
 
@@ -837,18 +837,35 @@ p.wp-caption-text {
 /* FILES: page-commissions.php, single-commission.php */
 
 .vertical_commissions {
-  
+
   a.commission-maker-detail {
     display: block;
     text-align: center;
   }
-  
+
 }
 
 /* SPIDERWEBSOUND VERTICAL */
 /* FILES: page-sound.php, taxonomy-sounds.php, single-a-sound.php */
 /* SCOPE: .Soundseries */
 /* Descriptive sections for series of sounds, or other meta-information related to podcasts */
+
+.podcast-card {
+	float: left;
+	margin: 1em;
+	width: 300px;
+	background-color: #fff;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+
+.podcast-card figure {
+
+}
+
+.podcast-text {
+	padding: 1em;
+}
+
 
 @media (min-width: 768px) {
 
@@ -885,7 +902,7 @@ p.wp-caption-text {
 	-moz-transition: all 0.4s ease-out;
 	-o-transition: all 0.4s ease-out;
 	-ms-transition: all 0.4s ease-out;
-	transition: all 0.4s ease-out;	
+	transition: all 0.4s ease-out;
 }
 
 .exp2-card .experiment {
@@ -893,7 +910,7 @@ p.wp-caption-text {
 	height: 100%;
 	margin: 0;
 	padding: $base_unit;
-	
+
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.2)";
 	filter: alpha(opacity=0.2);
 	opacity: 0.2;
@@ -919,7 +936,7 @@ transform: scale(0.95);
 
 .exp2-card:hover .experiment {
 	background: #000;
-	
+
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.7)";
 	filter: alpha(opacity=0.7);
 	opacity: 0.7;
@@ -937,7 +954,7 @@ transform: scale(0.95);
 .exp2-card .experiment.sonic-theatre, .which-lab.sonic-theatre {
 	background: deeppink;
 }
-	
+
 .exp2-card .experiment.twitter-theatre, .which-lab.twitter-theatre {
 	background: royalblue;
 }
@@ -986,7 +1003,7 @@ span.which-lab {
 	text-transform: uppercase;
 	font-family: $type_default;
 }
-		
+
 .share-button a {
 	background: #444;
 	padding: 0.2em 0.8em;
@@ -1045,22 +1062,22 @@ span.which-lab {
 	transition-duration: 0.2s;
 	color: $textcolor;
 	text-decoration: none;
-	
-	
+
+
 	img {
 		float: left;
 		margin-right: $base_unit;
 	}
-	
+
 	p {
 		margin: 0;
 		padding: 0;
 	}
-	
+
 	p.twitter {
 		color: #bbb; /* It would make sense to make a consistent "de-emphasis" lighter color. Consider contrast and accessibility when implementing */
 	}
-	
+
 }
 
 .maker-card:hover {
@@ -1076,36 +1093,36 @@ span.which-lab {
   overflow: hidden;
   float: left;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
-	
+
 	p {
   	margin: 0;
   	padding: 0;
   	margin-left: calc(75px + 1em);
 	}
-	
+
 	a {
   	text-decoration: none;
 	}
-	
+
 	p.twitter a {
 	  text-decoration: none;
 	  color: #bbb;
 	}
-	
+
 	p.title {
   	margin-top: $base_unit;
 	}
-	
+
 	p.location {
   	color: #bbb;
 	}
-	
+
 	img {
   	float: left;
   	margin-right: $base_unit;
   	margin-bottom: $base_unit;
 	}
-	
+
 }
 
 
@@ -1126,4 +1143,3 @@ span.which-lab {
 .fourohfour {
 	text-align: center;
 }
-

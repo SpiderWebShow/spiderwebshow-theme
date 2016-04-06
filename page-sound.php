@@ -62,7 +62,7 @@
         <p><small><a href="<?php echo $podcastURLitunes ?>">Subscribe in iTunes</a></small></p>
         <?php } ?>
       </div>
-      
+
     </div>
 
 

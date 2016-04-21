@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
 <style>
 	.style0{
-		fill:	#800518;
+		fill:	#045a67;
 	}
 	.style1{
-		stroke:	#f77f16;
+		stroke:	#e9c920;
 		stroke-width: 20;
 		stroke-miterlimit:	20;
 	}
 </style>
 <g>
-	<rect width="1024" height="1024" class="style0" />	
+	<rect width="1024" height="1024" class="style0" />
 </g>
 <line x1="190.9" y1="980.1" x2="893.3" y2="43.6" class="style1"/>
 <line x1="448.3" y1="895.3" x2="351" y2="766.7" class="style1"/>

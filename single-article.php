@@ -65,7 +65,7 @@
 			<div class="comments">
 				<!-- START: Livefyre Embed -->
 				<div id="livefyre-comments"></div>
-				<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+				<script type="text/javascript" src="https://crossorigin.me/http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
 				<script type="text/javascript">
 				(function () {
 				    var articleId = fyre.conv.load.makeArticleId(null);

@@ -60,7 +60,7 @@ soundManager.setup({
 			
 			onready: function() {
 				var mySound = soundManager.createSound({
-					url: 'http://api.soundcloud.com/tracks/134645988/stream?client_id=3f356f314a7dde49074ede79efb447b2'
+					url: 'https://api.soundcloud.com/tracks/134645988/stream?client_id=3f356f314a7dde49074ede79efb447b2'
 				});
 				mySound.play();
 			},

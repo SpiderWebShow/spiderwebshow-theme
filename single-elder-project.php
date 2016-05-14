@@ -24,7 +24,7 @@
 		  
   		<script>
   		  // Load the Google API to load the Youtube Subscribe button
-    		head.load("//apis.google.com/js/platform.js");
+    		head.load("https://apis.google.com/js/platform.js");
   		</script>
   		<div style="display:block;float:right;margin-top: 1em;padding:0.33em 2em;background:rgba(33,33,33,0.3);text-align:center;">
     		<p>Subscribe on YouTube: <div class="g-ytsubscribe" data-channelid="UC32SlshOqWPecg0eYa63DPA" data-layout="default" data-count="hidden"></div></p>
@@ -47,7 +47,7 @@
 		var youtubeURL = '<?php echo $youtubeUrl; ?>',
 		// Use a Regex .match to extract just the video's 11-digit id; see http://stackoverflow.com/a/1280572			
 				vID = youtubeURL.match(/\?v=([\w-]{11})/)[1],
-				videoEmbed = $('<iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/' + vID + '?rel=0" frameborder="0" allowfullscreen></iframe>');;
+				videoEmbed = $('<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + vID + '?rel=0" frameborder="0" allowfullscreen></iframe>');;
 		$('figure.video').append(videoEmbed).fitVids();
 	});
 </script>

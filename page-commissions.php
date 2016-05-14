@@ -41,7 +41,7 @@
 	
 	<div class="pure-u-3-5">
 	<figure id="embed_youtube" class="embed video youtube">
-		<iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/<?php echo $firstVideoID; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php echo $firstVideoID; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
 	</figure>
 	<p><a class="commission-maker-detail" href="<?php echo $makerProfileUrl; ?>" title="">Click here to read more about the author and how they made this work &raquo;</a></p>
 	

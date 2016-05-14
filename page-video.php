@@ -45,7 +45,7 @@
 	
 	<div class="pure-u-3-5">
 	<figure id="embed_youtube" class="embed video youtube">
-		<iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/<?php echo $firstVideoID; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php echo $firstVideoID; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
 	</figure>
 	<p>
 	  <small><a href="<?php echo $permalinkToTalkShow; ?>"><i class="icon-link"></i> Permanent link to this episode »</a></small>

@@ -49,7 +49,7 @@
 
 			<div class="share" style="margin-bottom:2em;">
 				<div class="share-button twitter" style="vertical-align: top;">
-					<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-via="SpiderWebShow" data-hashtags="cdncult" data-dnt="true">Tweet This</a>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-via="SpiderWebShow" data-hashtags="cdncult" data-dnt="true">Tweet This</a>
 				</div>
 				<div class="share-button facebook">
 					<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>

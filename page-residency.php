@@ -4,8 +4,8 @@
 	<div class="pure-u-1">
   	
     <figure class="vertical_header">
-      <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-thought.jpg" alt="">
-      <p class="vertical_header-caption">Photo: <em>Salt Baby</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+      <img class="vertical_header-img" src="https://spiderwebshow.ca/wp-content/uploads/2015/10/sws-thought.jpg" alt="">
+      <p class="vertical_header-caption">Photo: <em>Salt Baby</em> by Mathieu Murphy-Perron, from the <a href="https://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
     </figure>
   	
 		<h1>Thought Residencies</h1>

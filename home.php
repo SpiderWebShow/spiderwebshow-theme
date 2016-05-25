@@ -9,7 +9,7 @@
 		  <div class="fb-like" data-href="https://www.facebook.com/PraxNACspiderwebshow" data-width="" data-height="" data-colorscheme="light" data-layout="button" data-action="like" data-show-faces="false" data-send="false" style="margin-left: 1em; float:left;">
 		  </div>&nbsp;
 		  <div class="instagram-follow" style="float:left; margin-left: 1em;">
-        <a href="http://instagram.com/spiderwebshow?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" target="_blank" /></a>
+        <a href="https://instagram.com/spiderwebshow?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" target="_blank" /></a>
 		  </div>
 		</p>
     

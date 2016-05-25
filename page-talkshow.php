@@ -5,8 +5,8 @@
 	<div class="pure-u-1">
   	
     <figure class="vertical_header">
-      <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-talkshow.jpg" alt="">
-      <p class="vertical_header-caption">Photo: <em>Habitat</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+      <img class="vertical_header-img" src="https://spiderwebshow.ca/wp-content/uploads/2015/10/sws-talkshow.jpg" alt="">
+      <p class="vertical_header-caption">Photo: <em>Habitat</em> by Mathieu Murphy-Perron, from the <a href="https://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
     </figure>
   	
 		<h1><?php the_title(); ?></h1>
@@ -45,7 +45,7 @@
 	
 	<div class="pure-u-3-5">
 	<figure id="embed_youtube" class="embed video youtube">
-		<iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/<?php echo $firstVideoID; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/<?php echo $firstVideoID; ?>?rel=0" frameborder="0" allowfullscreen></iframe>		
 	</figure>
 	<p>
 	  <small><a href="<?php echo $permalinkToTalkShow; ?>"><i class="icon-link"></i> Permanent link to this episode »</a></small>

@@ -49,7 +49,7 @@
 
 			<div class="share" style="margin-bottom:2em;">
 				<div class="share-button twitter" style="vertical-align: top;">
-					<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-via="SpiderWebShow" data-hashtags="cdncult" data-dnt="true">Tweet This</a>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-via="SpiderWebShow" data-hashtags="cdncult" data-dnt="true">Tweet This</a>
 				</div>
 				<div class="share-button facebook">
 					<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
@@ -65,7 +65,7 @@
 			<div class="comments">
 				<!-- START: Livefyre Embed -->
 				<div id="livefyre-comments"></div>
-				<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+				<script type="text/javascript" src="https://crossorigin.me/http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
 				<script type="text/javascript">
 				(function () {
 				    var articleId = fyre.conv.load.makeArticleId(null);

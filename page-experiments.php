@@ -14,7 +14,7 @@
 	<div class="experiment">
 		&nbsp;	
 	</div>
-	<a href="http://spiderwebshow.ca/experiment/about-the-experiments">
+	<a href="https://spiderwebshow.ca/experiment/about-the-experiments">
 		<div class="exp2-content">
 			<h2>About the Experiments</h2>
 			<p>CLICK HERE to read more about the research wing of the SpiderWebShow</p>
@@ -26,7 +26,7 @@
 	<div class="experiment">
 		&nbsp;	
 	</div>
-	<a href="http://spiderwebshow.ca/laboratory/podcasts">
+	<a href="https://spiderwebshow.ca/laboratory/podcasts">
 		<div class="exp2-content">
 			<h2>Podcasts</h2>
 			<p>SWS Podcast - click here</p>
@@ -37,7 +37,7 @@
 	<div class="experiment">
 		&nbsp;	
 	</div>
-	<a href="http://spiderwebshow.ca/laboratory/theatre-ux">
+	<a href="https://spiderwebshow.ca/laboratory/theatre-ux">
 		<div class="exp2-content">
 			<h2>Theatre UX</h2>
 			<p>Click here to see all episodes of Theatre UX - the podcast all about theatre and tech.</p>

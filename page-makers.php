@@ -6,8 +6,8 @@
 		<div class="pure-u-1">
   		
   		<figure class="vertical_header">
-        <img class="vertical_header-img" src="http://spiderwebshow.ca/wp-content/uploads/2015/10/sws-mkers.jpg" alt="">
-        <p class="vertical_header-caption">Photo: <em>Education is a right</em> by Mathieu Murphy-Perron, from the <a href="http://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+        <img class="vertical_header-img" src="https://spiderwebshow.ca/wp-content/uploads/2015/10/sws-mkers.jpg" alt="">
+        <p class="vertical_header-caption">Photo: <em>Education is a right</em> by Mathieu Murphy-Perron, from the <a href="https://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
       </figure>
   		
 			<h1><?php the_title(); ?></h1>
@@ -29,7 +29,7 @@
 	<div class="pure-u-1">
 	  
 	  <div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/sstanley">
+    	<a href="https://spiderwebshow.ca/author/sstanley">
       	<img src="//spiderwebshow.ca/wp-content/uploads/2014/09/sarah-garton-stanley-75x75.jpg" alt="Sarah Garton Stanley" />
       	<p>Sarah Garton Stanley</p>
     	</a>
@@ -40,7 +40,7 @@
 	  </div>
   	
   	<div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/mwheeler">
+    	<a href="https://spiderwebshow.ca/author/mwheeler">
       	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/Michael_Wheeler_Headshot-75x75.jpg" alt="Michael Wheeler" />
       	<p>Michael Wheeler</p>
     	</a>
@@ -50,7 +50,7 @@
   	</div>
   	
   	<div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/adriennewong">
+    	<a href="https://spiderwebshow.ca/author/adriennewong">
       	<img src="//spiderwebshow.ca/wp-content/uploads/2013/11/074-IMG_4796-75x75.jpg" alt="Adrienne Wong" />
       	<p>Adrienne Wong</p>
     	</a>
@@ -60,8 +60,8 @@
   	</div>
   	
   	<div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/laurelgreen">
-      	<img src="http://spiderwebshow.ca/wp-content/uploads/2014/09/laurel-green-75x75.jpg" alt="Laurel Green" />
+    	<a href="https://spiderwebshow.ca/author/laurelgreen">
+      	<img src="https://spiderwebshow.ca/wp-content/uploads/2014/09/laurel-green-75x75.jpg" alt="Laurel Green" />
       	<p>Laurel Green</p>
     	</a>
      	<p class="twitter"><a href="https://twitter.com/lgyyc">@LGYYC</a></p>
@@ -70,7 +70,7 @@
   	</div>
   	
     <div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/gfscott">
+    	<a href="https://spiderwebshow.ca/author/gfscott">
       	<img src="//spiderwebshow.ca/wp-content/uploads/2013/08/gfs1-75x75.jpg" alt="Graham F. Scott" />
       	<p>Graham F. Scott</p>
     	</a>
@@ -80,8 +80,8 @@
   	</div>
   	
   <div class="creator-card">
-	  <a href="http://spiderwebshow.ca/author/CamilaDiazVarela">
-      <img src="http://spiderwebshow.ca/wp-content/uploads/2015/10/Activation-47-75x75.jpg" alt="Camila Diaz-Varela" />
+	  <a href="https://spiderwebshow.ca/author/CamilaDiazVarela">
+      <img src="https://spiderwebshow.ca/wp-content/uploads/2015/10/Activation-47-75x75.jpg" alt="Camila Diaz-Varela" />
       <p>Camila Diaz-Varela</p>
     	</a>
     <p class="twitter"><a href="https://twitter.com/camilstown">@camilstown</a></p>
@@ -90,8 +90,8 @@
   </div>
   	
   <div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/claytonbaraniuk">
-      	<img src="http://spiderwebshow.ca/wp-content/uploads/2014/12/Clayton-75x75.jpg" alt="Clayton Baraniuk" />
+    	<a href="https://spiderwebshow.ca/author/claytonbaraniuk">
+      	<img src="https://spiderwebshow.ca/wp-content/uploads/2014/12/Clayton-75x75.jpg" alt="Clayton Baraniuk" />
       	<p>Clayton Baraniuk</p>
     	</a>
       <p class="twitter"><a href="https://twitter.com/Claybee">@Claybee</a></p>
@@ -100,8 +100,8 @@
  	</div>
    	
   <div class="creator-card">
-    	<a href="http://spiderwebshow.ca/author/alisonbowie">
-      	<img src="http://spiderwebshow.ca/wp-content/uploads/2015/05/Headshot-2015sm-75x75.jpeg" alt="Alison Bowie" />
+    	<a href="https://spiderwebshow.ca/author/alisonbowie">
+      	<img src="https://spiderwebshow.ca/wp-content/uploads/2015/05/Headshot-2015sm-75x75.jpeg" alt="Alison Bowie" />
       	<p>Alison Bowie</p>
     	</a>
       <p class="twitter"><a href="https://twitter.com/ajbowie1984">@ajbowie1984</a></p>

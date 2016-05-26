@@ -1,12 +1,29 @@
 <?php get_header(); ?>
 
-<div class="main_content vertical_talkshow stage pure-g-r">
-
-	<div class="pure-u-1">
-		<p><a href="/talkshow" title="See all TalkShow episodes">&laquo; Back to TalkShow</a></p>
-	</div>
+<div class="main_content vertical_video stage pure-g-r">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // WORDPRESS LOOP BEGINS ?>
+	<?php
+
+	// Fatal error: Cannot use object of type WP_Error as array in /Users/gfscott/dev/spiderwebshow/wp-content/themes/spiderwebshow/single-a-video.php on line 12
+
+  	$video =  wp_get_post_terms( $post->ID, 'video-series' );
+		if ($video) {
+
+    	$video = $video[0];
+    	$videoID = $video->term_id;
+    	$videoName = $video->name;
+    	$videoDesc = $video->description;
+    	$videoSlug = $video->slug;
+    	$videoURL = get_bloginfo('url') . "/video-series/" . $videoSlug;
+    	$videoFeed = get_bloginfo('url') . "/video-series/" . $videoSlug . "/feed";
+    if (function_exists('z_taxonomy_image_url')) {
+    	  $videoImg = z_taxonomy_image_url($videoID, 'medium', false);
+    }
+  	}
+	?>
+
+
 	<?php
 	/////////////////////////////
 	// CUSTOM POST TYPE METADATA
@@ -15,7 +32,22 @@
 		$youtubeUrl = types_render_field("youtube-url", array("raw"=>"true")); // get custom field for the youtube video -- REQUIRED
 
 	?>
-	<article class="commission_post">
+
+	<div class="pure-u-1">
+
+		<figure class="vertical_header">
+			<img class="vertical_header-img" src="https://spiderwebshow.ca/wp-content/uploads/2015/10/sws-talkshow.jpg" alt="">
+			<p class="vertical_header-caption">Photo: <em>Habitat</em> by Mathieu Murphy-Perron, from the <a href="https://spiderwebshow.ca/images">SpiderWebShow Gallery</a></p>
+		</figure>
+
+		<p>
+      <a href="/video" title="More SpiderWebShow Video">SpiderWeb Video</a><?php
+        if ( $videoName && $videoURL ): ?>&nbsp;&raquo;&nbsp;<a href="<?php echo $videoURL ?>"><?php echo $videoName; ?></a>&nbsp;&raquo;&nbsp;<?php the_title(); ?><?php endif; ?>
+    </p>
+	</div>
+
+	<article class="postcontent-video">
+
 		<h1 class="pure-u-1"><?php the_title(); ?></h1>
 
 		<figure class="video"></figure>
